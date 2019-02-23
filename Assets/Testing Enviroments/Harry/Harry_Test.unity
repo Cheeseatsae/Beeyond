@@ -639,37 +639,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8754288717084911114, guid: ca7e17a398d94bd4794648ed3f6a0225,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8754288717084911114, guid: ca7e17a398d94bd4794648ed3f6a0225,
-        type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8754288717084911114, guid: ca7e17a398d94bd4794648ed3f6a0225,
-        type: 3}
-      propertyPath: m_Drag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8754288717084911114, guid: ca7e17a398d94bd4794648ed3f6a0225,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596184592, guid: ca7e17a398d94bd4794648ed3f6a0225, type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596184592, guid: ca7e17a398d94bd4794648ed3f6a0225, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1596184592, guid: ca7e17a398d94bd4794648ed3f6a0225, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
+    - target: {fileID: 1596184591, guid: ca7e17a398d94bd4794648ed3f6a0225, type: 3}
+      propertyPath: maxSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca7e17a398d94bd4794648ed3f6a0225, type: 3}
