@@ -7,9 +7,7 @@ public class WindScript : MonoBehaviour
 {
 
     public static float windSpeed = 1f; // eventual global wind speed
-    private float _windSpeedOld =0f;
 
-    public bool checkWind = false;
 
     float _pingpongRange = 2f; //size of pingpong
     float _pingpongSpeed = 1f; // speed / rate of pingpong
@@ -32,23 +30,13 @@ public class WindScript : MonoBehaviour
 
         windSpeed = Mathf.PingPong(Time.time*_pingpongSpeed, _pingpongRange); // get next pingpong value
       
-        if (checkWind == true && windSpeed > _windSpeedOld) // check to see if start of pingpong
-        {
-            checkWind = false; // disable pingpong check
-            
+        if(windSpeed< 0.1f)  // if at the start of the pingpong. set new random values
+        {    
             _pingpongRange = GetRandomValue(0f); //get value for pingpong
             _pingpongSpeed = GetRandomValue(_pingpongRange); //use previous value to get weighted speed value
         }
         
-        
-        
-        if (windSpeed < _windSpeedOld)
-        {
-            checkWind = true; //enable pinpong check
-            
-        }
-
-        _windSpeedOld = windSpeed;
+       
 
         
         // set screen texts for debugging
