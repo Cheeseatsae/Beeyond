@@ -6,7 +6,14 @@ using UnityEngine;
 public class WindScript : MonoBehaviour
 {
 
-    public static float windSpeed = 1f; // eventual global wind speed
+    public static float windSpeed = 0f; // eventual global wind speed
+
+    // values used to lerp to smooth out windSpeed jitters
+    private float _oldWindSpeed = 0f;
+    private float _newWindSpeed = 1f;
+    
+    // lower the lerpAmount to smooth out wind jitters
+    [Range(0.0f, 0.1f)] public float lerpAmount;
 
 
     float _pingpongRange = 2f; //size of pingpong
@@ -53,9 +60,11 @@ public class WindScript : MonoBehaviour
     void Update ()
     {
 
-        windSpeed = Mathf.PingPong(Time.time*_pingpongSpeed, _pingpongRange); // get next pingpong value
+        _newWindSpeed = Mathf.PingPong(Time.time*_pingpongSpeed, _pingpongRange); // get next pingpong value
+
+        windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
       
-        if(windSpeed< 0.03f)  // if at the start of the pingpong. set new random values
+        if(_newWindSpeed < 0.05f)  // if at the start of the pingpong. set new random values
         {    
             _pingpongRange = GetRandomValue(0f); //get value for pingpong 
             _pingpongSpeed = GetRandomValue(_pingpongRange); //use previous value to get weighted speed value
@@ -68,7 +77,9 @@ public class WindScript : MonoBehaviour
         windSpeedText.text = "wind speed " + windSpeed.ToString();
         pingpongRangeText.text = "PP Range " + _pingpongRange.ToString();
         pingpongSpeedText.text = "pp Speed " + _pingpongSpeed.ToString();
-        
+
+        _oldWindSpeed = windSpeed; // set _oldWindSpeed for origin of lerp before next update
+
     }
     
     // gets a random (weighted) float

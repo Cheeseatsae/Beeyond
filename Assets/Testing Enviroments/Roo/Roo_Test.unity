@@ -893,14 +893,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8680609ba817f6e48bba2f0d89740459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lerpAmount: 0.0145
   weight1: 6
-  weight1LowerRange: 1.57
-  weight1UpperRange: 2.69
-  weight2: 7.95
-  weight2LowerRange: 3.51
-  weight2UpperRange: 4.2
-  weight3LowerRange: 7.9
-  weight3UpperRange: 8.62
+  weight1LowerRange: 1.73
+  weight1UpperRange: 2.45
+  weight2: 8
+  weight2LowerRange: 2.54
+  weight2UpperRange: 4.12
+  weight3LowerRange: 6.92
+  weight3UpperRange: 10
   windSpeedText: {fileID: 404182940}
   pingpongRangeText: {fileID: 1266679443}
   pingpongSpeedText: {fileID: 1077074978}
