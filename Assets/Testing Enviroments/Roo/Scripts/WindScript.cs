@@ -57,7 +57,7 @@ public class WindScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update ()
+    void FixedUpdate ()
     {
 
         _newWindSpeed = Mathf.PingPong(Time.time*_pingpongSpeed, _pingpongRange); // get next pingpong value
