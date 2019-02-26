@@ -13,6 +13,8 @@ namespace Harry
         [Range(0,3)]
         public float inputMult = 1;
 
+        public Transform parent;
+
         // horizontal input property
         private float InputHorizontalValue 
         { 
@@ -40,7 +42,7 @@ namespace Harry
         void Update() 
         {
             // sets position locally for bee to chase
-            transform.localPosition = new Vector3(InputHorizontalValue * inputMult, InputVerticalValue * inputMult, 0);
+            transform.position = new Vector3(InputHorizontalValue * inputMult, InputVerticalValue * inputMult, 0) + parent.position;
             // Debug.Log("X is " + InputHorizontalValue + "          Y is " + InputVerticalValue);
         }
         

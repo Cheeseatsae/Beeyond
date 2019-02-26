@@ -15,20 +15,12 @@ namespace Harry
         public float distance = 0.5f;
         [Range(0,2)]
         public float amount = 0.5f;
-
-        public GameObject parent;
         
         private float _sinTime;
-
-        public float floatingRange;
-
-        private Rigidbody _myBody;
         private float _yValue;
-        private bool _zeroed = true;
 
         private void Awake()
         {
-            _myBody = GetComponent<Rigidbody>();
             _sinTime = Random.Range(0f, 1f);
         }
         
@@ -36,7 +28,6 @@ namespace Harry
         void FixedUpdate()
         {
             // sin(_Time.y * _Speed + v.vertex.y * _Amplitude) * _Distance * _Amount;
-    
             _sinTime += Time.deltaTime;
     
         }
@@ -53,8 +44,6 @@ namespace Harry
         }
         
     }
-
-    
     
 }
 
