@@ -45,7 +45,7 @@ namespace Harry
         }
 
         // Update is called once per frame
-        void Update()
+        void Update() 
         {
             
             transform.position = new Vector3(_beeChild.transform.position.x, transform.position.y, _beeChild.transform.position.z);

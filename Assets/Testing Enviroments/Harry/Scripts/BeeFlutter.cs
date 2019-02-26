@@ -8,13 +8,13 @@ namespace Harry
     public class BeeFlutter : MonoBehaviour
     {
         [Range(0,1)]
-        public float speed;
+        public float speed = 1;
         [Range(0,1)]
-        public float amplitude;
+        public float amplitude = 0.6f;
         [Range(0,2)]
-        public float distance;
+        public float distance = 0.5f;
         [Range(0,2)]
-        public float amount;
+        public float amount = 0.5f;
 
         public GameObject parent;
         
@@ -29,38 +29,32 @@ namespace Harry
         private void Awake()
         {
             _myBody = GetComponent<Rigidbody>();
-            _sinTime = Random.Range(0, 1f);
+            _sinTime = Random.Range(0f, 1f);
         }
-
+        
         // Update is called once per frame
         void FixedUpdate()
         {
             // sin(_Time.y * _Speed + v.vertex.y * _Amplitude) * _Distance * _Amount;
     
             _sinTime += Time.deltaTime;
-            
+    
+        }
+
+        public float InputSin()
+        {
             _yValue = Mathf.Sin(_sinTime * speed + transform.position.y * amplitude) * distance * amount;
-    
-                if (Vector3.Distance(transform.position, parent.transform.position) > floatingRange)     
-                    _zeroed = false;
-                
-                if (_zeroed) 
-                    _myBody.velocity = new Vector3(0, _yValue, 0);
-                else
-                {
-                    _myBody.velocity = new Vector3(0, parent.transform.position.y - transform.position.y, 0) ;
-    
-                    if (Vector3.Distance(transform.position, parent.transform.position) < 0.02f)
-                    {
-                        _sinTime = 0;
-                        _zeroed = true;
-                    } 
-                        
-                }
-    
-            }
+            return _yValue;
+        }
+        
+        public void ResetSin()
+        {
+            _sinTime = 0;
+        }
         
     }
 
+    
+    
 }
 
