@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CubeMovement : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,6 +12,6 @@ public class CubeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * WindScript.windSpeed);
+        transform.Translate(Vector3.forward * Time.deltaTime * Roo.WindScript.windSpeed);
     }
 }
