@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -11,6 +12,9 @@ namespace Harry
 
         // rotate on turn to have been follow its target 
         // put in a state for disabling input
+        
+        public enum BeeState { Moving, Stopped }
+        public BeeState myState = BeeState.Moving;
         
         public GameObject target;
         
@@ -45,34 +49,41 @@ namespace Harry
 
         private void FixedUpdate()
         {
+            // if we're stopped do nothing
+            if (myState == BeeState.Stopped) return;
             
+            RotateTowards(target.transform.position);
             
-            
+            // setting desired velocity to be towards the target
             _velocity = ((target.transform.position - transform.position) * speedMult);
-            Debug.Log(_velocity);
-            RotateBee(_velocity);
+            // applying sin variation and the wind effect
             _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed / windSpeedMult), _velocity.y + _flutter.InputSin(), _velocity.z);
             
+            // adding the force normalized
             _myBody.AddRelativeForce(_velocity);
 
+            // adding drag to slow us and clamping speed
             _myBody.velocity = Vector3.Lerp(_myBody.velocity, Vector3.zero, 0.01f);
             _myBody.velocity = new Vector3(Mathf.Clamp(_myBody.velocity.x, -maxSpeed - (Roo.WindScript.windSpeed / windSpeedClamp), maxSpeed), Mathf.Clamp(_myBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(_myBody.velocity.z, -maxSpeed, maxSpeed));
         }
-
         
-        // STILL BROKEN, NEEDS WORK
-        public void RotateBee(Vector3 v)
+        public void RotateTowards(Vector3 t)
         {
-            //Debug.Log(transform.forward);
-            if (v.x < -rotateThreshold && transform.forward.z < 0)
-            {
-                _myModel.transform.Rotate(0,rotateSpeed,0);
-            } 
-            else if (v.x > rotateThreshold && transform.forward.z > 0)
-            {
-                _myModel.transform.Rotate(0,-rotateSpeed,0);
-            }
+            // if the target is on top of us stop rotating
+            if (Vector3.Distance(t, _myModel.transform.position) < rotateThreshold) return;
             
+            Vector3 targetDir = t - _myModel.transform.position;
+            // so we dont go upside down
+            targetDir = new Vector3(targetDir.x,0,0);
+
+            // The step size is equal to speed times frame time.
+            float step = rotateSpeed * Time.deltaTime;
+
+            Vector3 newDir = Vector3.RotateTowards(_myModel.transform.forward, targetDir, step, 1f);
+
+            // Move our position a step closer to the target.
+            _myModel.transform.rotation = Quaternion.LookRotation(newDir);
+
         }
 
         public void RayCastDistanceCheck()
