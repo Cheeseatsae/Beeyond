@@ -17,8 +17,11 @@ namespace Harry
         private Rigidbody _myBody;
         private BeeFlutter _flutter;
         private GameObject _myModel;
-
+        private CheckWhatsAround _whatsAround;
         private Vector3 _velocity;
+        public float minDist;
+        public float maxDist;
+        public Color rayColor = Color.green;
 
         [Range(0,2)]    public float speedMult = 1;
         [Range(0, 10)]     public float windSpeedClamp;
@@ -32,10 +35,18 @@ namespace Harry
             _myBody = GetComponent<Rigidbody>();
             _flutter = GetComponent<BeeFlutter>();
             _myModel = GetComponentInChildren<Renderer>().gameObject;
+            _whatsAround = GetComponent<CheckWhatsAround>();
+        }
+
+        private void Update()
+        {
+            RayCastDistanceCheck();
         }
 
         private void FixedUpdate()
         {
+            
+            
             
             _velocity = ((target.transform.position - transform.position) * speedMult);
             Debug.Log(_velocity);
@@ -62,6 +73,34 @@ namespace Harry
                 _myModel.transform.Rotate(0,-rotateSpeed,0);
             }
             
+        }
+
+        public void RayCastDistanceCheck()
+        {
+            foreach (GameObject bees in _whatsAround.WhosAround)
+            {
+                float distance;
+                Debug.Log(bees + "now raycast");
+                //rayColor = Color.red;
+                
+                if (Physics.Raycast(_myBody.transform.position, (_myBody.transform.position - bees.transform.position), _whatsAround.raduisOfSphere))
+                {
+                    Debug.DrawRay(transform.position, (bees.transform.position - _myBody.transform.position), rayColor);
+                    distance = Vector3.Distance(transform.position, bees.transform.position);
+                    if(distance <= minDist )
+                    {
+                        Debug.Log(bees + "is to close");
+                        rayColor = Color.red;
+                        //move character away from close object
+                    }
+                    else if (distance >= maxDist)
+                    {
+                        Debug.Log("I need to move closer to" + bees);
+                        rayColor = Color.blue;
+                        //move closer to object
+                    }
+                }
+            }
         }
     }
 
