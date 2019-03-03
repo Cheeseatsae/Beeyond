@@ -49,6 +49,7 @@ namespace Harry
 
         private void FixedUpdate()
         {
+
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
             
@@ -69,19 +70,19 @@ namespace Harry
         
         public void RotateTowards(Vector3 t)
         {
-            // if the target is on top of us stop rotating
-            if (Vector3.Distance(t, _myModel.transform.position) < rotateThreshold) return;
-            
-            Vector3 targetDir = t - _myModel.transform.position;
+            // finding dir to turn towards
+            Vector3 dir = t - _myModel.transform.position;
             // so we dont go upside down
-            targetDir = new Vector3(targetDir.x,0,0);
-
-            // The step size is equal to speed times frame time.
+            dir = new Vector3(0,0,-dir.z);
+            
+            // so we dont go sideways/turn when we dont want to
+            if (dir.z < 0.1f && dir.z > -0.1f) return;
+            
+            // setting turn speed
             float step = rotateSpeed * Time.deltaTime;
 
-            Vector3 newDir = Vector3.RotateTowards(_myModel.transform.forward, targetDir, step, 1f);
-
-            // Move our position a step closer to the target.
+            // actual rotation
+            Vector3 newDir = Vector3.RotateTowards(_myModel.transform.forward, dir, step, 0);
             _myModel.transform.rotation = Quaternion.LookRotation(newDir);
 
         }
