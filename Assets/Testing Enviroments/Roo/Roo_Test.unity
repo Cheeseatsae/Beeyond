@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -893,14 +893,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8680609ba817f6e48bba2f0d89740459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpAmount: 0.0583
+  lerpAmount: 0.0773
   weight1: 6
-  weight1LowerRange: 1.73
-  weight1UpperRange: 2.45
-  weight2: 8
-  weight2LowerRange: 2.54
-  weight2UpperRange: 4.12
-  weight3LowerRange: 6.92
+  weight1LowerRange: 1.84
+  weight1UpperRange: 3.17
+  weight2: 8.85
+  weight2LowerRange: 3.17
+  weight2UpperRange: 4.57
+  weight3LowerRange: 8.86
   weight3UpperRange: 10
   windSpeedText: {fileID: 404182940}
   pingpongRangeText: {fileID: 1266679443}

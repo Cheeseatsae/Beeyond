@@ -67,7 +67,7 @@ namespace Roo
 
             windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
 
-            if (_newWindSpeed < 0.05f) // if at the start of the pingpong. set new random values
+            if (_newWindSpeed < 0.1f) // if at the start of the pingpong. set new random values
             {
                 _pingpongRange = GetRandomValue(0f); //get value for pingpong 
                 _pingpongSpeed = GetRandomValue(_pingpongRange); //use previous value to get weighted speed value
