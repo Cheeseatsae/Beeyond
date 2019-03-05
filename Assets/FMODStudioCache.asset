@@ -13,16 +13,14 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114159384403839104}
-  - {fileID: 114318582825932710}
-  - {fileID: 114475584092432558}
-  - {fileID: 114326425528783372}
+  - {fileID: 114439531705055876}
+  - {fileID: 114631844218744022}
   EditorEvents: []
   MasterBanks:
-  - {fileID: 114326425528783372}
+  - {fileID: 114631844218744022}
   StringsBanks:
-  - {fileID: 114159384403839104}
-  stringsBankWriteTime: 636872876833017281
+  - {fileID: 114439531705055876}
+  stringsBankWriteTime: 636872819655995318
   cacheVersion: 3
 --- !u!114 &114159384403839104
 MonoBehaviour:
@@ -81,6 +79,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114439531705055876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\FMod\Beeyond Soundtrack\Build\Desktop\MasterBank.strings.bank
+  lastModified: 636872819655995318
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 672
+  Exists: 1
 --- !u!114 &114475584092432558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,4 +116,23 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 450
+  Exists: 1
+--- !u!114 &114631844218744022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\rkooistra\Documents\Unity\Beeyond\Assets\FMod\Beeyond Soundtrack\Build\Desktop\MasterBank.bank
+  lastModified: 636872819655905550
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
   Exists: 1

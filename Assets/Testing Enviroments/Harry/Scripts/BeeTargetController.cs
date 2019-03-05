@@ -36,7 +36,7 @@ namespace Harry
         void Update() 
         {
             // sets position locally for bee to chase
-            transform.position = new Vector3(0, InputVerticalValue * inputMult, InputHorizontalValue * inputMult) + parent.position;
+            transform.position = new Vector3(InputHorizontalValue * inputMult, InputVerticalValue * inputMult, 0) + parent.position;
         }
         
     }

@@ -28,8 +28,8 @@ namespace Harry
         public Color rayColor = Color.green;
 
         [Range(0,2)]    public float speedMult = 1;
-        [Range(0, 10)]     public float windSpeedClamp;
-        [Range(1, 10)]     public float windSpeedMult = 2;
+        [Range(0, 5)] public float windSpeedClamp;
+        [Range(0, 5)] public float windSpeedMult = 2;
         public float rotateThreshold = 0.1f;
         [Range(0,4)]    public float rotateSpeed = 2;
         public float maxSpeed = 5;
@@ -44,7 +44,7 @@ namespace Harry
 
         private void Update()
         {
-            RayCastDistanceCheck();
+            //RayCastDistanceCheck();
         }
 
         private void FixedUpdate()
@@ -53,19 +53,19 @@ namespace Harry
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
             
-            RotateTowards(target.transform.position);
+            //RotateTowards(target.transform.position);
             
             // setting desired velocity to be towards the target
             _velocity = ((target.transform.position - transform.position) * speedMult);
             // applying sin variation and the wind effect
-            _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed / windSpeedMult), _velocity.y + _flutter.InputSin(), _velocity.z);
+            _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed * windSpeedMult), _velocity.y + _flutter.InputSin(), _velocity.z);
             
             // adding the force normalized
             _myBody.AddRelativeForce(_velocity);
 
             // adding drag to slow us and clamping speed
             _myBody.velocity = Vector3.Lerp(_myBody.velocity, Vector3.zero, 0.01f);
-            _myBody.velocity = new Vector3(Mathf.Clamp(_myBody.velocity.x, -maxSpeed - (Roo.WindScript.windSpeed / windSpeedClamp), maxSpeed), Mathf.Clamp(_myBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(_myBody.velocity.z, -maxSpeed, maxSpeed));
+            _myBody.velocity = new Vector3(Mathf.Clamp(_myBody.velocity.x, -maxSpeed - (Roo.WindScript.windSpeed * windSpeedClamp), maxSpeed), Mathf.Clamp(_myBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(_myBody.velocity.z, -maxSpeed, maxSpeed));
         }
         
         public void RotateTowards(Vector3 t)
@@ -73,10 +73,10 @@ namespace Harry
             // finding dir to turn towards
             Vector3 dir = t - _myModel.transform.position;
             // so we dont go upside down
-            dir = new Vector3(0,0,-dir.z);
+            dir = new Vector3(dir.x, 0,0);
             
             // so we dont go sideways/turn when we dont want to
-            if (dir.z < 0.1f && dir.z > -0.1f) return;
+            if (dir.x < 0.1f && dir.x > -0.1f) return;
             
             // setting turn speed
             float step = rotateSpeed * Time.deltaTime;
