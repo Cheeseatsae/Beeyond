@@ -28,8 +28,8 @@ namespace Harry
         public Color rayColor = Color.green;
 
         [Range(0,2)]    public float speedMult = 1;
-            public float windSpeedClamp;
-           public float windSpeedMult = 2;
+        [Range(0, 5)] public float windSpeedClamp;
+        [Range(0, 5)] public float windSpeedMult = 2;
         public float rotateThreshold = 0.1f;
         [Range(0,4)]    public float rotateSpeed = 2;
         public float maxSpeed = 5;
