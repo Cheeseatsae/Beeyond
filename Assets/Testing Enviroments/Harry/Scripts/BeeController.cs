@@ -53,7 +53,8 @@ namespace Harry
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
             
-            //RotateTowards(target.transform.position);
+            RotateTowards(target.transform.position);
+            Debug.DrawLine(_myModel.transform.position, _myModel.transform.position + _myModel.transform.forward * 4, Color.cyan);
             
             // setting desired velocity to be towards the target
             _velocity = ((target.transform.position - transform.position) * speedMult);
