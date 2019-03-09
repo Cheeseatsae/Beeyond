@@ -7,7 +7,6 @@ public class WindDebugPanel : MonoBehaviour
 {
     
     public GameObject _debugPanel; // canvas that can be switched on and off
-    private bool isCanvasShowing = true;
     
     
     // following texts are for live debugging
@@ -30,17 +29,14 @@ public class WindDebugPanel : MonoBehaviour
         // used for toggling audio canvas on and off
         if (Input.GetKeyDown(KeyCode.T))
         {
-            if (!isCanvasShowing)
+            if (_debugPanel.activeSelf)
             {
-                isCanvasShowing = true;
-                _debugPanel.SetActive(true);
-            }
-            else
-            {
-                isCanvasShowing = false;
                 _debugPanel.SetActive(false);
             }
-            
+           else
+           {
+               _debugPanel.SetActive(true);
+           }
         }
         
         
