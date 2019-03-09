@@ -1073,6 +1073,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5627209651417571159, guid: 2c1b3403ffe1d09449a1bccc76ed4f07,
+        type: 3}
+      propertyPath: m_Text
+      value: Ping Pong Speed
+      objectReference: {fileID: 0}
     - target: {fileID: 5627209652537009219, guid: 2c1b3403ffe1d09449a1bccc76ed4f07,
         type: 3}
       propertyPath: m_AnchorMax.x
