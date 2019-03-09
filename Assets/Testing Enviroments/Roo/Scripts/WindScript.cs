@@ -8,7 +8,9 @@ namespace Roo
 
     public class WindScript : MonoBehaviour
     {
-
+        public GameObject AudioC; // canvas that can be switched on and off
+        private bool isCanvasShowing = true;
+        
         public static float windSpeed = 0f; // eventual global wind speed --> use Roo.WindScript.windSpeed
 
         // values used to lerp to smooth out windSpeed jitters
@@ -51,7 +53,8 @@ namespace Roo
         public Text windSpeedText;
         public Text pingpongRangeText;
         public Text pingpongSpeedText;
-
+        public Slider windSpeedSlider;
+        
 
         // Start is called before the first frame update
         void Start()
@@ -60,6 +63,26 @@ namespace Roo
         }
 
         // Update is called once per frame
+        private void Update()
+        {
+            // used for toggling audio canvas on and off
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                if (!isCanvasShowing)
+                {
+                    isCanvasShowing = true;
+                    AudioC.SetActive(true);
+                }
+                else
+                {
+                    isCanvasShowing = false;
+                    AudioC.SetActive(false);
+                }
+            
+            }
+        }
+
+
         void FixedUpdate()
         {
 
@@ -67,7 +90,7 @@ namespace Roo
 
             windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
 
-            if (_newWindSpeed < 0.1f) // if at the start of the pingpong. set new random values
+            if (_newWindSpeed < 0.5f) // if at the start of the pingpong. set new random values
             {
                 _pingpongRange = GetRandomValue(0f); //get value for pingpong 
                 _pingpongSpeed = GetRandomValue(_pingpongRange); //use previous value to get weighted speed value
@@ -77,6 +100,7 @@ namespace Roo
 
 
             // set screen texts for debugging
+            windSpeedSlider.value = windSpeed;
             windSpeedText.text = "wind speed " + windSpeed.ToString();
             pingpongRangeText.text = "PP Range " + _pingpongRange.ToString();
             pingpongSpeedText.text = "pp Speed " + _pingpongSpeed.ToString();
