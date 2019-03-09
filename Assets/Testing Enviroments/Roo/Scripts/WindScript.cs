@@ -8,10 +8,10 @@ namespace Roo
 
     public class WindScript : MonoBehaviour
     {
-        public GameObject AudioC; // canvas that can be switched on and off
-        private bool isCanvasShowing = true;
-        
+        // public static variables for game
         public static float windSpeed = 0f; // eventual global wind speed --> use Roo.WindScript.windSpeed
+        public static float pingpongRange = 2f; //size of pingpong
+        public static float pingpongSpeed = 1f; // speed / rate of pingpong
 
         // values used to lerp to smooth out windSpeed jitters
         private float _oldWindSpeed = 0f;
@@ -19,10 +19,6 @@ namespace Roo
 
         // lower the lerpAmount to smooth out wind jitters
         [Range(0.0f, 0.1f)] public float lerpAmount;
-
-
-        float _pingpongRange = 2f; //size of pingpong
-        float _pingpongSpeed = 1f; // speed / rate of pingpong
 
         /*
          * the following ranges are used for weighted random variables
@@ -63,47 +59,18 @@ namespace Roo
         }
 
         // Update is called once per frame
-        private void Update()
-        {
-            // used for toggling audio canvas on and off
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                if (!isCanvasShowing)
-                {
-                    isCanvasShowing = true;
-                    AudioC.SetActive(true);
-                }
-                else
-                {
-                    isCanvasShowing = false;
-                    AudioC.SetActive(false);
-                }
-            
-            }
-        }
-
-
         void FixedUpdate()
         {
 
-            _newWindSpeed = Mathf.PingPong(Time.time * _pingpongSpeed, _pingpongRange); // get next pingpong value
+            _newWindSpeed = Mathf.PingPong(Time.time * pingpongSpeed, pingpongRange); // get next pingpong value
 
             windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
 
             if (_newWindSpeed < 0.5f) // if at the start of the pingpong. set new random values
             {
-                _pingpongRange = GetRandomValue(0f); //get value for pingpong 
-                _pingpongSpeed = GetRandomValue(_pingpongRange); //use previous value to get weighted speed value
+                pingpongRange = GetRandomValue(0f); //get value for pingpong 
+                pingpongSpeed = GetRandomValue(pingpongRange); //use previous value to get weighted speed value
             }
-
-
-
-
-            // set screen texts for debugging
-            windSpeedSlider.value = windSpeed;
-            windSpeedText.text = "wind speed " + windSpeed.ToString();
-            pingpongRangeText.text = "PP Range " + _pingpongRange.ToString();
-            pingpongSpeedText.text = "pp Speed " + _pingpongSpeed.ToString();
 
             _oldWindSpeed = windSpeed; // set _oldWindSpeed for origin of lerp before next update
 
