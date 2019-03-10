@@ -11,6 +11,7 @@ public class WindDebugPanel : MonoBehaviour
     
     // following texts are for live debugging
     public Slider windSpeedSlider;
+    public Image fill;
     
     public Text pingpongRangeText;
     public Text pingpongSpeedText;
@@ -38,10 +39,10 @@ public class WindDebugPanel : MonoBehaviour
                _debugPanel.SetActive(true);
            }
         }
-        
-        
-        // set screen texts for debugging
+
+        // set values in panel for debugging
         windSpeedSlider.value = Roo.WindScript.windSpeed;
+        fill.color = Color.Lerp(Color.green, Color.red, Roo.WindScript.windSpeed / 10f); // slider chnges colour depending on value
         windSpeedText.text = System.Math.Round(Roo.WindScript.windSpeed,2).ToString();
         pingpongRangeText.text = System.Math.Round(Roo.WindScript.pingpongRange,2).ToString();
         pingpongSpeedText.text = System.Math.Round(Roo.WindScript.pingpongSpeed,2).ToString();

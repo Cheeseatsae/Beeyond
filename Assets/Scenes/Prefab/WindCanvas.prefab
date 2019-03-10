@@ -318,7 +318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ping Pong Range
+  m_Text: Ping Pong Speed
 --- !u!1 &5627209651500886781
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -586,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _debugPanel: {fileID: 5627209652975332063}
   windSpeedSlider: {fileID: 5627209651234953026}
+  fill: {fileID: 5627209652537009218}
   pingpongRangeText: {fileID: 5627209652908216841}
   pingpongSpeedText: {fileID: 5627209651500886770}
   windSpeedText: {fileID: 5627209652819618579}

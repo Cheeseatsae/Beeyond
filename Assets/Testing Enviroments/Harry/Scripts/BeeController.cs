@@ -26,7 +26,7 @@ namespace Harry
         [Range(0,2)]    public float speedMult = 1;
         [Range(0, 5)]   public float windSpeedClamp;
         [Range(0, 5)]   public float windSpeedMult = 2;
-        [Range(0,4)]    public float rotateSpeed = 2;
+        [Range(0,10)]    public float rotateSpeed = 2;
         public float maxSpeed = 5;
 
         private void Awake()

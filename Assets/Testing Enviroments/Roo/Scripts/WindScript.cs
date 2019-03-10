@@ -43,13 +43,6 @@ namespace Roo
         [Range(1f, 10f)] public float weight3LowerRange;
         [Range(1f, 10f)] public float weight3UpperRange;
 
-
-
-// following texts are for live debugging
-        public Text windSpeedText;
-        public Text pingpongRangeText;
-        public Text pingpongSpeedText;
-        public Slider windSpeedSlider;
         
 
         // Start is called before the first frame update
