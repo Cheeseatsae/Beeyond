@@ -45,7 +45,6 @@ namespace Harry
 
         private void FixedUpdate()
         {
-
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
             
