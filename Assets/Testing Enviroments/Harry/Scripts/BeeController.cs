@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using UnityEngine;
-using UnityEngine.Networking;
+﻿using UnityEngine;
 
 namespace Harry
 {
@@ -13,7 +9,7 @@ namespace Harry
         // rotate on turn to have been follow its target 
         // put in a state for disabling input
         
-        public enum BeeState { Moving, Stopped }
+        public enum BeeState { Moving, Stopped, Pollenized }
         public BeeState myState = BeeState.Moving;
         
         public GameObject target;
@@ -28,14 +24,14 @@ namespace Harry
         public Color rayColor = Color.green;
 
         [Range(0,2)]    public float speedMult = 1;
-        [Range(0, 5)] public float windSpeedClamp;
-        [Range(0, 5)] public float windSpeedMult = 2;
-        public float rotateThreshold = 0.1f;
+        [Range(0, 5)]   public float windSpeedClamp;
+        [Range(0, 5)]   public float windSpeedMult = 2;
         [Range(0,4)]    public float rotateSpeed = 2;
         public float maxSpeed = 5;
 
         private void Awake()
         {
+            // setup
             _myBody = GetComponent<Rigidbody>();
             _flutter = GetComponent<BeeFlutter>();
             _myModel = GetComponentInChildren<Renderer>().gameObject;
