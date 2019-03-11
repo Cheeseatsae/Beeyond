@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Harry
 {
@@ -9,7 +13,7 @@ namespace Harry
         // rotate on turn to have been follow its target 
         // put in a state for disabling input
         
-        public enum BeeState { Moving, Stopped, Pollenized }
+        public enum BeeState { Moving, Stopped }
         public BeeState myState = BeeState.Moving;
         
         public GameObject target;
@@ -24,14 +28,14 @@ namespace Harry
         public Color rayColor = Color.green;
 
         [Range(0,2)]    public float speedMult = 1;
-        [Range(0, 5)]   public float windSpeedClamp;
-        [Range(0, 5)]   public float windSpeedMult = 2;
-        [Range(0,10)]    public float rotateSpeed = 2;
+        [Range(0, 5)] public float windSpeedClamp;
+        [Range(0, 5)] public float windSpeedMult = 2;
+        public float rotateThreshold = 0.1f;
+        [Range(0,4)]    public float rotateSpeed = 2;
         public float maxSpeed = 5;
 
         private void Awake()
         {
-            // setup
             _myBody = GetComponent<Rigidbody>();
             _flutter = GetComponent<BeeFlutter>();
             _myModel = GetComponentInChildren<Renderer>().gameObject;
@@ -40,11 +44,12 @@ namespace Harry
 
         private void Update()
         {
-            //RayCastDistanceCheck();
+            RayCastDistanceCheck();
         }
 
         private void FixedUpdate()
         {
+
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
             
@@ -98,13 +103,13 @@ namespace Harry
                     if(distance <= minDist )
                     {
                         Debug.Log(bees + "is to close");
-                        rayColor = Color.red;
+                        Debug.DrawRay(transform.position, (bees.transform.position - _myBody.transform.position), Color.red);
                         //move character away from close object
                     }
                     else if (distance >= maxDist)
                     {
                         Debug.Log("I need to move closer to" + bees);
-                        rayColor = Color.blue;
+                        Debug.DrawRay(transform.position, (bees.transform.position - _myBody.transform.position), Color.blue);
                         //move closer to object
                     }
                 }
