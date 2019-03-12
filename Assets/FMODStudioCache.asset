@@ -13,16 +13,14 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114439531705055876}
-  - {fileID: 114631844218744022}
+  - {fileID: 114982378723151634}
+  - {fileID: 114655607102000934}
   EditorEvents: []
-  MasterBanks:
-  - {fileID: 114631844218744022}
-  StringsBanks:
-  - {fileID: 114439531705055876}
-  stringsBankWriteTime: 636872819655995318
-  cacheVersion: 3
---- !u!114 &114159384403839104
+  MasterBankRef: {fileID: 114655607102000934}
+  StringsBankRef: {fileID: 114982378723151634}
+  stringsBankWriteTime: 636879866321629889
+  cacheVersion: 2
+--- !u!114 &114655607102000934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,52 +32,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: Assets\FMod\Beeyond Soundtrack\Build\Desktop\Music.strings.bank
-  lastModified: 636872876833017281
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 748
-  Exists: 1
---- !u!114 &114318582825932710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\thone\OneDrive\Documents\Beeyond\Beeyond\Assets\FMod\Beeyond Soundtrack\Build\Desktop\Atmos.bank
-  lastModified: 636872876833077116
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 450
-  Exists: 1
---- !u!114 &114326425528783372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\thone\OneDrive\Documents\Beeyond\Beeyond\Assets\FMod\Beeyond Soundtrack\Build\Desktop\Music.bank
-  lastModified: 636872876832876301
+  Path: C:\Users\tnewman6\Documents\Beeyond\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636879866321629889
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 12474
   Exists: 1
---- !u!114 &114439531705055876
+--- !u!114 &114982378723151634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,48 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: Assets\FMod\Beeyond Soundtrack\Build\Desktop\MasterBank.strings.bank
-  lastModified: 636872819655995318
+  Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636879866321629889
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 672
-  Exists: 1
---- !u!114 &114475584092432558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\thone\OneDrive\Documents\Beeyond\Beeyond\Assets\FMod\Beeyond Soundtrack\Build\Desktop\SFX.bank
-  lastModified: 636872876833148105
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 450
-  Exists: 1
---- !u!114 &114631844218744022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\rkooistra\Documents\Unity\Beeyond\Assets\FMod\Beeyond Soundtrack\Build\Desktop\MasterBank.bank
-  lastModified: 636872819655905550
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 12474
   Exists: 1

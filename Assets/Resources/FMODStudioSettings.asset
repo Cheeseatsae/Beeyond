@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\FMod\Beeyond Soundtrack\Beeyond.fspro
-  SourceProjectPathUnformatted: Assets\FMod\Beeyond Soundtrack\Beeyond.fspro
-  SourceBankPathUnformatted: Assets\FMod\Beeyond Soundtrack\Build
+  sourceProjectPath: Assets\BeeyondSoundtrack\BeeyondSound\BeeyondSound.fspro
+  SourceProjectPathUnformatted: Assets\BeeyondSoundtrack\BeeyondSound\BeeyondSound.fspro
+  SourceBankPathUnformatted: Assets\BeeyondSoundtrack\BeeyondSound\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -59,8 +59,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBanks:
-  - Music
-  Banks:
-  - Atmos
-  - SFX
+  MasterBank: Master Bank
+  Banks: []

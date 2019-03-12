@@ -38,21 +38,13 @@ namespace FMODUnity
 
             if (!levelScope)
             {
-                #if UNITY_2018_3_OR_NEWER
-                emitters.RemoveAll(x => PrefabUtility.GetPrefabAssetType(x) == PrefabAssetType.NotAPrefab);
-                #else
                 emitters.RemoveAll(x => PrefabUtility.GetPrefabType(x) != PrefabType.Prefab);
-                #endif
             }
 
             if (!prefabScope)
             {
-                #if UNITY_2018_3_OR_NEWER
-                emitters.RemoveAll(x => PrefabUtility.GetPrefabAssetType(x) == PrefabAssetType.NotAPrefab);
-                #else
-                emitters.RemoveAll(x => PrefabUtility.GetPrefabType(x) != PrefabType.Prefab);
-                #endif
-            }
+                emitters.RemoveAll(x => PrefabUtility.GetPrefabType(x) == PrefabType.Prefab);
+            }            
         }
 
         bool first = true;
