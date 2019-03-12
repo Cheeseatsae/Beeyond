@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 
 namespace Harry
@@ -33,6 +34,8 @@ namespace Harry
         public float rotateThreshold = 0.1f;
         [Range(0,4)]    public float rotateSpeed = 2;
         public float maxSpeed = 5;
+        [Range(10, 100)] public float windYAxisDivider;
+        public Text finalWindSpeed;
 
         private void Awake()
         {
@@ -45,10 +48,12 @@ namespace Harry
         private void Update()
         {
             RayCastDistanceCheck();
+            
         }
 
         private void FixedUpdate()
         {
+            finalWindSpeed.text = System.Math.Round(Roo.WindScript.windSpeed * windSpeedMult + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
 
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
@@ -59,7 +64,7 @@ namespace Harry
             // setting desired velocity to be towards the target
             _velocity = ((target.transform.position - transform.position) * speedMult);
             // applying sin variation and the wind effect
-            _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed * windSpeedMult), _velocity.y + _flutter.InputSin(), _velocity.z);
+            _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed * windSpeedMult + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider))), _velocity.y + _flutter.InputSin(), _velocity.z);
             
             // adding the force normalized
             _myBody.AddRelativeForce(_velocity);
