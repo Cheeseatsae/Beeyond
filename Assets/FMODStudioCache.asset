@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114982378723151634}
-  - {fileID: 114588896741685936}
+  - {fileID: 114842500476311862}
   EditorEvents: []
-  MasterBankRef: {fileID: 114588896741685936}
+  MasterBankRef: {fileID: 114842500476311862}
   StringsBankRef: {fileID: 114982378723151634}
-  stringsBankWriteTime: 636879847391463863
+  stringsBankWriteTime: 636880055981208222
   cacheVersion: 2
 --- !u!114 &114588896741685936
 MonoBehaviour:
@@ -60,6 +60,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114842500476311862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tnewman6\Documents\Beeyond\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636880055981258111
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
 --- !u!114 &114982378723151634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636879847391463863
+  lastModified: 636880055981208222
   LoadResult: 0
   FileSizes:
   - Name: Desktop
