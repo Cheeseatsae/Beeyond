@@ -53,7 +53,7 @@ namespace Harry
 
         private void FixedUpdate()
         {
-            finalWindSpeed.text = System.Math.Round(Roo.WindScript.windSpeed * windSpeedMult + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
+            finalWindSpeed.text = System.Math.Round((Roo.WindScript.windSpeed * windSpeedMult) + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
 
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) return;
@@ -64,7 +64,7 @@ namespace Harry
             // setting desired velocity to be towards the target
             _velocity = ((target.transform.position - transform.position) * speedMult);
             // applying sin variation and the wind effect
-            _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed * windSpeedMult + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider))), _velocity.y + _flutter.InputSin(), _velocity.z);
+            _velocity = new Vector3(_velocity.x - (Roo.WindScript.windSpeed * windSpeedMult) - (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)), _velocity.y + _flutter.InputSin(), _velocity.z);
             
             // adding the force normalized
             _myBody.AddRelativeForce(_velocity);
