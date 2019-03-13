@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7996547350269013560}
   - component: {fileID: 7996547350269013556}
   - component: {fileID: 7996547350269013559}
+  - component: {fileID: 7996547350146501615}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Untagged
@@ -122,3 +123,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
+  harvested: 0
+--- !u!65 &7996547350146501615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996547350269013561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.55, z: 0.8}
+  m_Center: {x: 0, y: 0.5, z: 0}

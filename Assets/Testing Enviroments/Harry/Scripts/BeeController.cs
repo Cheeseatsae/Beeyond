@@ -23,7 +23,7 @@ namespace Harry
         [HideInInspector] public CheckWhatsAround _whatsAround;
         [HideInInspector] public Vector3 _force;
 
-        public FlowerInteraction currentFlower;
+        public Interactable currentInteractable;
 
         [Range(0,5)] public float speedMult = 1;
         [Range(0, 5)] public float windSpeedClamp;
