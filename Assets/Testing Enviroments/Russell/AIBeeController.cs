@@ -57,14 +57,14 @@ namespace Harry
                     distance = Vector3.Distance(transform.position, bees.transform.position);
                     if(distance <= minAiDist )
                     {
-                        Debug.Log(bees + "is to close");
+                        //Debug.Log(bees + "is to close");
                         //Debug.DrawRay(transform.position, (bees.transform.position - _myBody.transform.position), Color.red);
                         _moveForce = ((transform.position - bees.transform.position) * speedMult);
                         _myBody.AddForce(_moveForce);
                     }
                     else if (distance >= maxDist)
                     {
-                        Debug.Log("I need to move closer to" + bees);
+                        //Debug.Log("I need to move closer to" + bees);
                         //Debug.DrawRay(transform.position, (bees.transform.position - _myBody.transform.position), Color.blue);
                         _moveForce = ((bees.transform.position - transform.position) * speedMult);
                         _myBody.AddForce(_moveForce);
