@@ -14,7 +14,7 @@ namespace Harry
         // rotate on turn to have been follow its target 
         // put in a state for disabling input
         
-        public enum BeeState { Moving, Stopped }
+        public enum BeeState { Moving, Stopped, Pollenated }
         public BeeState myState = BeeState.Moving;
         
         public GameObject target;
@@ -28,11 +28,13 @@ namespace Harry
         public float maxDist;
         public Color rayColor = Color.green;
 
-        [Range(0,2)]    public float speedMult = 1;
+        public FlowerInteraction currentFlower;
+
+        [Range(0,2)] public float speedMult = 1;
         [Range(0, 5)] public float windSpeedClamp;
         [Range(0, 5)] public float windSpeedMult = 2;
         public float rotateThreshold = 0.1f;
-        [Range(0,4)]    public float rotateSpeed = 2;
+        [Range(0,4)] public float rotateSpeed = 2;
         public float maxSpeed = 5;
         [Range(10, 100)] public float windYAxisDivider;
         public Text finalWindSpeed;
@@ -55,9 +57,29 @@ namespace Harry
         {
             finalWindSpeed.text = System.Math.Round((Roo.WindScript.windSpeed * windSpeedMult) + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
 
+            // HACK will need to be redone later 
+            if (Input.GetButtonDown(KeyCode.E))
+            {
+                switch (myState)
+                {
+                    case BeeState.Stopped:
+                        myState = BeeState.Pollenated;
+                        currentFlower.Harvest();
+
+                        break;
+
+                    case BeeState.Pollenated:
+                        myState = BeeState.Moving;
+
+
+                        break;  
+                }
+               
+            }
+
             // if we're stopped do nothing
-            if (myState == BeeState.Stopped) return;
-            
+            if (myState == BeeState.Stopped) return
+
             RotateTowards(target.transform.position);
             Debug.DrawLine(_myModel.transform.position, _myModel.transform.position + _myModel.transform.forward * 4, Color.cyan);
             

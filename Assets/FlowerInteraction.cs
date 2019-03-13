@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FlowerInteraction : MonoBehaviour
 {
+    public bool harvested = false;
+
     private float previousWindMod;
     private GameObject myBee;
     private BeeController myBeeController;
@@ -19,6 +21,8 @@ public class FlowerInteraction : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
+        if (harvested) return;
+
         // on collision with a bee occupy the flower if we aren't already occupied
         if (other.gameObject.GetComponent<BeeController>() != null && state == FlowerState.Unoccupied)
         {
@@ -26,6 +30,7 @@ public class FlowerInteraction : MonoBehaviour
             state = FlowerState.Occupied;
             myBee = other.gameObject;
             myBeeController = myBee.GetComponent<BeeController>();
+            myBeeController.currentFlower = GetComponent<FlowerInteraction>();
             
             // removing wind effectiveness from bee
             previousWindMod = myBeeController.windSpeedMult;
@@ -42,9 +47,15 @@ public class FlowerInteraction : MonoBehaviour
         {
             // turn wind back on
             myBeeController.windSpeedMult = previousWindMod;
+            myBeeController.currentFlower = null;
             // remove references 
             myBee = null;
             myBeeController = null;
         }
+    }
+
+    public void Harvest()
+    {
+        if (!harvested) harvested = true;
     }
 }
