@@ -179,9 +179,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7861828436680828367}
   - component: {fileID: 7861828436680828364}
-  - component: {fileID: 6387984386942511503}
   - component: {fileID: 7861828436581189464}
   - component: {fileID: 698481252}
+  - component: {fileID: 114693724}
   m_Layer: 0
   m_Name: Smart Bee
   m_TagString: Untagged
@@ -221,32 +221,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &6387984386942511503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7861828436680828366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f82522287035074d818d165fcc081c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myState: 0
-  target: {fileID: 7861828437704780591}
-  minDist: 0
-  maxDist: 0
-  rayColor: {r: 0, g: 1, b: 0, a: 1}
-  currentFlower: {fileID: 0}
-  speedMult: 1
-  windSpeedClamp: 1.02
-  windSpeedMult: 0.05
-  rotateThreshold: 0.1
-  rotateSpeed: 4
-  maxSpeed: 5
-  windYAxisDivider: 20
-  finalWindSpeed: {fileID: 0}
 --- !u!114 &7861828436581189464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +250,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114693724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861828436680828366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5282af4e6f38b4aa06e501d0e63ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 7861828437704780591}
+  _myBody: {fileID: 0}
+  _flutter: {fileID: 0}
+  _myModel: {fileID: 0}
+  _whatsAround: {fileID: 0}
+  _force: {x: 0, y: 0, z: 0}
+  currentFlower: {fileID: 0}
+  speedMult: 1
+  windSpeedClamp: 1.02
+  windSpeedMult: 0.05
+  rotateThreshold: 0.1
+  rotateSpeed: 4
+  maxSpeed: 5
+  windYAxisDivider: 20
+  finalWindSpeed: {fileID: 0}
+  myState: 0
 --- !u!1 &7861828437704780591
 GameObject:
   m_ObjectHideFlags: 0
