@@ -8,6 +8,7 @@ namespace Harry
 {
     public class CheckWhatsAround : MonoBehaviour
     {
+        [HideInInspector]
         public List<GameObject> WhosAround = new List<GameObject>();
     
         public SphereCollider collider;
