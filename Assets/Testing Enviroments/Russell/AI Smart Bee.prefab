@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6446853952683379242}
   - component: {fileID: 2449698643631514233}
   - component: {fileID: 5699048793883817988}
-  - component: {fileID: 2741018623065246125}
+  - component: {fileID: 1262493744}
   m_Layer: 0
-  m_Name: BeeAI
+  m_Name: AI Smart Bee
   m_TagString: Bee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &5699048793883817988
 MonoBehaviour:
@@ -126,7 +126,7 @@ MonoBehaviour:
   amplitude: 0.6
   distance: 0.5
   amount: 0.5
---- !u!114 &2741018623065246125
+--- !u!114 &1262493744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,17 +135,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2449698643631514231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f82522287035074d818d165fcc081c0, type: 3}
+  m_Script: {fileID: 11500000, guid: a42add73f910ebd4b8ac7ef88a632004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  _myBody: {fileID: 0}
+  _flutter: {fileID: 0}
+  _myModel: {fileID: 0}
+  _whatsAround: {fileID: 0}
+  _force: {x: 0, y: 0, z: 0}
+  currentFlower: {fileID: 0}
+  speedMult: 1
+  windSpeedClamp: 1.02
+  windSpeedMult: 0.05
+  rotateThreshold: 0.1
+  rotateSpeed: 4
+  maxSpeed: 5
+  windYAxisDivider: 20
+  finalWindSpeed: {fileID: 0}
   myState: 0
-  target: {fileID: 4951779462938916633, guid: de9fc16b21bbec04f8be38a8688fdd63, type: 3}
   minDist: 0
   maxDist: 0
   rayColor: {r: 0, g: 1, b: 0, a: 1}
-  speedMult: 1
-  windSpeedClamp: 0
-  windSpeedMult: 2
-  rotateThreshold: 0.1
-  rotateSpeed: 2
-  maxSpeed: 5
