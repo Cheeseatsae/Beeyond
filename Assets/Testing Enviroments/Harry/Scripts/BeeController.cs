@@ -49,16 +49,16 @@ namespace Harry
 
         private void Update()
         {
-            RayCastDistanceCheck();
+           // RayCastDistanceCheck();
             
         }
 
         private void FixedUpdate()
         {
-            finalWindSpeed.text = System.Math.Round((Roo.WindScript.windSpeed * windSpeedMult) + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
+//            finalWindSpeed.text = System.Math.Round((Roo.WindScript.windSpeed * windSpeedMult) + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
 
             // HACK will need to be redone later 
-            if (Input.GetButtonDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 switch (myState)
                 {
@@ -71,14 +71,13 @@ namespace Harry
                     case BeeState.Pollenated:
                         myState = BeeState.Moving;
 
-
                         break;  
                 }
                
             }
 
             // if we're stopped do nothing
-            if (myState == BeeState.Stopped) return
+            if (myState == BeeState.Stopped) return;
 
             RotateTowards(target.transform.position);
             Debug.DrawLine(_myModel.transform.position, _myModel.transform.position + _myModel.transform.forward * 4, Color.cyan);

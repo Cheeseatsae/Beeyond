@@ -238,11 +238,15 @@ MonoBehaviour:
   minDist: 0
   maxDist: 0
   rayColor: {r: 0, g: 1, b: 0, a: 1}
+  currentFlower: {fileID: 0}
   speedMult: 1
   windSpeedClamp: 1.02
   windSpeedMult: 0.05
+  rotateThreshold: 0.1
   rotateSpeed: 4
   maxSpeed: 5
+  windYAxisDivider: 20
+  finalWindSpeed: {fileID: 0}
 --- !u!114 &7861828436581189464
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -392,10 +392,6 @@ MonoBehaviour:
   weight2UpperRange: 5.3
   weight3LowerRange: 7.5
   weight3UpperRange: 10
-  windSpeedText: {fileID: 0}
-  pingpongRangeText: {fileID: 0}
-  pingpongSpeedText: {fileID: 0}
-  windSpeedSlider: {fileID: 0}
 --- !u!4 &1860828315
 Transform:
   m_ObjectHideFlags: 0
@@ -476,6 +472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387984386942511503, guid: ba54ec61043d2df4c92e0c559adeee25,
+        type: 3}
+      propertyPath: windYAxisDivider
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba54ec61043d2df4c92e0c559adeee25, type: 3}
