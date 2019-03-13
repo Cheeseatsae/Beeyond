@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2449698643631514233}
   - component: {fileID: 5699048793883817988}
   - component: {fileID: 1262493744}
+  - component: {fileID: 1543035680}
+  - component: {fileID: 1543035681}
   m_Layer: 0
   m_Name: AI Smart Bee
   m_TagString: Bee
@@ -31,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 2449698643631514231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -68.83, y: 24.635958, z: 4.7}
-  m_LocalScale: {x: 2.0585, y: 2.0585, z: 2.0585}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -145,7 +147,7 @@ MonoBehaviour:
   _whatsAround: {fileID: 0}
   _force: {x: 0, y: 0, z: 0}
   currentFlower: {fileID: 0}
-  speedMult: 1
+  speedMult: 0.71
   windSpeedClamp: 1.02
   windSpeedMult: 0.05
   rotateThreshold: 0.1
@@ -154,6 +156,36 @@ MonoBehaviour:
   windYAxisDivider: 20
   finalWindSpeed: {fileID: 0}
   myState: 0
-  minDist: 0
-  maxDist: 0
+  minPlayerDistance: 5
+  minAiDist: 7
+  maxDist: 20
   rayColor: {r: 0, g: 1, b: 0, a: 1}
+  braking: 10000
+--- !u!135 &1543035680
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449698643631514231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1543035681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449698643631514231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ced031e3bffb94c9fcefa8bf7924e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhosAround: []
+  collider: {fileID: 0}
+  raduisOfSphere: 20

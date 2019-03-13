@@ -26,7 +26,7 @@ namespace Harry
     
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Bee")
+            if (other.GetComponent<AIBeeController>())
             {
                 WhosAround.Add(other.gameObject);
             }
