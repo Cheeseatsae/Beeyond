@@ -3595,7 +3595,7 @@ PrefabInstance:
     - target: {fileID: 7861828436680828364, guid: ba54ec61043d2df4c92e0c559adeee25,
         type: 3}
       propertyPath: m_Mass
-      value: 0.45
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7861828436680828364, guid: ba54ec61043d2df4c92e0c559adeee25,
         type: 3}
@@ -3664,7 +3664,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114693724, guid: ba54ec61043d2df4c92e0c559adeee25, type: 3}
       propertyPath: windYAxisDivider
-      value: 70.6
+      value: 65.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114693724, guid: ba54ec61043d2df4c92e0c559adeee25, type: 3}
+      propertyPath: windSpeedMult
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba54ec61043d2df4c92e0c559adeee25, type: 3}
