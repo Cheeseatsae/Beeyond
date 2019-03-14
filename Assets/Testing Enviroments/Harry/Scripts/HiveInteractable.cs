@@ -4,18 +4,32 @@ using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
-
 namespace Harry
 {
     
     public class HiveInteractable : Interactable
     { 
         
-        int amountOfBees = 2;
+        public int[] amountOfBees;
+        public int[] pollenRequirement;
         public GameObject aiBee;
-        
+
+        public int pollenCount = 0;
+        private int triggerCount = 0;
+    
+        public delegate void OnPollenIncrease(int i);
+
+        public static OnPollenIncrease PollenCollected;
+
+        private void Start()
+        {
+            // spawn bees on event
+            PollenCollected += SpawnBees;
+        }
+
         public override void OnCollisionEnter(Collision other)
         {
+            // if bee isnt pollenated dont let it do anything
             if (other.gameObject.GetComponent<BeeController>().myState != BeeController.BeeState.Pollenated) return;
             
             base.OnCollisionEnter(other);
@@ -23,33 +37,36 @@ namespace Harry
 
         public override void OnInteract()
         {
-            //if (myBeeController.myState != BeeController.BeeState.Pollenated) return;
-
-            Debug.Log("Hive triggered");
+            // if interacted increase the pollen count
+            pollenCount++;
+            // allow bee to move
             myBeeController.myState = BeeController.BeeState.Moving;
 
-            for (int i = 0; i < amountOfBees; i++)
+            if (triggerCount > pollenRequirement.Length - 1) return;
+            // with enough pollen run event
+            if (pollenCount >= pollenRequirement[triggerCount])
+            {
+                triggerCount++;
+                PollenCollected?.Invoke(triggerCount);
+            }
+            
+            base.OnInteract();
+        }
+
+        public void SpawnBees(int count)
+        {
+            //if (amountOfBees.Length > count) return;
+            
+            for (int i = 0; i < amountOfBees[count - 1]; i++)
             {
                 GameObject newBee = Instantiate(aiBee, transform.position + (Vector3.up * 4), Quaternion.Euler(0, 0, 0));
                 newBee.GetComponent<BeeController>().target = myBee;
             }
-            
-            IncreaseBees();
-            base.OnInteract();
         }
-
-        public void IncreaseBees()
+        
+        private void OnDestroy()
         {
-            switch (amountOfBees)
-            {
-                case 2:
-                    amountOfBees = 5;
-                    break;
-                
-                case 5:
-                    amountOfBees = 8;
-                    break;
-            }
+            PollenCollected -= SpawnBees;
         }
     }
     

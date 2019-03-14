@@ -1,5 +1,6 @@
 ﻿using System.Collections; 
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using Harry;
 using UnityEngine;
 
 namespace Roo
@@ -18,22 +19,8 @@ namespace Roo
         // Start is called before the first frame update 
         void Start()
         {
-
+            HiveInteractable.PollenCollected += IncreaseClamp;
         }
-
-        // Update is called once per frame 
-        void Update()
-        {
-            if (Input.GetKeyUp(KeyCode.G))
-            {
-                if (openGate < cameraClampMaxX.Length - 1)
-                {
-                    openGate += 1;
-                }
-
-            }
-        }
-
 
         void FixedUpdate()
         {
@@ -48,5 +35,17 @@ namespace Roo
                     Mathf.Clamp(transform.position.y, 1.19f, 15.33f), transform.position.z); // clamp camera boundaries 
         }
 
+        public void IncreaseClamp(int count)
+        {
+            if (openGate < cameraClampMaxX.Length - 1)
+            {
+                openGate = count;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            HiveInteractable.PollenCollected -= IncreaseClamp;
+        }
     }
 }

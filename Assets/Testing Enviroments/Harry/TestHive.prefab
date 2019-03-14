@@ -305,7 +305,10 @@ MonoBehaviour:
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
   state: 1
+  amountOfBees: 0100000002000000030000000400000005000000
+  pollenRequirement: 0100000002000000030000000400000005000000
   aiBee: {fileID: 2449698643631514231, guid: de9fc16b21bbec04f8be38a8688fdd63, type: 3}
+  pollenCount: 0
 --- !u!1 &7364060636397244479
 GameObject:
   m_ObjectHideFlags: 0
