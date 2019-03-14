@@ -15,13 +15,27 @@ namespace Harry
         float distance;
         private Vector3 _moveForce;
         public float braking = 10000;
-        private Vector3 brakeForce;
+        private Vector3 brakeForce;      
+        public ObjAvoidance avoidColl;
+        public Vector3 avoidanceForce;
+        RaycastHit leftHit;
+        RaycastHit rightHit;
+        public float offset = 5;
+        RaycastHit downHit;
+        RaycastHit upHit;
+        public GameObject upPoint;
+        public GameObject downPoint;
+        public GameObject leftPoint;
+        public GameObject rightPoint;
         public override void FixedUpdate()
         {
             
             base.FixedUpdate();
+            
             RaycastPlayerDistanceCheck();
+            
             RayCastAiDistanceCheck();
+            ObjAvoidance();
         }
 
         public void RaycastPlayerDistanceCheck()
@@ -35,7 +49,7 @@ namespace Harry
                 if(distance <= minPlayerDistance )
                 {
                     //Debug.Log(target + "is to close");
-                    //.DrawRay(transform.position, (target.transform.position - _myBody.transform.position), Color.red);
+                    //Debug.DrawRay(transform.position, (target.transform.position - _myBody.transform.position), Color.red);
                     _moveForce = ((transform.position - target.transform.position) * speedMult * 2);
                     _myBody.AddForce(_moveForce);
 
@@ -72,6 +86,43 @@ namespace Harry
                 }
             }
         }
+
+        public void ObjAvoidance()
+        {
+            // velocity += force / Mathf.Abs(distance / 5);
+            
+            float distance;
+            if (Physics.Raycast(rightPoint.transform.position, Quaternion.AngleAxis(45f, transform.up) * transform.forward, out rightHit, 10f))
+            {
+                distance = Vector3.Distance(_myBody.transform.position, rightHit.point);
+                Debug.DrawLine(rightPoint.transform.position, rightHit.point, Color.cyan);
+                avoidanceForce = (transform.position - rightHit.point) / (distance / offset) * 2;
+                _myBody.AddForce(avoidanceForce);
+            }
+            if (Physics.Raycast(leftPoint.transform.position, Quaternion.AngleAxis(-45f, transform.up) * transform.forward, out leftHit, 10f))
+            {
+                distance = Vector3.Distance(_myBody.transform.position, leftHit.point);
+                Debug.DrawLine(leftPoint.transform.position, leftHit.point, Color.cyan);
+                avoidanceForce = (transform.position - leftHit.point) / (distance / offset)* 2;
+                _myBody.AddForce(avoidanceForce);
+            }
+            if (Physics.Raycast(downPoint.transform.position, Quaternion.AngleAxis(45f, transform.right) * transform.forward, out downHit, 10f))
+            {
+                distance = Vector3.Distance(_myBody.transform.position, downHit.point);
+                Debug.DrawLine(downPoint.transform.position, downHit.point, Color.cyan);
+                avoidanceForce = (transform.position - downHit.point) / (distance / offset)* 2;
+                _myBody.AddForce(avoidanceForce);
+            }
+            if (Physics.Raycast(upPoint.transform.position, Quaternion.AngleAxis(-45f, transform.right) * transform.forward, out upHit, 10f))
+            {
+                distance = Vector3.Distance(_myBody.transform.position, upHit.point);
+                Debug.DrawLine(upPoint.transform.position, upHit.point, Color.cyan);
+                avoidanceForce = (transform.position - upHit.point) / (distance / offset)* 2;
+                _myBody.AddForce(avoidanceForce);
+            }
+        }
+
+
         
     }
     
