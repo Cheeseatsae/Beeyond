@@ -20,6 +20,7 @@ namespace Harry
         public override void OnInteract()
         {
             harvested = true;
+            GetComponent<Renderer>().material.color = Color.grey;
             myBeeController.myState = BeeController.BeeState.Pollenated;
             base.OnInteract();
         }
