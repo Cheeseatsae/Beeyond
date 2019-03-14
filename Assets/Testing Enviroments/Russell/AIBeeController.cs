@@ -27,37 +27,44 @@ namespace Harry
         public GameObject downPoint;
         public GameObject leftPoint;
         public GameObject rightPoint;
+        public Transform myTransform;
+
+        private void Update()
+        {
+           
+        }
+
+
         public override void FixedUpdate()
         {
             
             base.FixedUpdate();
             
-            RaycastPlayerDistanceCheck();
+            PlayerDistanceCheck();
             
-            RayCastAiDistanceCheck();
-            ObjAvoidance();
+            AiDistanceCheck();
+            //ObjAvoidance();
         }
 
-        public void RaycastPlayerDistanceCheck()
-        {
-            
-            if (Physics.Raycast(_myBody.transform.position, (target.transform.position - _myBody.transform.position), 30))
-            {
-                //Debug.Log("raycast plz");
-                //Debug.DrawRay(transform.position, (target.transform.position - _myBody.transform.position), rayColor);
-                distance = Vector3.Distance(transform.position, target.transform.position);
-                if(distance <= minPlayerDistance )
-                {
-                    //Debug.Log(target + "is to close");
-                    //Debug.DrawRay(transform.position, (target.transform.position - _myBody.transform.position), Color.red);
-                    _moveForce = ((transform.position - target.transform.position) * speedMult * 2);
-                    _myBody.AddForce(_moveForce);
-
-
-                }
-            }
-        }
-        public void RayCastAiDistanceCheck()
+        public void PlayerDistanceCheck()
+                 {
+                     
+         
+                         //Debug.Log("raycast plz");
+                         //Debug.DrawRay(transform.position, (target.transform.position - _myBody.transform.position), rayColor);
+                         distance = Vector3.Distance(transform.position, target.transform.position);
+                         if(distance <= minPlayerDistance )
+                         {
+                             //Debug.Log(target + "is to close");
+                             //Debug.DrawRay(transform.position, (target.transform.position - _myBody.transform.position), Color.red);
+                             _moveForce = ((transform.position - target.transform.position) * speedMult * 2);
+                             _myBody.AddForce(_moveForce);
+         
+         
+                         }
+                  
+                 }
+        public void AiDistanceCheck()
         {
             foreach (GameObject bees in _whatsAround.WhosAround)
             {
@@ -65,9 +72,7 @@ namespace Harry
                 //Debug.Log(bees + "now raycast");
                 //rayColor = Color.red;
                 
-                if (Physics.Raycast(_myBody.transform.position, (bees.transform.position - _myBody.transform.position), _whatsAround.raduisOfSphere))
-                {
-                    //Debug.DrawRay(transform.position, (bees.transform.position - _myBody.transform.position), rayColor);
+                
                     distance = Vector3.Distance(transform.position, bees.transform.position);
                     if(distance <= minAiDist )
                     {
@@ -83,7 +88,6 @@ namespace Harry
                         _moveForce = ((bees.transform.position - transform.position) * speedMult);
                         _myBody.AddForce(_moveForce);
                     }
-                }
             }
         }
 
