@@ -11,15 +11,14 @@ namespace Harry
         private void Update()
         {
             // HACK will need to be redone later 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+
                 if (myState == BeeState.Stopped)
                 {
                     Debug.Log(currentInteractable);
                     currentInteractable.OnInteract();
                 }
                
-            }
+            
         }
 
         // Update is called once per frame
