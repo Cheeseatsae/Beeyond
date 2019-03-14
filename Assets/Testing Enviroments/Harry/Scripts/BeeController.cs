@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,9 +34,11 @@ namespace Harry
         public float maxSpeed = 5;
         [Range(10, 100)] public float windYAxisDivider;
         public Text finalWindSpeed;
+        public Text playerState;
 
         public enum BeeState { Moving, Stopped, Pollenated }
         public BeeState myState = BeeState.Moving;
+        
         
         public virtual void Awake()
         {
@@ -44,6 +47,8 @@ namespace Harry
             _myModel = GetComponentInChildren<Renderer>().gameObject;
             _whatsAround = GetComponent<CheckWhatsAround>();
         }
+        
+        
 
         public virtual void FixedUpdate()
         {
@@ -61,7 +66,7 @@ namespace Harry
             // adding drag to slow us and clamping speed
             _myBody.velocity = Vector3.Lerp(_myBody.velocity, Vector3.zero, 0.01f);
             _myBody.velocity = new Vector3(Mathf.Clamp(_myBody.velocity.x, -maxSpeed - (Roo.WindScript.windSpeed * windSpeedClamp), maxSpeed), Mathf.Clamp(_myBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(_myBody.velocity.z, -maxSpeed, maxSpeed));
-            
+ 
             if (finalWindSpeed != null)
                 finalWindSpeed.text = System.Math.Round((Roo.WindScript.windSpeed * windSpeedMult) + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
         }

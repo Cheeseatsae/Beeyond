@@ -11,6 +11,7 @@ namespace Harry
         private void Update()
         {
             // HACK will need to be redone later 
+            playerState.text = myState.ToString();
 
                 if (myState == BeeState.Stopped)
                 {

@@ -43,7 +43,7 @@ namespace Harry
             PlayerDistanceCheck();
             
             AiDistanceCheck();
-            //ObjAvoidance();
+            ObjAvoidance();
         }
 
         public void PlayerDistanceCheck()
