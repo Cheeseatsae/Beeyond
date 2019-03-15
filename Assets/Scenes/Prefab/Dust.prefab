@@ -95,7 +95,7 @@ MonoBehaviour:
   perlinSmoothness: 15.8
   perlinAplitude: 1.97
   dustMinimumSpeed: 0.36
-  yAxisSpeedMultiplyer: 0.74
+  yAxisSpeedMultiplyer: 1.22
   secondsToDestroy: 2
   xOffsetToDestroy: 10
   yOffsetToDestroy: 10
