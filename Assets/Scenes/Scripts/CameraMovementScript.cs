@@ -15,6 +15,13 @@ namespace Roo
         public float cameraClampMinX;
         public float[] cameraClampMaxX;
         public int openGate = 0;
+        public static GameObject liveCamera;
+
+        void Awake()
+        {
+            liveCamera = this.gameObject;
+        }
+        
 
         // Start is called before the first frame update 
         void Start()

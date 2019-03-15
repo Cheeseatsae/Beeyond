@@ -15,11 +15,15 @@ public class DustMovement : MonoBehaviour
     [Range(0f,10f)] public float dustMinimumSpeed = 1;
     [Range(0.1f, 10f)] public float yAxisSpeedMultiplyer = 1;
     [Range(0.1f, 20f)] public float secondsToDestroy = 10;
+
+    private Transform _camTransform;
     
         
     // Start is called before the first frame update
     void Start()
     {
+        _camTransform = Roo.CameraMovementScript.liveCamera.transform;
+        StartCoroutine(ParticleCheck());
         Destroy(this.gameObject,secondsToDestroy);
         _originalPos = transform.position;
     }
@@ -40,6 +44,33 @@ public class DustMovement : MonoBehaviour
             
         }
         transform.position = new Vector3(transform.position.x - (Roo.WindScript.windSpeed * Time.deltaTime)-(dustMinimumSpeed * Time.deltaTime) - yMulti, _originalPos.y + (_perlinNoise * perlinAplitude), _originalPos.z);
+    }
+    
+    public IEnumerator ParticleCheck()
+    {
+        yield return new WaitForSeconds(secondsToDestroy);
+
+        bool check = false;
+        
+        if (transform.position.x < _camTransform.position.x - 10f)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            check = true;
+        }
+
+        while (check)
+        {
+            yield return new WaitForSeconds(1);
+
+            if (transform.position.x < _camTransform.position.x - 10f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
     }
 
 }
