@@ -8,6 +8,7 @@ public class DustMovement : MonoBehaviour
     private float _perlinNoise = 0f;
     private Vector3 _originalPos;
     private Vector3 _pos;
+    private float _progressiveY;
     
     
     [Range(1f,20f)] public float perlinSmoothness = 3;
@@ -16,6 +17,8 @@ public class DustMovement : MonoBehaviour
     [Range(0.1f, 10f)] public float yAxisSpeedMultiplyer = 1;
     [Range(0.1f, 20f)] public float secondsToDestroy = 10;
     [Range(0.1f, 40f)] public float xOffsetToDestroy = 10;
+    [Range(0.1f, 40f)] public float yOffsetToDestroy = 10;
+    [Range(0f, 10f)] public float fallRate = 2f;
 
     private Transform _camTransform;
     
@@ -26,6 +29,7 @@ public class DustMovement : MonoBehaviour
         _camTransform = Roo.CameraMovementScript.liveCamera.transform;
         StartCoroutine(ParticleCheck());
         _originalPos = transform.position;
+        _progressiveY = _originalPos.y;
     }
 
     void Update()
@@ -42,7 +46,8 @@ public class DustMovement : MonoBehaviour
             yMulti = 0;
             
         }
-        transform.position = new Vector3(transform.position.x - (Roo.WindScript.windSpeed * Time.deltaTime)-(dustMinimumSpeed * Time.deltaTime) - yMulti, _originalPos.y + (_perlinNoise * perlinAplitude), _originalPos.z);
+        transform.position = new Vector3(transform.position.x - (Roo.WindScript.windSpeed * Time.deltaTime)-(dustMinimumSpeed * Time.deltaTime) - yMulti, _progressiveY + (_perlinNoise * perlinAplitude), _originalPos.z);
+        _progressiveY -= fallRate*Time.deltaTime;
     }
     
     public IEnumerator ParticleCheck()
@@ -51,7 +56,7 @@ public class DustMovement : MonoBehaviour
 
         bool check = false;
         
-        if (transform.position.x < _camTransform.position.x - xOffsetToDestroy)
+        if (transform.position.x < _camTransform.position.x - xOffsetToDestroy || transform.position.y < _camTransform.position.y - yOffsetToDestroy)
         {
             Destroy(this.gameObject);
         }
@@ -64,7 +69,7 @@ public class DustMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
 
-            if (transform.position.x < _camTransform.position.x - xOffsetToDestroy)
+            if (transform.position.x < _camTransform.position.x - xOffsetToDestroy|| transform.position.y < _camTransform.position.y - yOffsetToDestroy)
             {
                 Destroy(this.gameObject);
             }

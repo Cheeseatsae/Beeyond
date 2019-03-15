@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e08718f5b40664c8b53cad7b20bdf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerSize: {x: 0.5, y: 25, z: 15}
+  spawnerSize: {x: 0.5, y: 30, z: 15}
   DustPrefab: {fileID: 8684505912292865344, guid: db603b0f6f599324a938b7348ecd5a0e,
     type: 3}
   offsetAxisY: -2.1

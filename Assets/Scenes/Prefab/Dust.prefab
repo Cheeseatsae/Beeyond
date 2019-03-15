@@ -96,5 +96,7 @@ MonoBehaviour:
   perlinAplitude: 1.97
   dustMinimumSpeed: 0.79
   yAxisSpeedMultiplyer: 0.86
-  secondsToDestroy: 5
-  xOffsetToDestroy: 20
+  secondsToDestroy: 1
+  xOffsetToDestroy: 10
+  yOffsetToDestroy: 10
+  fallRate: 1.2
