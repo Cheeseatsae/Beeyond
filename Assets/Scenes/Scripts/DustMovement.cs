@@ -15,6 +15,7 @@ public class DustMovement : MonoBehaviour
     [Range(0f,10f)] public float dustMinimumSpeed = 1;
     [Range(0.1f, 10f)] public float yAxisSpeedMultiplyer = 1;
     [Range(0.1f, 20f)] public float secondsToDestroy = 10;
+    [Range(0.1f, 40f)] public float xOffsetToDestroy = 10;
 
     private Transform _camTransform;
     
@@ -24,11 +25,9 @@ public class DustMovement : MonoBehaviour
     {
         _camTransform = Roo.CameraMovementScript.liveCamera.transform;
         StartCoroutine(ParticleCheck());
-        Destroy(this.gameObject,secondsToDestroy);
         _originalPos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         _pos = transform.position;
@@ -52,7 +51,7 @@ public class DustMovement : MonoBehaviour
 
         bool check = false;
         
-        if (transform.position.x < _camTransform.position.x - 10f)
+        if (transform.position.x < _camTransform.position.x - xOffsetToDestroy)
         {
             Destroy(this.gameObject);
         }
@@ -65,7 +64,7 @@ public class DustMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
 
-            if (transform.position.x < _camTransform.position.x - 10f)
+            if (transform.position.x < _camTransform.position.x - xOffsetToDestroy)
             {
                 Destroy(this.gameObject);
             }
