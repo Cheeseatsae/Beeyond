@@ -217,21 +217,23 @@ MonoBehaviour:
   rotateThreshold: 0.1
   rotateSpeed: 4
   maxSpeed: 5
-  windYAxisDivider: 20
+  windYAxisDivider: 73
   finalWindSpeed: {fileID: 0}
+  playerState: {fileID: 0}
   myState: 0
-  minPlayerDistance: 5
-  minAiDist: 7
-  maxDist: 20
+  minPlayerDistance: 3
+  minAiDist: 5
+  maxDist: 15
   rayColor: {r: 0, g: 1, b: 0, a: 1}
   braking: 10000
   avoidColl: {fileID: 0}
   avoidanceForce: {x: 0, y: 0, z: 0}
-  offset: 5
+  offset: 3
   upPoint: {fileID: 2027702492140953934}
   downPoint: {fileID: 2976927355620560134}
   leftPoint: {fileID: 1003185486625476046}
   rightPoint: {fileID: 4180643545233259037}
+  myTransform: {fileID: 0}
 --- !u!135 &1543035680
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -94,9 +94,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perlinSmoothness: 15.8
   perlinAplitude: 1.97
-  dustMinimumSpeed: 0.79
-  yAxisSpeedMultiplyer: 0.86
-  secondsToDestroy: 1
+  dustMinimumSpeed: 0.36
+  yAxisSpeedMultiplyer: 0.74
+  secondsToDestroy: 2
   xOffsetToDestroy: 10
   yOffsetToDestroy: 10
-  fallRate: 1.2
+  fallRate: 0.93
