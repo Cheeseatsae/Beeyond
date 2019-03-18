@@ -14,6 +14,8 @@ namespace Roo
         private Vector3 TargetPosition;
         public float cameraClampMinX;
         public float[] cameraClampMaxX;
+        public float cameraClampMinY =2f;
+        public float cameraClampMaxY =16f;
         public int openGate = 0;
         public static GameObject liveCamera;
 
@@ -39,7 +41,7 @@ namespace Roo
 
             transform.position =
                 new Vector3(Mathf.Clamp(transform.position.x, cameraClampMinX, cameraClampMaxX[openGate]),
-                    Mathf.Clamp(transform.position.y, 1.19f, 15.33f), transform.position.z); // clamp camera boundaries 
+                    Mathf.Clamp(transform.position.y, cameraClampMinY, cameraClampMaxY), transform.position.z); // clamp camera boundaries 
         }
 
         public void IncreaseClamp(int count)
