@@ -7,12 +7,14 @@ public class BoundingWall : MonoBehaviour
 {
 
     public int requirement = 1;
+    public bool destructable = false;
     public bool pushEnabled = true;
-    public float pushMult = 1;
+    public float pushMult = 4;
 
     private void Start()
     {
-        HiveInteractable.PollenCollected += CheckPollenRequirement;
+        if (destructable)
+            HiveInteractable.PollenCollected += CheckPollenRequirement;
     }
 
     private void OnTriggerStay(Collider other)
@@ -20,9 +22,13 @@ public class BoundingWall : MonoBehaviour
         if (!pushEnabled) return;
         
         // if we can, push object away from invis wall while inside trigger
-        if (other.gameObject.GetComponent<Rigidbody>() != null)
+        if (other.gameObject.GetComponent<BeeController>() != null)
         {
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * pushMult);
+            // position - contact point to push bee away from collider
+            Vector3 pushDir = other.transform.position - GetComponent<Collider>().ClosestPointOnBounds(other.transform.position);
+            pushDir = Vector3.Normalize(pushDir);
+
+            other.gameObject.GetComponent<Rigidbody>().AddForce(pushDir * pushMult);
         }
     }
 
@@ -37,6 +43,7 @@ public class BoundingWall : MonoBehaviour
 
     private void OnDestroy()
     {
-        HiveInteractable.PollenCollected -= CheckPollenRequirement;
+        if (destructable)
+            HiveInteractable.PollenCollected -= CheckPollenRequirement;
     }
 }
