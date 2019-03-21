@@ -49,7 +49,12 @@ public class DustMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x - (Roo.WindScript.windSpeed * Time.deltaTime)-(dustMinimumSpeed * Time.deltaTime) - yMulti, _progressiveY + (_perlinNoise * perlinAplitude), _originalPos.z);
         _progressiveY -= fallRate*Time.deltaTime;
     }
-    
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(this.gameObject);
+    }
+
     public IEnumerator ParticleCheck()
     {
         yield return new WaitForSeconds(secondsToDestroy);
