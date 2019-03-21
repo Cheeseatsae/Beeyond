@@ -336,7 +336,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105445833
 GameObject:
@@ -1377,14 +1377,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFence (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.063
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.301
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -128.65
@@ -1440,6 +1432,14 @@ PrefabInstance:
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalScale.z
       value: 53.874928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2071,7 +2071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1182808032 stripped
 Transform:
@@ -3696,14 +3696,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFence
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.063
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.301
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -128.65
@@ -3759,6 +3751,14 @@ PrefabInstance:
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalScale.z
       value: 53.874928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4030,14 +4030,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFence (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.063
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.301
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -126.19998
@@ -4093,6 +4085,14 @@ PrefabInstance:
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalScale.z
       value: 53.87492
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4374,7 +4374,7 @@ PrefabInstance:
     - target: {fileID: 1789549320700795018, guid: 4895be2d93ef5b14f9c29076ab30165b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1789549320700795018, guid: 4895be2d93ef5b14f9c29076ab30165b,
         type: 3}
@@ -4438,7 +4438,7 @@ PrefabInstance:
     - target: {fileID: 5534964980772441165, guid: c693307bc7f8244439ef3ac2e2434a65,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.42
+      value: 15.420001
       objectReference: {fileID: 0}
     - target: {fileID: 5534964980772441165, guid: c693307bc7f8244439ef3ac2e2434a65,
         type: 3}
@@ -4484,6 +4484,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.83601
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534964980772441165, guid: c693307bc7f8244439ef3ac2e2434a65,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534964980772441165, guid: c693307bc7f8244439ef3ac2e2434a65,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c693307bc7f8244439ef3ac2e2434a65, type: 3}
@@ -4606,7 +4616,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875878, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875878, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
