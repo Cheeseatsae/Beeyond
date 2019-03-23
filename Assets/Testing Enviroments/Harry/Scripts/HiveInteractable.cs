@@ -20,6 +20,10 @@ namespace Harry
         public delegate void OnPollenIncrease(int i);
 
         public static OnPollenIncrease PollenCollected;
+        
+        public delegate void ActivateFlowers(int i);
+
+        public static ActivateFlowers ActivateNextFlowers;
 
         private void Start()
         {
@@ -48,6 +52,7 @@ namespace Harry
             {
                 triggerCount++;
                 PollenCollected?.Invoke(triggerCount);
+                ActivateNextFlowers.Invoke(triggerCount);
             }
             
             base.OnInteract();
