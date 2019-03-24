@@ -8,10 +8,11 @@ namespace Harry
     
     public class FlowerInteraction : Interactable
     {
-
+        
         public bool harvested;
         [Range(0, 5)]
         public int flowerLevel;
+        
 
         public bool active;
 

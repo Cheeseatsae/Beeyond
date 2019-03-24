@@ -255,7 +255,7 @@ MonoBehaviour:
   playerState: {fileID: 0}
   myState: 0
   followState: {fileID: 8537320667400951128}
-  findflower: {fileID: 0}
+  findflower: {fileID: 6460018786008430737}
   currentState: {fileID: 8537320667400951128}
 --- !u!135 &1543035680
 SphereCollider:
@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 1287558754545515926}
   - component: {fileID: 2746051847192262865}
   - component: {fileID: 8537320667400951128}
+  - component: {fileID: 6460018786008430737}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -398,6 +399,23 @@ MonoBehaviour:
   rightPoint: {fileID: 4180643545233259037}
   upPoint: {fileID: 2027702492140953934}
   offset: 5
+--- !u!114 &6460018786008430737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166514364945360684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a8632a34b6b144bae9771f58b8c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1262493744}
+  flowerManager: {fileID: 0}
+  follow: {fileID: 0}
+  newTarget: {fileID: 0}
+  flowerIndex: 0
 --- !u!1 &4180643545233259037
 GameObject:
   m_ObjectHideFlags: 0
