@@ -227,6 +227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -265,7 +270,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -281,6 +286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -336,7 +346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105445833
 GameObject:
@@ -379,7 +389,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &112475838 stripped
 Transform:
@@ -398,6 +408,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -437,7 +452,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -453,6 +468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -523,7 +543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -186.88, y: -1.2470093, z: -0.14898682}
 --- !u!4 &221680291 stripped
 Transform:
@@ -635,6 +655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -689,6 +714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -743,6 +773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -781,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -798,6 +833,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1001 &367339496
@@ -811,6 +851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -850,7 +895,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -866,6 +911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -886,6 +936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -925,7 +980,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -941,6 +996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -1075,6 +1135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1113,7 +1178,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1130,6 +1195,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1001 &544814593
@@ -1143,6 +1213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1182,7 +1257,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1198,6 +1273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: active
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -1302,7 +1382,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 926188094}
     m_Modifications:
     - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1327,17 +1407,17 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1363,6 +1443,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: active
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -1557,6 +1647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1595,7 +1690,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1611,6 +1706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -1738,6 +1838,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1729775300}
   - {fileID: 36491236}
   - {fileID: 6769998}
   - {fileID: 598144187}
@@ -1814,7 +1915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1054731140
 PrefabInstance:
@@ -1827,6 +1928,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1866,7 +1972,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1883,6 +1989,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1001 &1071392829
@@ -1896,6 +2007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1935,7 +2051,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -1951,6 +2067,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -1993,7 +2114,7 @@ Transform:
   - {fileID: 1641107152}
   - {fileID: 1336260026}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1152080292 stripped
 MonoBehaviour:
@@ -2071,7 +2192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1182808032 stripped
 Transform:
@@ -2096,6 +2217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -2135,7 +2261,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -2152,6 +2278,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1001 &1267815703
@@ -2165,6 +2296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -2204,7 +2340,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -2220,6 +2356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -2264,7 +2405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2351,7 +2492,7 @@ Transform:
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -89.997, z: 0}
 --- !u!1001 &1336260025
 PrefabInstance:
@@ -2883,7 +3024,7 @@ Transform:
   - {fileID: 77609791}
   - {fileID: 1415925461}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1459739591
 PrefabInstance:
@@ -2926,7 +3067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079136905, guid: 503a06aa027b3ae4a8ece85f41d72a6b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2079136905, guid: 503a06aa027b3ae4a8ece85f41d72a6b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2970,6 +3111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3008,7 +3154,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -3024,6 +3170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -3135,6 +3286,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3173,7 +3329,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -3189,6 +3345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -3206,6 +3367,7 @@ GameObject:
   - component: {fileID: 1578746973}
   - component: {fileID: 1578746972}
   - component: {fileID: 1578746971}
+  - component: {fileID: 1578746976}
   m_Layer: 0
   m_Name: HiveTrigger (1)
   m_TagString: Untagged
@@ -3317,6 +3479,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578746969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1578746976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578746969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92367da76635b943b6f4227995a8872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlowerList: []
 --- !u!1 &1585270252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,6 +3596,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3459,7 +3639,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -3475,6 +3655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -3684,6 +3869,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf,
     type: 3}
   m_PrefabInstance: {fileID: 1844482660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1729775300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 623348115}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1844482660
 PrefabInstance:
@@ -3962,6 +4153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4000,7 +4196,7 @@ PrefabInstance:
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7996547350269013557, guid: af4a7dd845aac9041a35d66b68c8a4d3,
         type: 3}
@@ -4016,6 +4212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -4240,7 +4441,7 @@ PrefabInstance:
     - target: {fileID: 5627209652641419878, guid: 2c1b3403ffe1d09449a1bccc76ed4f07,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5627209652641419878, guid: 2c1b3403ffe1d09449a1bccc76ed4f07,
         type: 3}
@@ -4374,7 +4575,7 @@ PrefabInstance:
     - target: {fileID: 1789549320700795018, guid: 4895be2d93ef5b14f9c29076ab30165b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1789549320700795018, guid: 4895be2d93ef5b14f9c29076ab30165b,
         type: 3}
@@ -4616,7 +4817,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875878, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875878, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
