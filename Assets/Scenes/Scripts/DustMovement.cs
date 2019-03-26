@@ -9,6 +9,7 @@ public class DustMovement : MonoBehaviour
     private Vector3 _originalPos;
     private Vector3 _pos;
     private float _progressiveY;
+    private float _randPerlinFloat;
     
     
     [Range(1f,20f)] public float perlinSmoothness = 3;
@@ -19,6 +20,7 @@ public class DustMovement : MonoBehaviour
     [Range(0.1f, 40f)] public float xOffsetToDestroy = 10;
     [Range(0.1f, 40f)] public float yOffsetToDestroy = 10;
     [Range(0f, 10f)] public float fallRate = 2f;
+    [Range(0f, 50f)] public float movementVariation = 25f;
 
     private Transform _camTransform;
     
@@ -26,6 +28,7 @@ public class DustMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _randPerlinFloat = Random.Range(0f, movementVariation);
         _camTransform = Roo.CameraMovementScript.liveCamera.transform;
         StartCoroutine(ParticleCheck());
         _originalPos = transform.position;
@@ -35,7 +38,7 @@ public class DustMovement : MonoBehaviour
     void Update()
     {
         _pos = transform.position;
-        _perlinNoise = Mathf.PerlinNoise(_pos.x/perlinSmoothness, _pos.y/perlinSmoothness);
+        _perlinNoise = Mathf.PerlinNoise(_pos.x/perlinSmoothness, (Time.time * _randPerlinFloat) / perlinSmoothness);
     }
 
     void FixedUpdate()

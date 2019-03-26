@@ -1105,14 +1105,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFence (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.063
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.301
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -128.65
@@ -1168,6 +1160,14 @@ PrefabInstance:
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalScale.z
       value: 53.874928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2143,7 +2143,7 @@ PrefabInstance:
     - target: {fileID: 5534964980772441165, guid: c693307bc7f8244439ef3ac2e2434a65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6291084
+      value: 8.39
       objectReference: {fileID: 0}
     - target: {fileID: 5534964980772441165, guid: c693307bc7f8244439ef3ac2e2434a65,
         type: 3}
@@ -3097,14 +3097,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFence
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.063
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.301
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -128.65
@@ -3160,6 +3152,14 @@ PrefabInstance:
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalScale.z
       value: 53.874928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3247,14 +3247,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFence (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.063
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.301
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -126.19998
@@ -3310,6 +3302,14 @@ PrefabInstance:
     - target: {fileID: 400018, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_LocalScale.z
       value: 53.87492
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
       propertyPath: m_Materials.Array.data[0]

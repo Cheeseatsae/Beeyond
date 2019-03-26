@@ -92,11 +92,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88727d956d5df147bc9356fc0e60535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perlinSmoothness: 15.8
-  perlinAplitude: 1.97
+  perlinSmoothness: 15.67
+  perlinAplitude: 2.18
   dustMinimumSpeed: 0.36
   yAxisSpeedMultiplyer: 1.32
   secondsToDestroy: 2
   xOffsetToDestroy: 10
   yOffsetToDestroy: 10
   fallRate: 0.78
+  movementVariation: 16.2
