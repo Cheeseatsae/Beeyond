@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public GameObject ObjectToBreak;// object that will have joint broken
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +19,14 @@ public class GameManagerScript : MonoBehaviour
         {
             Application.Quit();
         }
+
+
+
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            
+            Destroy(ObjectToBreak.GetComponent<CharacterJoint>()); // destroy the joint of that object
+        }
     }
+
 }
