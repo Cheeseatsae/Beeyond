@@ -11,6 +11,7 @@ namespace Harry
         public FollowThePlayer follow;
         public GameObject newTarget;
         public int flowerIndex;
+        public List<GameObject> flowersIveVisited = new List<GameObject>();
         
         // Start is called before the first frame update
 
@@ -28,13 +29,16 @@ namespace Harry
         public override void Enter()
         {
             base.Enter();
+            
             ChooseAFlower();
+            CheckIfIveBeenHereBefore();
         }
 
         public override void Execute()
         {
             base.Execute();
             
+            //follow.PlayerDistanceCheck();
             follow.ObjAvoidance();
             follow.AiDistanceCheck();
             
@@ -45,10 +49,19 @@ namespace Harry
             flowerIndex = Random.Range(0, flowerManager.FlowerList.Count);
             newTarget = flowerManager.FlowerList[flowerIndex];
             controller.target = newTarget;
-            follow.minPlayerDistance = 0;
-            follow.maxPlayerDistance = 0;
+            flowersIveVisited.Add(newTarget);
         }
-        
+
+        public void CheckIfIveBeenHereBefore()
+        {
+            foreach (GameObject target in flowersIveVisited)
+            {
+                if (newTarget == target)
+                {
+                    ChooseAFlower();
+                }
+            }
+        }
     }
 
 

@@ -268,7 +268,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1543035681
 MonoBehaviour:
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhosAround: []
-  collider: {fileID: 0}
-  raduisOfSphere: 20
+  collider: {fileID: 1543035680}
+  raduisOfSphere: 3
 --- !u!135 &4829029849853092666
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -386,8 +386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1262493744}
-  minPlayerDistance: 3
-  maxPlayerDistance: 6
+  minPlayerDistance: 1
+  maxPlayerDistance: 2
   minAiDistance: 2
   maxAiDistance: 4
   rb: {fileID: 0}

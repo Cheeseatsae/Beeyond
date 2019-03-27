@@ -14,10 +14,7 @@ namespace Harry
         public SphereCollider collider;
         public float raduisOfSphere;
     
-        private void Awake()
-        {
-            collider = GetComponent<SphereCollider>();
-        }
+
     
         // Start is called before the first frame update
         void Start()

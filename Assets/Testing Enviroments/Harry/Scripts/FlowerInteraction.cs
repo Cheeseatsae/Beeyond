@@ -13,7 +13,8 @@ namespace Harry
         [Range(0, 5)]
         public int flowerLevel;
         public bool playerOnly;
-        
+        public Transform aiPickupPoint;
+
 
         public bool active;
 

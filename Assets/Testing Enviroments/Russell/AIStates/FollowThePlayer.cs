@@ -50,9 +50,9 @@ namespace Harry
         {
 
             base.Execute();
-            PlayerDistanceCheck();
+            PlayerDistanceCheck();                     
             ObjAvoidance();
-            AiDistanceCheck();
+            AiDistanceCheck(); 
         }
 
 
@@ -93,7 +93,7 @@ namespace Harry
         {
             float dist;
                 if (Physics.Raycast(rightPoint.transform.position,
-                    Quaternion.AngleAxis(15f, transform.up) * transform.forward, out rightHit, 3f))
+                    Quaternion.AngleAxis(15f, transform.up) * transform.forward, out rightHit, 1f))
                 {
                     dist = Vector3.Distance(rb.transform.position, rightHit.point);
                     Debug.DrawLine(rightPoint.transform.position, rightHit.point, Color.cyan);
@@ -103,7 +103,7 @@ namespace Harry
                 }
 
                 if (Physics.Raycast(leftPoint.transform.position,
-                    Quaternion.AngleAxis(-15f, transform.up) * transform.forward, out leftHit, 3f))
+                    Quaternion.AngleAxis(-15f, transform.up) * transform.forward, out leftHit, 1f))
                 {
                     dist = Vector3.Distance(rb.transform.position, leftHit.point);
                     Debug.DrawLine(leftPoint.transform.position, leftHit.point, Color.cyan);
@@ -113,7 +113,7 @@ namespace Harry
                 }
 
                 if (Physics.Raycast(downPoint.transform.position,
-                    Quaternion.AngleAxis(15f, transform.right) * transform.forward, out downHit, 3f))
+                    Quaternion.AngleAxis(15f, transform.right) * transform.forward, out downHit, 1f))
                 {
                     dist = Vector3.Distance(rb.transform.position, downHit.point);
                     Debug.DrawLine(downPoint.transform.position, downHit.point, Color.cyan);
@@ -122,7 +122,7 @@ namespace Harry
                 }
 
                 if (Physics.Raycast(upPoint.transform.position,
-                    Quaternion.AngleAxis(-15f, transform.right) * transform.forward, out upHit, 3f))
+                    Quaternion.AngleAxis(-15f, transform.right) * transform.forward, out upHit, 1f))
                 {
                     dist = Vector3.Distance(rb.transform.position, upHit.point);
                     Debug.DrawLine(upPoint.transform.position, upHit.point, Color.cyan);

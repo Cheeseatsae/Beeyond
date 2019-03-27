@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44795382, g: 0.4573084, b: 0.42111564, a: 1}
+  m_IndirectSpecularColor: {r: 0.3672611, g: 0.3750394, b: 0.3445662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3405,7 +3405,7 @@ MonoBehaviour:
   myBeeController: {fileID: 0}
   state: 1
   amountOfBees: 02000000030000000300000005000000
-  pollenRequirement: 0200000003000000040000000500000006000000
+  pollenRequirement: 0100000003000000040000000500000006000000
   aiBee: {fileID: 2449698643631514231, guid: de9fc16b21bbec04f8be38a8688fdd63, type: 3}
   pollenCount: 0
 --- !u!65 &1578746972
@@ -4898,6 +4898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnerSize.z
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427069147554875875, guid: bf12e30c19919c94eb56c8d022cee64c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf12e30c19919c94eb56c8d022cee64c, type: 3}
