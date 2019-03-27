@@ -12,6 +12,7 @@ namespace Harry
         public bool harvested;
         [Range(0, 5)]
         public int flowerLevel;
+        public bool playerOnly;
         
 
         public bool active;
