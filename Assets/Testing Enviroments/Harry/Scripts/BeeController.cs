@@ -32,7 +32,7 @@ namespace Harry
         public float rotateThreshold = 0.1f;
         [Range(0,4)] public float rotateSpeed = 2;
         public float maxSpeed = 5;
-        [Range(10, 100)] public float windYAxisDivider;
+        [Range(0, 1)] public float windYAxisDivider;
         public Text finalWindSpeed;
         public Text playerState;
 
@@ -58,7 +58,7 @@ namespace Harry
             // setting desired velocity to be towards the target
             _force = ((target.transform.position - transform.position) * speedMult);
             // applying sin variation and the wind effect
-            _force = new Vector3(_force.x - (Roo.WindScript.windSpeed * windSpeedMult) - (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)), _force.y + _flutter.InputSin(), _force.z);
+            _force = new Vector3(_force.x - (Roo.WindScript.windSpeed * windSpeedMult) - (Roo.WindScript.windSpeed * (_myModel.transform.position.y * windYAxisDivider)), _force.y + _flutter.InputSin(), _force.z);
             
             // adding the force normalized
             _myBody.AddForce(_force);

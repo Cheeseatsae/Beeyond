@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 698481252}
   - component: {fileID: 114693724}
   m_Layer: 0
-  m_Name: Smart Bee
+  m_Name: Smart Bee.old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   rotateThreshold: 0.1
   rotateSpeed: 4
   maxSpeed: 5
-  windYAxisDivider: 60.3
+  windYAxisDivider: 0.0603
   finalWindSpeed: {fileID: 0}
   playerState: {fileID: 0}
   myState: 0

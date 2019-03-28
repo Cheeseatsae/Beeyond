@@ -250,13 +250,14 @@ MonoBehaviour:
   rotateThreshold: 0.1
   rotateSpeed: 4
   maxSpeed: 5
-  windYAxisDivider: 73
+  windYAxisDivider: 0.073
   finalWindSpeed: {fileID: 0}
   playerState: {fileID: 0}
   myState: 0
   followState: {fileID: 8537320667400951128}
   findflower: {fileID: 6460018786008430737}
   currentState: {fileID: 8537320667400951128}
+  gettingPollen: {fileID: 0}
 --- !u!135 &1543035680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -416,7 +417,7 @@ MonoBehaviour:
   follow: {fileID: 0}
   newTarget: {fileID: 0}
   flowerIndex: 0
-  flowersIveVisited: []
+  myflowers: []
 --- !u!1 &4180643545233259037
 GameObject:
   m_ObjectHideFlags: 0
