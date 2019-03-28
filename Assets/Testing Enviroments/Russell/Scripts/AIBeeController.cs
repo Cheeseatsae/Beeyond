@@ -8,6 +8,7 @@ namespace Harry
         public AIStateBase followState;
         public AIStateBase findflower;
         public AIStateBase currentState;
+        public AIStateBase gettingPollen;
 
         public void ChangeState(AIStateBase newState)
         {

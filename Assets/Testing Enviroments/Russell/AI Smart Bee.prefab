@@ -387,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1262493744}
   minPlayerDistance: 1
-  maxPlayerDistance: 2
+  maxPlayerDistance: 3
   minAiDistance: 2
   maxAiDistance: 4
   rb: {fileID: 0}
@@ -416,6 +416,7 @@ MonoBehaviour:
   follow: {fileID: 0}
   newTarget: {fileID: 0}
   flowerIndex: 0
+  flowersIveVisited: []
 --- !u!1 &4180643545233259037
 GameObject:
   m_ObjectHideFlags: 0

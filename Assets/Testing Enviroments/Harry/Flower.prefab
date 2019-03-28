@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6333644893147516178}
+  - component: {fileID: 185108582992176378}
+  - component: {fileID: 3687872138142615811}
   m_Layer: 0
   m_Name: AIPoint
   m_TagString: Untagged
@@ -30,6 +32,33 @@ Transform:
   m_Father: {fileID: 7996547350269013557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &185108582992176378
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202878819820587985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3687872138142615811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202878819820587985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d514d1e198fd3314a8559e0396e0c345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flower: {fileID: 7996547350269013561}
+  thisFlowersBee: {fileID: 0}
 --- !u!1 &7996547350269013561
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,7 +76,7 @@ GameObject:
   - component: {fileID: 7996547350146501615}
   m_Layer: 0
   m_Name: Flower
-  m_TagString: Untagged
+  m_TagString: Flower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
