@@ -6,9 +6,13 @@ using UnityEditor;
 
 namespace Harry
 {
-    public class WindFreeZone : MonoBehaviour
+    public class WindModZone : MonoBehaviour
     {
 
+        public float newMultX;
+        public float newMultY;
+        public float newWindClamp;
+        
         private struct beeMod
         {
             public GameObject bee;
@@ -35,9 +39,9 @@ namespace Harry
             
             bees.Add(b);
             
-            thisBee.windSpeedMult = 0;
-            thisBee.windYAxisDivider = 0;
-            thisBee.windSpeedClamp = 0;
+            thisBee.windSpeedMult = newMultX;
+            thisBee.windYAxisDivider = newMultY;
+            thisBee.windSpeedClamp = newWindClamp;
             
         }
 
