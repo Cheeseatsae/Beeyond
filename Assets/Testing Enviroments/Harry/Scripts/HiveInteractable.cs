@@ -15,7 +15,8 @@ namespace Harry
         public GameObject aiBee;
 
         public int pollenCount = 0;
-        private int triggerCount = 0;
+        
+        private static int triggerCount = 0;
     
         public delegate void OnPollenIncrease(int i);
 
@@ -61,6 +62,7 @@ namespace Harry
         public void SpawnBees(int count)
         {
             //if (amountOfBees.Length > count) return;
+            if (myBee == null) return;
             
             for (int i = 0; i < amountOfBees[count - 1]; i++)
             {
