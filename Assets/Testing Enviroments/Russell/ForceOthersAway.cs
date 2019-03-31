@@ -8,8 +8,13 @@ namespace Harry
     {
         public GameObject flower;
         private FlowerInteraction floInt;
+        
 
         public GameObject thisFlowersBee;
+        
+        public delegate void RecalMyList(int i);
+
+        public static RecalMyList ReList;
         // Start is called before the first frame update
         private void Awake()
         {
@@ -27,8 +32,14 @@ namespace Harry
             if (other.GetComponent<AIBeeController>())
             {
                 thisFlowersBee = other.gameObject;
-                //change the bees state to get the pollen
+                AIBeeController beeState = thisFlowersBee.GetComponent<AIBeeController>();
+                beeState.ChangeState(beeState.gettingPollen);
+                //beeState.target = floInt.aiPickupPoint;
+                
                 floInt.state = Interactable.State.Occupied;
+                ReList.Invoke(floInt.flowerLevel);
+                //floInt.active = false;
+                
                 //run event to remove this from list
             }
 

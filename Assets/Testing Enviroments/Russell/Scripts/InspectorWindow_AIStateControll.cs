@@ -28,6 +28,18 @@ namespace Harry
                 }
                 else GoFindFlowers.Invoke();
             }
+            
+            if(GUILayout.Button("Bee Relist"))
+            {
+                if (!Application.isPlaying)
+                {
+                    Debug.LogWarning("Editor must be playing for this button to function");
+
+                }
+                else GoFindFlowers.Invoke();
+            }
+            
+            
         }
     }
 

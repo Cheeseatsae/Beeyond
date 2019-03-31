@@ -257,7 +257,7 @@ MonoBehaviour:
   followState: {fileID: 8537320667400951128}
   findflower: {fileID: 6460018786008430737}
   currentState: {fileID: 8537320667400951128}
-  gettingPollen: {fileID: 0}
+  gettingPollen: {fileID: 1827453127879259919}
 --- !u!135 &1543035680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 2746051847192262865}
   - component: {fileID: 8537320667400951128}
   - component: {fileID: 6460018786008430737}
+  - component: {fileID: 1827453127879259919}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -418,6 +419,19 @@ MonoBehaviour:
   newTarget: {fileID: 0}
   flowerIndex: 0
   myflowers: []
+--- !u!114 &1827453127879259919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166514364945360684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7aa4bd019e3662469446b505dc1d2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 2449698643631514231}
 --- !u!1 &4180643545233259037
 GameObject:
   m_ObjectHideFlags: 0

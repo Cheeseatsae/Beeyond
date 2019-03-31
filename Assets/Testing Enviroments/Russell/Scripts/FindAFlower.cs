@@ -11,6 +11,7 @@ namespace Harry
         public FollowThePlayer follow;
         public GameObject newTarget;
         public int flowerIndex;
+        public int count;
         public List<GameObject> myflowers = new List<GameObject>();
         
         // Start is called before the first frame update
@@ -23,6 +24,7 @@ namespace Harry
         void Start()
         {
             follow = GetComponent<FollowThePlayer>();
+            ForceOthersAway.ReList += ChooseNewFlower;
         }
 
 
@@ -45,11 +47,18 @@ namespace Harry
 
         public void ChooseAFlower()
         {
-            AddMyFlowers();            
-            flowerIndex = Random.Range(0, myflowers.Count);
-            newTarget = myflowers[flowerIndex];
-            controller.target = newTarget;
             
+            Debug.Log("rerun flowerchooser");
+            AddMyFlowers();
+            if (myflowers.Count != 0)
+            {
+                flowerIndex = Random.Range(0, myflowers.Count);
+                newTarget = myflowers[flowerIndex];
+
+                controller.target = newTarget.GetComponent<FlowerInteraction>().aiPickupPoint;
+                Debug.Log("rerun flowerchooser");
+            }
+
         }
 
         public void AddMyFlowers()
@@ -60,7 +69,15 @@ namespace Harry
                 {
                     myflowers.Add(flowers);
                 }
+                
             }
+
+        }
+
+        public void ChooseNewFlower(int count)
+        {
+            myflowers.Clear();
+            ChooseAFlower();
         }
         
         

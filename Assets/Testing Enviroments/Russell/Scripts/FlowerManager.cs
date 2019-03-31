@@ -11,6 +11,7 @@ namespace Harry
         void Start()
         {
             HiveInteractable.ActivateNextFlowers += GetFlowerList;
+            ForceOthersAway.ReList += GetFlowerList;
         }
     
         // Update is called once per frame
