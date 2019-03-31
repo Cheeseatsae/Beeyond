@@ -9,8 +9,11 @@ namespace Harry
     {
         private bool withinTrigger = false;
         private float previousWindMod;
+        private float previousYWindMod;
         [HideInInspector] public GameObject myBee;
         [HideInInspector] public BeeController myBeeController;
+
+        public float delay = 2;
 
         public enum State
         {
@@ -37,7 +40,9 @@ namespace Harry
 
                 // removing wind effectiveness from bee
                 previousWindMod = myBeeController.windSpeedMult;
+                previousYWindMod = myBeeController.windYAxisDivider;
                 myBeeController.windSpeedMult = 0;
+                myBeeController.windYAxisDivider = 0;
                 // stopping bee
                 myBeeController.myState = BeeController.BeeState.Stopped;
             }
@@ -56,15 +61,28 @@ namespace Harry
 
         public virtual void OnInteract()
         {
+            StartCoroutine(Interaction());
+        }
+
+        public virtual IEnumerator Interaction()
+        {
+            myBeeController.interacting = true;                
+            yield return new WaitForSeconds(delay);
+            Reset();
+        }
+        
+        public virtual void Reset()
+        {
             // On interaction
             // turn wind back on
             myBeeController.windSpeedMult = previousWindMod;
+            myBeeController.windYAxisDivider = previousYWindMod;
+            myBeeController.interacting = false;
             
             myBeeController.currentInteractable = null;
             myBee = null;
             myBeeController = null;
             state = State.Unoccupied;
-
         }
     }
 

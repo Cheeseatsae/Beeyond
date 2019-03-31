@@ -317,12 +317,13 @@ MonoBehaviour:
   _force: {x: 0, y: 0, z: 0}
   currentInteractable: {fileID: 0}
   speedMult: 1
-  windSpeedClamp: 1.1
+  windSpeedClamp: 0.66
   windSpeedMult: 0.08
   rotateThreshold: 0.1
   rotateSpeed: 4
   maxSpeed: 5
-  windYAxisDivider: 56.9
+  windYAxisDivider: 0.001
   finalWindSpeed: {fileID: 0}
   playerState: {fileID: 0}
   myState: 0
+  interacting: 0

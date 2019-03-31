@@ -17,7 +17,7 @@ namespace Harry
         
         public GameObject target;
         
-        
+       
         [HideInInspector] public Rigidbody _myBody;
         [HideInInspector] public BeeFlutter _flutter;
         [HideInInspector] public GameObject _myModel;
@@ -38,7 +38,8 @@ namespace Harry
 
         public enum BeeState { Moving, Stopped, Pollenated }
         public BeeState myState = BeeState.Moving;
-        
+
+        public bool interacting = false;
         
         public virtual void Awake()
         {

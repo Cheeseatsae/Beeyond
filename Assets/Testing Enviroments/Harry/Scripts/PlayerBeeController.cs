@@ -13,12 +13,10 @@ namespace Harry
             // HACK will need to be redone later 
             playerState.text = myState.ToString();
 
-                if (myState == BeeState.Stopped)
+                if (myState == BeeState.Stopped && !interacting)
                 {
-                    Debug.Log(currentInteractable);
                     currentInteractable.OnInteract();
                 }
-               
             
         }
 

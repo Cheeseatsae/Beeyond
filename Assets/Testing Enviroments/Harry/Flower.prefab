@@ -184,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
+  delay: 2
   state: 1
   harvested: 0
   flowerLevel: 0

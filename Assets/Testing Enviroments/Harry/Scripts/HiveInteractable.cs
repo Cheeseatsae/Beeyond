@@ -40,14 +40,18 @@ namespace Harry
             base.OnCollisionEnter(other);
         }
 
-        public override void OnInteract()
+        public override IEnumerator Interaction()
         {
+            
+            myBeeController.interacting = true;                
+            yield return new WaitForSeconds(delay);
+            
             // if interacted increase the pollen count
             pollenCount++;
             // allow bee to move
             myBeeController.myState = BeeController.BeeState.Moving;
-
-            if (triggerCount > pollenRequirement.Length - 1) return;
+            
+            if (triggerCount > pollenRequirement.Length - 1) StopCoroutine(Interaction());
             // with enough pollen run event
             if (pollenCount >= pollenRequirement[triggerCount])
             {
@@ -55,8 +59,8 @@ namespace Harry
                 PollenCollected?.Invoke(triggerCount);
                 ActivateNextFlowers.Invoke(triggerCount);
             }
-            
-            base.OnInteract();
+            Reset();
+
         }
 
         public void SpawnBees(int count)

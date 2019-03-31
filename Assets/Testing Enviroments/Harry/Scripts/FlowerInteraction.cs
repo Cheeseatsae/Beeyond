@@ -36,13 +36,17 @@ namespace Harry
                 active = true;
             }
         }
-        public override void OnInteract()
+        public override IEnumerator Interaction()
         {
+            myBeeController.interacting = true;                
+            yield return new WaitForSeconds(delay);
+            
             harvested = true;
             active = false;
             GetComponent<Renderer>().material.color = Color.grey;
             myBeeController.myState = BeeController.BeeState.Pollenated;
-            base.OnInteract();
+
+            Reset();
         }
     }
 }

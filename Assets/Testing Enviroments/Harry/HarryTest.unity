@@ -18135,6 +18135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
+  delay: 0
   state: 1
   amountOfBees: 02000000030000000300000005000000
   pollenRequirement: 0200000003000000040000000500000006000000
@@ -20393,10 +20394,6 @@ PrefabInstance:
       propertyPath: windSpeedClamp
       value: 0.66
       objectReference: {fileID: 0}
-    - target: {fileID: 2079136901, guid: 503a06aa027b3ae4a8ece85f41d72a6b, type: 3}
-      propertyPath: windYAxisDivider
-      value: 71.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503a06aa027b3ae4a8ece85f41d72a6b, type: 3}
 --- !u!1001 &1485977377
@@ -20993,6 +20990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
+  delay: 2
   state: 1
   amountOfBees: 02000000040000000300000005000000
   pollenRequirement: 0200000003000000040000000500000006000000
