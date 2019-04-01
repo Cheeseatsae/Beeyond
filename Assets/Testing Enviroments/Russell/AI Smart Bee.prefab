@@ -245,19 +245,22 @@ MonoBehaviour:
   _force: {x: 0, y: 0, z: 0}
   currentInteractable: {fileID: 0}
   speedMult: 0.71
-  windSpeedClamp: 1.02
-  windSpeedMult: 0.05
+  windSpeedClamp: 0.66
+  windSpeedMult: 0.08
   rotateThreshold: 0.1
   rotateSpeed: 4
-  maxSpeed: 5
-  windYAxisDivider: 0.073
+  maxSpeed: 4
+  windYAxisDivider: 0.01
   finalWindSpeed: {fileID: 0}
   playerState: {fileID: 0}
   myState: 0
+  interacting: 0
   followState: {fileID: 8537320667400951128}
   findflower: {fileID: 6460018786008430737}
   currentState: {fileID: 8537320667400951128}
   gettingPollen: {fileID: 1827453127879259919}
+  returnToHive: {fileID: 8411735084584391154}
+  visitedAFlower: 0
 --- !u!135 &1543035680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -342,6 +345,7 @@ GameObject:
   - component: {fileID: 8537320667400951128}
   - component: {fileID: 6460018786008430737}
   - component: {fileID: 1827453127879259919}
+  - component: {fileID: 8411735084584391154}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -388,9 +392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1262493744}
-  minPlayerDistance: 1
-  maxPlayerDistance: 3
-  minAiDistance: 2
+  minPlayerDistance: 3
+  maxPlayerDistance: 5
+  minAiDistance: 3
   maxAiDistance: 4
   rb: {fileID: 0}
   currentTarget: {fileID: 0}
@@ -418,6 +422,7 @@ MonoBehaviour:
   follow: {fileID: 0}
   newTarget: {fileID: 0}
   flowerIndex: 0
+  count: 0
   myflowers: []
 --- !u!114 &1827453127879259919
 MonoBehaviour:
@@ -432,6 +437,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 2449698643631514231}
+--- !u!114 &8411735084584391154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166514364945360684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd8bfbd3a25b3c4b9bbffe2eb75a44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bee: {fileID: 2449698643631514231}
+  hive: {fileID: 0}
 --- !u!1 &4180643545233259037
 GameObject:
   m_ObjectHideFlags: 0

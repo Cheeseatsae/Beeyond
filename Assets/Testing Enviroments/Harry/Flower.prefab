@@ -189,7 +189,7 @@ MonoBehaviour:
   harvested: 0
   flowerLevel: 0
   playerOnly: 0
-  aiPickupPoint: {fileID: 6333644893147516178}
+  aiPickupPoint: {fileID: 6202878819820587985}
   active: 0
 --- !u!65 &7996547350146501615
 BoxCollider:

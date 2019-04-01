@@ -23,22 +23,28 @@ namespace Harry
         public override void Enter()
         {
             base.Enter();
-            //myFlower = beeController.target.GetComponent<FlowerInteraction>();
+            myFlower = beeController.target.GetComponentInParent<FlowerInteraction>();
             //beeController.target = myFlower.aiPickupPoint;
         }
 
         public override void Execute()
         {
             base.Execute();
-            
+            float speed = 1 * Time.deltaTime;            
+            parent.transform.position =
+                Vector3.MoveTowards(parent.transform.position, beeController.target.transform.position, speed);
+            StartCoroutine(GoBackToHive());
 
         }
 // Start is called before the first frame update
 
         IEnumerator GoBackToHive()
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
+            myFlower.active = false;
+            myFlower.harvested = true;
             beeController.ChangeState(beeController.returnToHive);
+            
         }
     }
 

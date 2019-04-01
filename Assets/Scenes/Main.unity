@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3968524, g: 0.37887853, b: 0.36652914, a: 1}
+  m_IndirectSpecularColor: {r: 0.43990782, g: 0.44910854, b: 0.41352794, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7031,6 +7031,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1 &332247187
@@ -12417,6 +12422,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: playerOnly
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1 &557364376
@@ -13160,6 +13170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: playerOnly
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -18029,6 +18044,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: playerOnly
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
 --- !u!1 &903885576 stripped
@@ -19297,13 +19322,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 19.445963
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 62277509e94587947b073f3b7ba55141, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.354
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
@@ -20081,6 +20106,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
       propertyPath: m_Name
       value: Beeyond_Hive
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
+      propertyPath: m_TagString
+      value: Hive
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62277509e94587947b073f3b7ba55141, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21493,6 +21522,7 @@ GameObject:
   - component: {fileID: 1578746973}
   - component: {fileID: 1578746972}
   - component: {fileID: 1578746971}
+  - component: {fileID: 1578746976}
   m_Layer: 0
   m_Name: HiveTrigger (1)
   m_TagString: Untagged
@@ -21605,6 +21635,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578746969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1578746976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578746969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92367da76635b943b6f4227995a8872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlowerList: []
 --- !u!1001 &1610863467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22268,6 +22311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996547350269013559, guid: af4a7dd845aac9041a35d66b68c8a4d3,
+        type: 3}
+      propertyPath: flowerLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4a7dd845aac9041a35d66b68c8a4d3, type: 3}
@@ -24049,6 +24097,16 @@ PrefabInstance:
       propertyPath: pushMult
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1789549321007422391, guid: 4895be2d93ef5b14f9c29076ab30165b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789549321007422391, guid: 4895be2d93ef5b14f9c29076ab30165b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 177.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1789549320844935811, guid: 4895be2d93ef5b14f9c29076ab30165b,
         type: 3}
       propertyPath: m_IsActive
@@ -24063,16 +24121,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789549321007422391, guid: 4895be2d93ef5b14f9c29076ab30165b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.7999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789549321007422391, guid: 4895be2d93ef5b14f9c29076ab30165b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 177.3
       objectReference: {fileID: 0}
     - target: {fileID: 1789549321665783708, guid: 4895be2d93ef5b14f9c29076ab30165b,
         type: 3}

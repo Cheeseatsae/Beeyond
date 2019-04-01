@@ -47,17 +47,20 @@ namespace Harry
 
         public void ChooseAFlower()
         {
-            
-            Debug.Log("rerun flowerchooser");
-            AddMyFlowers();
-            if (myflowers.Count != 0)
+            if (!controller.visitedAFlower)
             {
-                flowerIndex = Random.Range(0, myflowers.Count);
-                newTarget = myflowers[flowerIndex];
-
-                controller.target = newTarget.GetComponent<FlowerInteraction>().aiPickupPoint;
                 Debug.Log("rerun flowerchooser");
+                AddMyFlowers();
+                if (myflowers.Count != 0)
+                {
+                    flowerIndex = Random.Range(0, myflowers.Count);
+                    newTarget = myflowers[flowerIndex];
+
+                    controller.target = newTarget.GetComponent<FlowerInteraction>().aiPickupPoint;
+                    Debug.Log("rerun flowerchooser");
+                }
             }
+
 
         }
 

@@ -18126,6 +18126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
+  delay: 2
   state: 1
   amountOfBees: 02000000030000000300000005000000
   pollenRequirement: 0200000003000000040000000500000006000000
@@ -18692,7 +18693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1013722433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19736,7 +19737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!182 &1336188091
 WindZone:
   m_ObjectHideFlags: 0
@@ -20320,7 +20321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079136901, guid: 503a06aa027b3ae4a8ece85f41d72a6b, type: 3}
       propertyPath: windYAxisDivider
-      value: 71.4
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503a06aa027b3ae4a8ece85f41d72a6b, type: 3}
@@ -20929,6 +20930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
+  delay: 2
   state: 1
   amountOfBees: 02000000030000000300000005000000
   pollenRequirement: 0200000003000000040000000500000006000000

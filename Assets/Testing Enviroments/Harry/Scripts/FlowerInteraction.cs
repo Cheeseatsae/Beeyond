@@ -15,7 +15,7 @@ namespace Harry
         public bool playerOnly;
         public GameObject aiPickupPoint;
 
-
+        public bool visited = false;
         public bool active;
 
         private void Start()

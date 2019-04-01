@@ -26,7 +26,7 @@ namespace Harry
             foreach (GameObject flower in GameObject.FindGameObjectsWithTag("Flower"))
             {
                 
-                if (flower.GetComponent<FlowerInteraction>().flowerLevel == count && flower.GetComponent<FlowerInteraction>().playerOnly == false && flower.GetComponent<FlowerInteraction>().state != Interactable.State.Occupied)
+                if (flower.GetComponent<FlowerInteraction>().flowerLevel == count && flower.GetComponent<FlowerInteraction>().playerOnly == false && flower.GetComponent<FlowerInteraction>().visited == false)
                 {
                     FlowerList.Add(flower);
                 }

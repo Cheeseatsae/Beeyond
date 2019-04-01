@@ -10,6 +10,7 @@ namespace Harry
         public AIStateBase currentState;
         public AIStateBase gettingPollen;
         public AIStateBase returnToHive;
+        public bool visitedAFlower = false;
 
         public void ChangeState(AIStateBase newState)
         {
@@ -26,8 +27,8 @@ namespace Harry
             ChangeState(followState);
 
         }
-
         private void Start()
+
         {
             InspectorWindow_AIStateControll.GoFindFlowers += ChangeToFind;
         }
@@ -39,7 +40,10 @@ namespace Harry
 
         public override void FixedUpdate()
         {
+
             base.FixedUpdate();
+            
+            
             currentState.Execute();
         }
 
