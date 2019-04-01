@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2382547491925815624
+--- !u!1 &3221622797538699956
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5108698214918381011}
-  - component: {fileID: 4127230268002524766}
-  - component: {fileID: 2731108191935628868}
+  - component: {fileID: 5022210618551072188}
+  - component: {fileID: 7051988528734861617}
+  - component: {fileID: 8752016632955843014}
   m_Layer: 0
-  m_Name: SwingSeatWoodwithMorganEtch
+  m_Name: Beeyond_Farmhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5108698214918381011
+--- !u!4 &5022210618551072188
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2382547491925815624}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.261, y: 2.8138, z: -9.3}
-  m_LocalScale: {x: 4.807406, y: 4.807406, z: 4.807406}
+  m_GameObject: {fileID: 3221622797538699956}
+  m_LocalRotation: {x: -0, y: -0.849742, z: -0, w: 0.52719873}
+  m_LocalPosition: {x: 72, y: -28.5, z: 431.35}
+  m_LocalScale: {x: 14.006465, y: 14.006465, z: 14.006465}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4127230268002524766
+  m_LocalEulerAnglesHint: {x: 0, y: -116.367004, z: 0}
+--- !u!33 &7051988528734861617
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2382547491925815624}
-  m_Mesh: {fileID: 4300000, guid: 75f8ffe28faf6f64a9eebe4b574e5fbb, type: 3}
---- !u!23 &2731108191935628868
+  m_GameObject: {fileID: 3221622797538699956}
+  m_Mesh: {fileID: 4300000, guid: 250723f74c4b623488f1aa824ccc4406, type: 3}
+--- !u!23 &8752016632955843014
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2382547491925815624}
+  m_GameObject: {fileID: 3221622797538699956}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

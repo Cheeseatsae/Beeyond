@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 0283125c0ca79e84297c1b2ab5a52f87
+guid: 250723f74c4b623488f1aa824ccc4406
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: chainlink:chainlink:SwingSeat
-    100002: //RootNode
-    400000: chainlink:chainlink:SwingSeat
-    400002: //RootNode
-    2100000: lambert1
-    2100002: chainlink_lambert2
-    2300000: chainlink:chainlink:SwingSeat
-    3300000: chainlink:chainlink:SwingSeat
-    4300000: chainlink:chainlink:SwingSeat
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert2
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pPlane9
   externalObjects: {}
   materials:
     importMaterials: 1
