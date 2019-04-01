@@ -5712,8 +5712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2228300f86788724093cb6deb4bd5d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToBreak: {fileID: 0}
-  hingeJointToBreak: 1
+  ObjectToBreak: {fileID: 622314208}
+  hingeJointToBreak: 0
 --- !u!4 &105445835
 Transform:
   m_ObjectHideFlags: 0
@@ -13088,6 +13088,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: ff69c84d8ed47f64f8e0a10d4493cabf, type: 3}
+--- !u!1 &622314208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1322632135, guid: 3fde35225ba6d984b9c0a42e571a1435,
+    type: 3}
+  m_PrefabInstance: {fileID: 1432189971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &623348115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20749,7 +20755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322632136, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5928648
+      value: -0.6196
       objectReference: {fileID: 0}
     - target: {fileID: 1322632136, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
       propertyPath: m_LocalRotation.x
@@ -20787,10 +20793,42 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 1857790953}
+    - target: {fileID: 1322632137, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_Anchor.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322632137, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.001332283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322632137, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.055928685
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322632137, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1322632138, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 557364379}
+    - target: {fileID: 1322632138, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322632138, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.96614355
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322632138, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.055928804
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322632138, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.0013353229
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fde35225ba6d984b9c0a42e571a1435, type: 3}
 --- !u!1 &1432600350
