@@ -30,6 +30,7 @@ namespace Harry
         public override void OnCollisionEnter(Collision other)
         {
             if (harvested) return;
+            if (other.gameObject.GetComponent<BeeController>() == null) return;
             if (other.gameObject.GetComponent<BeeController>().myState == BeeController.BeeState.Pollenated) return;
             
             base.OnCollisionEnter(other);
