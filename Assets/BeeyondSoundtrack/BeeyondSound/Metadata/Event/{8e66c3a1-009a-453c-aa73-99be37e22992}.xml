@@ -112,7 +112,7 @@
     </object>
     <object class="SingleSound" id="{5926c17d-ae2a-4f25-aea5-205baf6c24a2}">
         <property name="length">
-            <value>3.8000000000000003</value>
+            <value>3.2000000000000002</value>
         </property>
         <property name="looping">
             <value>true</value>
@@ -129,10 +129,10 @@
     </object>
     <object class="SingleSound" id="{fac95256-9f8f-4f8e-af3b-e27c3eb99831}">
         <property name="start">
-            <value>2.7000000000000002</value>
+            <value>1</value>
         </property>
         <property name="length">
-            <value>4.6000000000000005</value>
+            <value>8</value>
         </property>
         <property name="looping">
             <value>true</value>
@@ -152,10 +152,10 @@
     </object>
     <object class="SingleSound" id="{a45d8204-9cc3-4565-9be8-cd450776e84e}">
         <property name="start">
-            <value>6.2000000000000002</value>
+            <value>7.2000000000000002</value>
         </property>
         <property name="length">
-            <value>3.8000000000000003</value>
+            <value>2.8000000000000003</value>
         </property>
         <property name="looping">
             <value>true</value>
@@ -199,7 +199,7 @@
             <value>pitch</value>
         </property>
         <property name="root">
-            <value>1.99999988</value>
+            <value>0.99999994</value>
         </property>
         <property name="pitchAtMinimum">
             <value>0.595000029</value>
@@ -221,7 +221,7 @@
             <value>pitch</value>
         </property>
         <property name="root">
-            <value>4.89999962</value>
+            <value>3.19999981</value>
         </property>
         <property name="pitchAtMinimum">
             <value>0.200000018</value>
@@ -254,10 +254,10 @@
             <value>pitch</value>
         </property>
         <property name="root">
-            <value>7.44999933</value>
+            <value>9.19999981</value>
         </property>
         <property name="pitchAtMinimum">
-            <value>0.640000045</value>
+            <value>0.880000055</value>
         </property>
     </object>
     <object class="FadeCurve" id="{be252dd7-4f60-47e2-a10b-e908e3d49475}">
@@ -288,7 +288,7 @@
     <object class="MixerBusFader" id="{a0ba80d9-83b4-4819-b1c9-c17c108e7075}"/>
     <object class="AutomationPoint" id="{ce5a2bab-8ca5-471a-8fc1-5bb5e994c7c6}">
         <property name="position">
-            <value>2.7000000000000002</value>
+            <value>1</value>
         </property>
         <property name="value">
             <value>1</value>
@@ -299,7 +299,7 @@
     </object>
     <object class="AutomationPoint" id="{fdddcaa6-f438-49ce-b936-62ad00318030}">
         <property name="position">
-            <value>3.8000000000000003</value>
+            <value>3.2000000000000002</value>
         </property>
         <property name="value">
             <value>0</value>
@@ -307,7 +307,7 @@
     </object>
     <object class="AutomationPoint" id="{5c74cf40-1ade-48c5-8977-45be8f7e131c}">
         <property name="position">
-            <value>2.7000000000000002</value>
+            <value>1</value>
         </property>
         <property name="value">
             <value>0</value>
@@ -318,7 +318,7 @@
     </object>
     <object class="AutomationPoint" id="{e33c6ebf-d7f1-42ec-a438-68ead837e2bd}">
         <property name="position">
-            <value>3.8000000000000003</value>
+            <value>3.2000000000000002</value>
         </property>
         <property name="value">
             <value>1</value>
@@ -326,7 +326,7 @@
     </object>
     <object class="AutomationPoint" id="{3846c267-43d2-4302-9c50-2da7f56747e0}">
         <property name="position">
-            <value>6.2000000000000002</value>
+            <value>7.2000000000000002</value>
         </property>
         <property name="value">
             <value>1</value>
@@ -337,7 +337,7 @@
     </object>
     <object class="AutomationPoint" id="{4af14f91-1870-4828-b17d-48ee18508d0b}">
         <property name="position">
-            <value>7.3000000000000007</value>
+            <value>9</value>
         </property>
         <property name="value">
             <value>0</value>
@@ -345,7 +345,7 @@
     </object>
     <object class="AutomationPoint" id="{b6c9aaf2-8085-4cb1-9a94-0765e0d56f32}">
         <property name="position">
-            <value>6.2000000000000002</value>
+            <value>7.2000000000000002</value>
         </property>
         <property name="value">
             <value>0</value>
@@ -356,7 +356,7 @@
     </object>
     <object class="AutomationPoint" id="{de3d313c-1e9c-4a79-a69e-873c9a5db579}">
         <property name="position">
-            <value>7.3000000000000007</value>
+            <value>9</value>
         </property>
         <property name="value">
             <value>1</value>
