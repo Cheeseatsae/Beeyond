@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6333644893147516178}
   - component: {fileID: 185108582992176378}
   - component: {fileID: 3687872138142615811}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AIPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 7996547350269013556}
   - component: {fileID: 7996547350269013559}
   - component: {fileID: 7996547350146501615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flower
   m_TagString: Flower
   m_Icon: {fileID: 0}
@@ -190,6 +190,7 @@ MonoBehaviour:
   flowerLevel: 0
   playerOnly: 0
   aiPickupPoint: {fileID: 6202878819820587985}
+  visited: 0
   active: 0
 --- !u!65 &7996547350146501615
 BoxCollider:
