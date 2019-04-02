@@ -29,20 +29,24 @@ namespace Harry
     
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<AIBeeController>() && floInt.active && other.GetComponent<AIBeeController>().visitedAFlower == false && !floInt.visited)
+            if (!floInt.playerOnly)
             {
-                thisFlowersBee = other.gameObject;
-                AIBeeController beeState = thisFlowersBee.GetComponent<AIBeeController>();
-                beeState.ChangeState(beeState.gettingPollen);
-                beeState.target = floInt.aiPickupPoint;
-                floInt.visited = true;
-                beeState.visitedAFlower = true;                
-                ReList.Invoke(floInt.flowerLevel);
+                if (other.GetComponent<AIBeeController>() && floInt.active && other.GetComponent<AIBeeController>().visitedAFlower == false && !floInt.visited)
+                {
+                    thisFlowersBee = other.gameObject;
+                    AIBeeController beeState = thisFlowersBee.GetComponent<AIBeeController>();
+                    beeState.ChangeState(beeState.gettingPollen);
+                    beeState.target = floInt.aiPickupPoint;
+                    floInt.visited = true;
+                    beeState.visitedAFlower = true;                
+                    ReList.Invoke(floInt.flowerLevel);
                 
-                //floInt.active = false;
+                    //floInt.active = false;
                 
-                //run event to remove this from list
+                    //run event to remove this from list
+                }
             }
+
 
         }
     }
