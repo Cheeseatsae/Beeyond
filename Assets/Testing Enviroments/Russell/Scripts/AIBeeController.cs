@@ -30,12 +30,13 @@ namespace Harry
         private void Start()
 
         {
-            InspectorWindow_AIStateControll.GoFindFlowers += ChangeToFind;
+            ChangetoFollow.GoFindFlowers += ChangeToFind;
         }
 
         private void ChangeToFind()
         {
             ChangeState(findflower);
+            
         }
 
         public override void FixedUpdate()
