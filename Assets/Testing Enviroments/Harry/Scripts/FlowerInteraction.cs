@@ -30,6 +30,8 @@ namespace Harry
         public override void OnCollisionEnter(Collision other)
         {
             if (harvested) return;
+            if (other.gameObject.GetComponent<BeeController>().myState == BeeController.BeeState.Pollenated) return;
+            
             base.OnCollisionEnter(other);
         }
 
@@ -40,6 +42,13 @@ namespace Harry
                 active = true;
             }
         }
+
+        public override void OnInteract()
+        {
+            if (myBeeController.myState == BeeController.BeeState.Pollenated) return;
+            base.OnInteract();
+        }
+
         public override IEnumerator Interaction()
         {
             myBeeController.interacting = true;                
