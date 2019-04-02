@@ -21,6 +21,10 @@ namespace Harry
         private void Start()
         {
             HiveInteractable.ActivateNextFlowers += ActivateFlower;
+            if (playerOnly)
+            {
+                aiPickupPoint.SetActive(false);
+            }
         }
 
         public override void OnCollisionEnter(Collision other)
