@@ -19069,11 +19069,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpAmount: 0.0868
   weight1: 6
-  weight1LowerRange: 1.86
-  weight1UpperRange: 3.2
+  weight1LowerRange: 2.2
+  weight1UpperRange: 3.73
   weight2: 8.82
-  weight2LowerRange: 2.9
-  weight2UpperRange: 4.58
+  weight2LowerRange: 3.14
+  weight2UpperRange: 6.08
   weight3LowerRange: 8.88
   weight3UpperRange: 10
 --- !u!4 &1013722434
