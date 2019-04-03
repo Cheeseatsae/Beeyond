@@ -13,8 +13,7 @@ public class DustMovement : MonoBehaviour
     
     
     [Range(1f,20f)] public float perlinSmoothness = 3;
-    [Range(1f,10f)] public float perlinAplitude = 2;
-    [Range(0f,10f)] public float dustMinimumSpeed = 1;
+    [Range(1f,10f)] public float perlinAplitude = 2; 
     [Range(0.1f, 10f)] public float yAxisSpeedMultiplyer = 1;
     [Range(0.1f, 20f)] public float secondsToDestroy = 10;
     [Range(0.1f, 40f)] public float xOffsetToDestroy = 10;
@@ -22,6 +21,7 @@ public class DustMovement : MonoBehaviour
     [Range(0f, 10f)] public float fallRate = 2f;
     [Range(0f, 50f)] public float movementVariation = 25f;
 
+    private float _dustMinimumSpeed;
     private Transform _camTransform;
     
         
@@ -33,6 +33,8 @@ public class DustMovement : MonoBehaviour
         StartCoroutine(ParticleCheck());
         _originalPos = transform.position;
         _progressiveY = _originalPos.y;
+
+        _dustMinimumSpeed = Random.Range(.2f, .4f);
     }
 
     void Update()
@@ -49,7 +51,7 @@ public class DustMovement : MonoBehaviour
             yMulti = 0;
             
         }
-        transform.position = new Vector3(transform.position.x - (Roo.WindScript.windSpeed * Time.deltaTime)-(dustMinimumSpeed * Time.deltaTime) - yMulti, _progressiveY + (_perlinNoise * perlinAplitude), _originalPos.z);
+        transform.position = new Vector3(transform.position.x - (Roo.WindScript.windSpeed * Time.deltaTime)-(_dustMinimumSpeed * Time.deltaTime) - yMulti, _progressiveY + (_perlinNoise * perlinAplitude), _originalPos.z);
         _progressiveY -= fallRate*Time.deltaTime;
     }
 

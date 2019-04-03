@@ -552,7 +552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!1 &6073247699917337307
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +826,7 @@ MonoBehaviour:
   _debugPanel: {fileID: 7450628454407319459}
   windSpeedSlider: {fileID: 6073247701388742470}
   fill: {fileID: 6073247700020083782}
-  pingpongRangeText: {fileID: 6073247699850217997}
-  pingpongSpeedText: {fileID: 6073247701131440886}
+  timerText: {fileID: 0}
   windSpeedText: {fileID: 6073247699745895191}
 --- !u!1 &6073247700216112840
 GameObject:
@@ -1188,7 +1187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ping Pong Range
+  m_Text: 
 --- !u!1 &6073247701464749831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1340,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ping Pong Speed
+  m_Text: Game Timer
 --- !u!1 &7450628454407319459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,9 +1377,9 @@ RectTransform:
   m_Father: {fileID: 6073247700125403746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.015021329, y: 0.44929034}
-  m_AnchorMax: {x: 0.24601808, y: 0.9701677}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.015021329, y: 0.23545386}
+  m_AnchorMax: {x: 0.24601808, y: 0.7563312}
+  m_AnchoredPosition: {x: 0, y: 24}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1377807087481549949

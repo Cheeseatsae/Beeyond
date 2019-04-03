@@ -100,4 +100,4 @@ MonoBehaviour:
   xOffsetToDestroy: 10
   yOffsetToDestroy: 10
   fallRate: 0.78
-  movementVariation: 16.2
+  movementVariation: 12.7

@@ -13,15 +13,17 @@ public class WindDebugPanel : MonoBehaviour
     public Slider windSpeedSlider;
     public Image fill;
     
-    public Text pingpongRangeText;
-    public Text pingpongSpeedText;
+    // public Text pingpongRangeText;
+    public Text timerText;
+    private float _startTime;
+
     public Text windSpeedText;
     
     
     // Start is called before the first frame update
     void Start()
     {
-   
+        _startTime = Time.time;
     }
 
     // Update is called once per frame
@@ -40,12 +42,21 @@ public class WindDebugPanel : MonoBehaviour
            }
         }
 
+        // get time values in mins and sec
+        float t = Time.time - _startTime;
+
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f0");
+
+   
         // set values in panel for debugging
         windSpeedSlider.value = Roo.WindScript.windSpeed;
         fill.color = Color.Lerp(Color.green, Color.red, Roo.WindScript.windSpeed / 10f); // slider chnges colour depending on value
-        windSpeedText.text = System.Math.Round(Roo.WindScript.windSpeed,2).ToString();
-        pingpongRangeText.text = System.Math.Round(Roo.WindScript.pingpongRange,2).ToString();
-        pingpongSpeedText.text = System.Math.Round(Roo.WindScript.pingpongSpeed,2).ToString();
-        
+        windSpeedText.text = System.Math.Round(Roo.WindScript.windSpeed,2).ToString(); // output windspeed
+        timerText.text = minutes + ":" + seconds; // output time as string
+
+        //pingpongRangeText.text = System.Math.Round(Roo.WindScript.pingpongRange,2).ToString();
+        //pingpongSpeedText.text = System.Math.Round(Roo.WindScript.pingpongSpeed,2).ToString();
+
     }
 }
