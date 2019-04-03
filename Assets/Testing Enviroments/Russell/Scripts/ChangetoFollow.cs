@@ -13,7 +13,7 @@ namespace Harry
         // Start is called before the first frame update
         private void OnTriggerEnter(Collider other)
         {
-            GoFindFlowers.Invoke();
+            GoFindFlowers?.Invoke();
             this.gameObject.SetActive(false);
         }
     }
