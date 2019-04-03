@@ -15,11 +15,13 @@ public class GrassMovementScript : MonoBehaviour
         grassCloth = GetComponent<Cloth>();
 
         //set random attributes
-        grassCloth.bendingStiffness = Random.Range(.5f, 1f);
-        grassCloth.friction = Random.Range(.2f, .3f);
-        grassCloth.damping = Random.Range(.05f, .15f);
+        grassCloth.bendingStiffness = Random.Range(.9f, 1f);
+        grassCloth.friction = Random.Range(.1f, .3f);
+        grassCloth.damping = Random.Range(.6f, 1f);
 
         _windMultiplier = Random.Range(windMultiplierLowerRange, windMultiplierUpperRange);
+
+       GetComponent<ConstantForce>().force = new Vector3(0f,19.6f,0f);
     }
 
     // Update is called once per frame
