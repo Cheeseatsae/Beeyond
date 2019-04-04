@@ -16,7 +16,6 @@ namespace Harry
         // put in a state for disabling input
         
         public GameObject target;
-        
        
         [HideInInspector] public Rigidbody _myBody;
         [HideInInspector] public BeeFlutter _flutter;

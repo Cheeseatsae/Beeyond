@@ -11,7 +11,7 @@ namespace Harry
         [Range(0,10)] public float radius = 3;
         [Range(0,1)] public float transparency = 0.5f;
 
-        public static List<GameObject> waypoints;
+        public static List<GameObject> waypoints = new List<GameObject>();
         
         private void Awake()
         {
