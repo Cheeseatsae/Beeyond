@@ -40,7 +40,7 @@ namespace Harry
 
         IEnumerator GoBackToHive()
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(6);
             myFlower.active = false;
             myFlower.harvested = true;
             beeController.ChangeState(beeController.returnToHive);

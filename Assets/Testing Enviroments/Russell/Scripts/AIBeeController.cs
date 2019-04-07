@@ -18,7 +18,7 @@ namespace Harry
             currentState.Exit();
             newState.Enter();
             currentState = newState;
-            Debug.Log("Ran Change State "+ newState);
+            //Debug.Log("Ran Change State "+ newState);
         }
 
         public override void Awake()
