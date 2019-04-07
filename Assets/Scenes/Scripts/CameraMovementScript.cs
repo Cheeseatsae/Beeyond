@@ -48,7 +48,7 @@ namespace Roo
         {
             if (openGate < cameraClampMaxX.Length - 1)
             {
-                openGate = count;
+                openGate++;
             }
         }
 

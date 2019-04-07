@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Harry;
 using UnityEngine;
@@ -18,6 +19,10 @@ namespace Harry
         public bool visited = false;
         public bool active;
 
+        public delegate void OnFlowerInteract();
+
+        public OnFlowerInteract InteractionEvent;
+        
         private void Start()
         {
             HiveInteractable.ActivateNextFlowers += ActivateFlower;
@@ -59,7 +64,8 @@ namespace Harry
             active = false;
             GetComponent<Renderer>().material.color = Color.grey;
             myBeeController.myState = BeeController.BeeState.Pollenated;
-
+            InteractionEvent?.Invoke();
+            
             Reset();
         }
     }

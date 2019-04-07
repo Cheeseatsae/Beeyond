@@ -24,13 +24,6 @@ public class GameManagerScript : MonoBehaviour
             Application.Quit();
         }
 
-        if (Input.GetKey(KeyCode.Alpha1))
-        {
-            
-            Destroy(_hinges[hingeJointToBreak]); // destroy the joint of that object
-            Destroy(ObjectToDestroy); // destroy the wall
-            GameCam.GetComponent<Roo.CameraMovementScript>().openGate += 1; // increase the clamp
-        }
     }
 
 }
