@@ -13,13 +13,142 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114982378723151634}
-  - {fileID: 114261094097388572}
-  EditorEvents: []
-  MasterBankRef: {fileID: 114261094097388572}
-  StringsBankRef: {fileID: 114982378723151634}
-  stringsBankWriteTime: 636887139816242123
+  - {fileID: 114718380245441192}
+  - {fileID: 114213527613714200}
+  EditorEvents:
+  - {fileID: 114588263030808010}
+  MasterBankRef: {fileID: 114213527613714200}
+  StringsBankRef: {fileID: 114718380245441192}
+  stringsBankWriteTime: 636902326149964267
   cacheVersion: 2
+--- !u!114 &114035328742115424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Wind
+  guid: a1c3668e9a003c45aa7399be37e22992
+  Banks:
+  - {fileID: 114753845671382952}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114187318856294094}
+  - {fileID: 114501253147424022}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114138849704892200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114152516175191486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\BeeyondAudio\BeeyondSound\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636902440441709301
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 670
+  Exists: 1
+--- !u!114 &114160912338323662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &114187318856294094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &114192254914198054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114213527613714200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity\Beeyond_backup\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636902326148912045
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 160448
+  Exists: 1
 --- !u!114 &114261094097388572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,31 +169,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12122
   Exists: 1
---- !u!114 &114588896741685936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Wind
-  guid: a1c3668e9a003c45aa7399be37e22992
-  Banks:
-  - {fileID: 114443426067660156}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 114519074635782352}
-  - {fileID: 114751101285139702}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &114364218190586126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +256,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 160448
   Exists: 1
+--- !u!114 &114501253147424022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114519074635782352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +284,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
+  Min: 0
+  Max: 0
+  Default: 0
+--- !u!114 &114588263030808010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Wind
+  guid: a1c3668e9a003c45aa7399be37e22992
+  Banks:
+  - {fileID: 114213527613714200}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114160912338323662}
+  - {fileID: 114138849704892200}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114588896741685936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Wind
+  guid: a1c3668e9a003c45aa7399be37e22992
+  Banks:
+  - {fileID: 114443426067660156}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114519074635782352}
+  - {fileID: 0}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114718380245441192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636887139816242123
+  lastModified: 636902326149964267
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 624
+    Value: 670
   Exists: 1
+--- !u!114 &114753845671382952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity\Beeyond_backup\Assets\BeeyondAudio\BeeyondSound\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636902440441689357
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 160448
+  Exists: 1
+--- !u!114 &114856867263659466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 10
+  Default: 0

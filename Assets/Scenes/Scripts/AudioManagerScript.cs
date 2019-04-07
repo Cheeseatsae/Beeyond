@@ -64,7 +64,7 @@ public class AudioManagerScript : MonoBehaviour
         wind.getParameter("Strength", out WindVol); // connect to Strength Parameter in Wind Sound and output WindVol
 
         wind.start(); // start the wind
-        WindVol.setValue(1); // set volume to max
+        // WindVol.setValue(1); // set volume to max - no longer required. volume is automated
     }
 
     // Update is called once per frame
