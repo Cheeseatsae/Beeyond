@@ -8,6 +8,9 @@ namespace Roo
 
     public class WindScript : MonoBehaviour
     {
+        public enum Winds { EXPLORING, STRUGGLE, REWARD } // windstates for each part of tha game
+        public Winds WindStates;
+
         // public static variables for game
         public static float windSpeed = 0f; // eventual global wind speed --> use Roo.WindScript.windSpeed
         public static float pingpongRange = 2f; //size of pingpong
@@ -48,24 +51,40 @@ namespace Roo
         // Start is called before the first frame update
         void Start()
         {
-
+            WindStates = Winds.EXPLORING;
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-
-            _newWindSpeed = Mathf.PingPong(Time.time * pingpongSpeed, pingpongRange); // get next pingpong value
-
-            windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
-
-            if (_newWindSpeed < 0.5f) // if at the start of the pingpong. set new random values
+            switch (WindStates)
             {
-                pingpongRange = GetRandomValue(0f); //get value for pingpong 
-                pingpongSpeed = GetRandomValue(pingpongRange); //use previous value to get weighted speed value
-            }
+                case (Winds.EXPLORING):
 
-            _oldWindSpeed = windSpeed; // set _oldWindSpeed for origin of lerp before next update
+                    _newWindSpeed = Mathf.PingPong(Time.time * pingpongSpeed, pingpongRange); // get next pingpong value
+
+                    windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
+
+                    if (_newWindSpeed < 0.5f) // if at the start of the pingpong. set new random values
+                    {
+                        pingpongRange = GetRandomValue(0f); //get value for pingpong 
+                        pingpongSpeed = GetRandomValue(pingpongRange); //use previous value to get weighted speed value
+                    }
+
+                    _oldWindSpeed = windSpeed; // set _oldWindSpeed for origin of lerp before next update
+
+                    break;
+
+                case (Winds.STRUGGLE):
+                    windSpeed = Mathf.PingPong(Time.time * 1f, 10f);
+                    break;
+
+                    
+
+                case (Winds.REWARD):
+                    windSpeed = 0f;
+                    break;
+            }
 
         }
 
