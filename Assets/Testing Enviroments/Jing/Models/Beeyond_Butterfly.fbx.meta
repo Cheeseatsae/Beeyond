@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: 88248a833bb2d204f8d08c1f4b226189
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: annotation1
+    100002: annotation2
+    100004: annotation3
+    100006: annotationLocator1
+    100008: annotationLocator2
+    100010: annotationLocator3
+    100012: Antenna_L
+    100014: Antenna_R
+    100016: //RootNode
+    100018: Body
+    100020: Butt_2
+    100022: Butt_main
+    100024: Cntrl_World
+    100026: Head_main
+    100028: Head_top
+    100030: Leg_b_L
+    100032: Leg_b_R
+    100034: Leg_f_L
+    100036: Leg_f_R
+    100038: Leg_m_L
+    100040: Leg_m_R
+    100042: Main
+    100044: Mesh_butterfly
+    100046: mouth
+    100048: Neck
+    100050: Rig_butterfly
+    100052: Tail
+    100054: Wing_L
+    100056: Wing_R
+    400000: annotation1
+    400002: annotation2
+    400004: annotation3
+    400006: annotationLocator1
+    400008: annotationLocator2
+    400010: annotationLocator3
+    400012: Antenna_L
+    400014: Antenna_R
+    400016: //RootNode
+    400018: Body
+    400020: Butt_2
+    400022: Butt_main
+    400024: Cntrl_World
+    400026: Head_main
+    400028: Head_top
+    400030: Leg_b_L
+    400032: Leg_b_R
+    400034: Leg_f_L
+    400036: Leg_f_R
+    400038: Leg_m_L
+    400040: Leg_m_R
+    400042: Main
+    400044: Mesh_butterfly
+    400046: mouth
+    400048: Neck
+    400050: Rig_butterfly
+    400052: Tail
+    400054: Wing_L
+    400056: Wing_R
+    2100000: Butterfly_body
+    2100002: Butterfly_wings
+    4300000: Body
+    4300002: Antenna_R
+    4300004: Antenna_L
+    4300006: mouth
+    4300008: Leg_m_L
+    4300010: Leg_b_R
+    4300012: Leg_f_L
+    4300014: Leg_f_R
+    4300016: Leg_b_L
+    4300018: Leg_m_R
+    4300020: Wing_L
+    4300022: Wing_R
+    7400000: Take 001
+    7400002: Take 001 (1)
+    7400004: Take 001 (2)
+    7400006: Take 001 (3)
+    9500000: //RootNode
+    13700000: Antenna_L
+    13700002: Antenna_R
+    13700004: Body
+    13700006: Leg_b_L
+    13700008: Leg_b_R
+    13700010: Leg_f_L
+    13700012: Leg_f_R
+    13700014: Leg_m_L
+    13700016: Leg_m_R
+    13700018: mouth
+    13700020: Wing_L
+    13700022: Wing_R
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001 (1)
+      takeName: Take 001
+      firstFrame: 220
+      lastFrame: 249
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001 (2)
+      takeName: Take 001
+      firstFrame: 242
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 14
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.14
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
