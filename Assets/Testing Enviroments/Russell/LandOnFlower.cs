@@ -9,7 +9,7 @@ namespace Harry
     {
         private AIBeeController beeController;
         public GameObject parent;
-        private FlowerInteraction myFlower;
+        public FlowerInteraction myFlower;
         private Rigidbody rb;
 
 
@@ -41,8 +41,8 @@ namespace Harry
         IEnumerator GoBackToHive()
         {
             yield return new WaitForSeconds(6);
-            myFlower.active = false;
-            myFlower.harvested = true;
+            //myFlower.harvested = true;
+            //myFlower.active = false;
             beeController.ChangeState(beeController.returnToHive);
             
         }
