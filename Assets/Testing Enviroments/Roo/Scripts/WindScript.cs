@@ -11,6 +11,7 @@ namespace Roo
         public enum Winds { EXPLORING, STRUGGLE, REWARD } // windstates for each part of tha game
         public Winds WindStates;
 
+        [Range(0.5f, 5f)] public float struggleLoopSpeed;
         // public static variables for game
         public static float windSpeed = 0f; // eventual global wind speed --> use Roo.WindScript.windSpeed
         public static float pingpongRange = 2f; //size of pingpong
@@ -76,7 +77,7 @@ namespace Roo
                     break;
 
                 case (Winds.STRUGGLE):
-                    windSpeed = Mathf.PingPong(Time.time * 1f, 10f);
+                    windSpeed = Mathf.PingPong(Time.time * struggleLoopSpeed, 15f);
                     break;
 
                     
