@@ -29,7 +29,7 @@ public class StormTrigger : MonoBehaviour
         StartCoroutine(TheStormApproaches());
 
         PlayParticles();
-
+        Roo.WindScript.WindStates = Roo.WindScript.Winds.STRUGGLE;
     }
 
     private void PlayParticles()

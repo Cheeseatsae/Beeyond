@@ -9,7 +9,7 @@ namespace Roo
     public class WindScript : MonoBehaviour
     {
         public enum Winds { EXPLORING, STRUGGLE, REWARD } // windstates for each part of tha game
-        public Winds WindStates;
+        public static Winds WindStates;
 
         [Range(0.5f, 5f)] public float struggleLoopSpeed;
         // public static variables for game
@@ -64,7 +64,7 @@ namespace Roo
 
                     _newWindSpeed = Mathf.PingPong(Time.time * pingpongSpeed, pingpongRange); // get next pingpong value
 
-                    windSpeed = Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount);
+                    windSpeed = noZeroValue(Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount));
 
                     if (_newWindSpeed < 0.5f) // if at the start of the pingpong. set new random values
                     {
@@ -77,13 +77,17 @@ namespace Roo
                     break;
 
                 case (Winds.STRUGGLE):
-                    windSpeed = Mathf.PingPong(Time.time * struggleLoopSpeed, 15f);
+                    _newWindSpeed = Mathf.PingPong(Time.time * struggleLoopSpeed, 15f); // 
+
+                    windSpeed = noZeroValue(Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount));
+
+                    _oldWindSpeed = windSpeed;
                     break;
 
                     
 
                 case (Winds.REWARD):
-                    windSpeed = 0f;
+                    windSpeed = .001f;
                     break;
             }
 
@@ -103,6 +107,18 @@ namespace Roo
                 return Random.Range(weight2LowerRange, weight2UpperRange);
 
             return Random.Range(weight3LowerRange, weight3UpperRange);
+        }
+
+        float noZeroValue(float checkSpeed)
+        {
+            if (checkSpeed > .01)
+            {
+                return checkSpeed;
+            }
+            else
+            {
+                return 0.1f;
+            }
         }
     }
 }
