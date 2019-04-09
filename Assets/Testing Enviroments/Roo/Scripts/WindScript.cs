@@ -47,11 +47,15 @@ namespace Roo
         [Range(1f, 10f)] public float weight3LowerRange;
         [Range(1f, 10f)] public float weight3UpperRange;
 
-        
+        private bool _hasTimeBeenReset = false;
+        private float _resetTime;
+
+
 
         // Start is called before the first frame update
         void Start()
         {
+            _resetTime = Time.time;
             WindStates = Winds.EXPLORING;
         }
 
@@ -77,14 +81,15 @@ namespace Roo
                     break;
 
                 case (Winds.STRUGGLE):
-                    _newWindSpeed = Mathf.PingPong(Time.time * struggleLoopSpeed, 15f); // 
+                    if (!_hasTimeBeenReset) { _hasTimeBeenReset = true; _resetTime = Time.time - _resetTime; }
+                    _newWindSpeed = Mathf.PingPong(Time.time - _resetTime * struggleLoopSpeed, 15f); // 
 
                     windSpeed = noZeroValue(Mathf.Lerp(_oldWindSpeed, _newWindSpeed, lerpAmount));
 
                     _oldWindSpeed = windSpeed;
                     break;
 
-                    
+
 
                 case (Winds.REWARD):
                     windSpeed = .001f;
