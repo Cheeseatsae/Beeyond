@@ -89,7 +89,7 @@ Material:
     - _TranslucentGain: 0.5
     - _UVSec: 0
     - _WindScale: 1
-    - _WindStrength: 0.10584581
+    - _WindStrength: 0.13829584
     - _ZWrite: 1
     m_Colors:
     - _BottomColor: {r: 0.11320752, g: 0.054574575, b: 0.015485938, a: 1}
