@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Mime;
 using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
@@ -31,9 +32,19 @@ namespace Harry
         public float rotateThreshold = 0.1f;
         [Range(0,4)] public float rotateSpeed = 2;
         public float maxSpeed = 5;
+        
+        // Modifiers for Y wind application
         [Range(0, 1)] public float windYAxisDivider;
+        private float _yAxisWindMod = 0;
+        [Range(0, 10)] public float yAxisMinWindEffect = 0;
+        [Range(-3, 3)] public float yAxisWindCutOff = 0;
+        
         public Text finalWindSpeed;
         public Text playerState;
+        
+        
+        
+        
 
         public enum BeeState { Moving, Stopped, Pollenated }
         public BeeState myState = BeeState.Moving;
@@ -47,8 +58,6 @@ namespace Harry
             _myModel = GetComponentInChildren<Renderer>().gameObject;
             _whatsAround = GetComponent<CheckWhatsAround>();
         }
-        
-        
 
         public virtual void FixedUpdate()
         {
@@ -58,7 +67,14 @@ namespace Harry
             // setting desired velocity to be towards the target
             _force = ((target.transform.position - transform.position) * speedMult);
             // applying sin variation and the wind effect
-            _force = new Vector3(_force.x - (Roo.WindScript.windSpeed * windSpeedMult) - (Roo.WindScript.windSpeed * (_myModel.transform.position.y * windYAxisDivider)), _force.y + _flutter.InputSin(), _force.z);
+            
+            // wind based on y axis
+            if (_myModel.transform.position.y > yAxisWindCutOff)
+                _yAxisWindMod = Roo.WindScript.windSpeed * (_myModel.transform.position.y * windYAxisDivider);
+            else
+                _yAxisWindMod = yAxisMinWindEffect * windYAxisDivider;
+            
+            _force = new Vector3(_force.x - (Roo.WindScript.windSpeed * windSpeedMult) - _yAxisWindMod, _force.y + _flutter.InputSin(), _force.z);
             
             // adding the force normalized
             _myBody.AddForce(_force);
