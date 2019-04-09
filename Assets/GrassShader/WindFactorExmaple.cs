@@ -6,7 +6,7 @@ public class WindFactorExmaple : MonoBehaviour
 {
     // This script will demonstrate how to change the 'Wind Strength' property of the Grass Shader
     // First, you need to create a variable to store the MAT, and access to the wind variable you want to hook it up to
-    public float MyWindVariable;
+    [Range(0f,1f)] public float MyWindVariable =1f;
     public Material GrassShader;
     
     // Drag the shader from the gameobject onto the field in the inspector (done outside of script)
@@ -17,5 +17,10 @@ public class WindFactorExmaple : MonoBehaviour
     void Start()
     {
         GrassShader.SetFloat("_WindStrength", MyWindVariable);
+    }
+
+    private void FixedUpdate()
+    {
+       // GrassShader.SetFloat("_WindStrength", Roo.WindScript.windSpeed * MyWindVariable);
     }
 }
