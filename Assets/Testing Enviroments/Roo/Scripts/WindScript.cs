@@ -52,7 +52,7 @@ namespace Roo
         // Start is called before the first frame update
         void Start()
         {
-            WindStates = Winds.STRUGGLE;
+            WindStates = Winds.EXPLORING;
         }
 
         // Update is called once per frame
