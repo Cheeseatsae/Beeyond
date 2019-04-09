@@ -26,6 +26,9 @@ namespace Harry
         private void Start()
         {
             HiveInteractable.ActivateNextFlowers += ActivateFlower;
+
+            InteractionEvent += PlayAnimation;
+
             if (playerOnly)
             {
                 aiPickupPoint.SetActive(false);
@@ -67,6 +70,16 @@ namespace Harry
             InteractionEvent?.Invoke();
             
             Reset();
+        }
+
+        public void PlayAnimation()
+        {
+            GetComponentInChildren<Animator>().SetTrigger("Play");
+        }
+
+        private void OnDestroy()
+        {
+            InteractionEvent -= PlayAnimation;
         }
     }
 }
