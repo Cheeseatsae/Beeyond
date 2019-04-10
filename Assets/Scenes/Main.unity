@@ -13461,7 +13461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2133fa55a92a7ce4f9d26b7ee15a4ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyWindVariable: 0.01
+  MyWindVariable: 0.0065
   GrassShader: {fileID: 2100000, guid: dc23b46c0890b774bb9bbeb2aa16645d, type: 2}
 --- !u!64 &640401615
 MeshCollider:
@@ -24579,7 +24579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2133fa55a92a7ce4f9d26b7ee15a4ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyWindVariable: 0.01
+  MyWindVariable: 0.0065
   GrassShader: {fileID: 2100000, guid: 8468ffaf77b12bc449aa977d67b728db, type: 2}
 --- !u!64 &1647767459
 MeshCollider:
