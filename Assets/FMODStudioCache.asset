@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114718380245441192}
-  - {fileID: 114265225274303086}
+  - {fileID: 114904317185046706}
   EditorEvents:
   - {fileID: 114588263030808010}
   - {fileID: 114949186524187110}
-  MasterBankRef: {fileID: 114265225274303086}
+  MasterBankRef: {fileID: 114904317185046706}
   StringsBankRef: {fileID: 114718380245441192}
-  stringsBankWriteTime: 636905029168065722
+  stringsBankWriteTime: 636905341108486047
   cacheVersion: 2
 --- !u!114 &114035328742115424
 MonoBehaviour:
@@ -429,6 +429,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114439076443012022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114443426067660156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,13 +580,13 @@ MonoBehaviour:
   Path: event:/SFX/Wind
   guid: a1c3668e9a003c45aa7399be37e22992
   Banks:
-  - {fileID: 114265225274303086}
+  - {fileID: 114904317185046706}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114392804918078184}
-  - {fileID: 114715774159276682}
+  - {fileID: 114738690149215326}
+  - {fileID: 114439076443012022}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -660,12 +676,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636905029168065722
+  lastModified: 636905341108486047
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 718
   Exists: 1
+--- !u!114 &114738690149215326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114745450849867560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +766,25 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114904317185046706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Beeyond\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.bank
+  lastModified: 636905341108476077
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 304928
+  Exists: 1
 --- !u!114 &114949186524187110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +801,7 @@ MonoBehaviour:
   guid: dfeb8d21a5a23f4b9e9f6be200d26eb1
   Banks:
   - {fileID: 114368913427927338}
-  - {fileID: 114265225274303086}
+  - {fileID: 114904317185046706}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0

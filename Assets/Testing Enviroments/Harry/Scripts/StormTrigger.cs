@@ -15,6 +15,14 @@ public class StormTrigger : MonoBehaviour
     private float exposure;
     private float oldExposure;
 
+    // original post processing values
+    // private FloatParameter _oldTemperature;
+    // private FloatParameter _oldContrast;
+    // private Vector4Parameter _oldGain;
+
+    public GameObject postProcess;
+    private ColorGrading _colourGrading;
+
     public List<ParticleSystem> particles = new List<ParticleSystem>();
     
     private void Awake()
@@ -30,6 +38,7 @@ public class StormTrigger : MonoBehaviour
 
         PlayParticles();
         Roo.WindScript.WindStates = Roo.WindScript.Winds.STRUGGLE;
+        Roo.LightningScript.lightningActive = true;
     }
 
     private void PlayParticles()
