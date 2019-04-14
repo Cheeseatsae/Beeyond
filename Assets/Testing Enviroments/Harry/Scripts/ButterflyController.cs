@@ -114,7 +114,7 @@ namespace Harry
             // finding dir to turn towards
             Vector3 dir = t - _myModel.transform.position;
             // so we dont go upside down
-            dir = new Vector3(dir.x, 0,0);
+            dir = new Vector3(dir.x, 0,dir.z);
             
             // so we dont go sideways/turn when we dont want to
             if (dir.x < 0.1f && dir.x > -0.1f) return;
