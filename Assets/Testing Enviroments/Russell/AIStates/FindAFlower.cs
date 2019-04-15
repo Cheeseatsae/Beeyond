@@ -12,6 +12,7 @@ namespace Harry
         public GameObject newTarget;
         public int flowerIndex;
         public int count;
+        public bool hasflower = false;
         public List<GameObject> myflowers = new List<GameObject>();
         
         // Start is called before the first frame update
@@ -42,6 +43,10 @@ namespace Harry
             //follow.PlayerDistanceCheck();
             follow.ObjAvoidance();
             follow.AiDistanceCheck();
+            if (myflowers.Count == 0 && controller.visitedAFlower == false)
+            {
+                controller.ChangeState(controller.returnToHive);
+            }
             
         }
 
@@ -55,13 +60,11 @@ namespace Harry
                 {
                     flowerIndex = Random.Range(0, myflowers.Count);
                     newTarget = myflowers[flowerIndex];
-
                     controller.target = newTarget.GetComponent<FlowerInteraction>().aiPickupPoint;
+                    hasflower = true;
                     Debug.Log("rerun flowerchooser");
                 }
             }
-
-
         }
 
         public void AddMyFlowers()
@@ -80,7 +83,7 @@ namespace Harry
         public void ChooseNewFlower(int count)
         {
             myflowers.Clear();
-            ChooseAFlower();
+            ChooseAFlower();           
         }
         
         

@@ -23,7 +23,10 @@ namespace Harry
         public override void Enter()
         {
             base.Enter();
+            
             myFlower = beeController.target.GetComponentInParent<FlowerInteraction>();
+            
+            StartCoroutine(GoBackToHive());
             //beeController.target = myFlower.aiPickupPoint;
         }
 
@@ -33,16 +36,24 @@ namespace Harry
             float speed = 1 * Time.deltaTime;            
             parent.transform.position =
                 Vector3.MoveTowards(parent.transform.position, beeController.target.transform.position, speed);
-            StartCoroutine(GoBackToHive());
+            
 
         }
 // Start is called before the first frame update
 
         IEnumerator GoBackToHive()
         {
-            yield return new WaitForSeconds(6);
-            //myFlower.harvested = true;
-            //myFlower.active = false;
+            yield return new WaitForSeconds(8);
+            if (!myFlower)
+            {
+                myFlower = beeController.target.GetComponentInParent<FlowerInteraction>();
+            }
+            if (beeController.myState != BeeController.BeeState.Pollenated)
+            {
+                myFlower.OnInteract();
+            }
+            
+            yield return  new WaitForSeconds(1);
             beeController.ChangeState(beeController.returnToHive);
             
         }

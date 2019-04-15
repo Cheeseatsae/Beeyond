@@ -11,7 +11,7 @@ namespace Harry
         private float previousWindMod;
         private float previousYWindMod;
         [HideInInspector] public GameObject myBee;
-        [HideInInspector] public BeeController myBeeController;
+        public BeeController myBeeController;
 
         public float delay = 2;
 

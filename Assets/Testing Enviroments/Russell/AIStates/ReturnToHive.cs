@@ -13,20 +13,24 @@ namespace Harry
         public float distance;
 
         public GameObject hive;
-
+        public HiveInteractable hiveInt;
+        public GameObject hive2;
         public GameObject returnPoint;
         // Start is called before the first frame update
 
         private void Awake()
         {
             ftp = GetComponent<FollowThePlayer>();
+            
         }
 
         public override void Enter()
         {
             base.Enter();
-            controller = bee.GetComponent<AIBeeController>();
             hive = GameObject.FindWithTag("Hive");
+            controller = bee.GetComponent<AIBeeController>();
+
+            
             controller.target = hive;
             
 

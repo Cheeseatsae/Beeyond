@@ -13,8 +13,12 @@ namespace Harry
         // Start is called before the first frame update
         private void OnTriggerEnter(Collider other)
         {
-            GoFindFlowers?.Invoke();
-            this.gameObject.SetActive(false);
+            if (other.GetComponent<PlayerBeeController>())
+            {
+                GoFindFlowers?.Invoke();
+                this.gameObject.SetActive(false);
+            }
+
         }
     }
 
