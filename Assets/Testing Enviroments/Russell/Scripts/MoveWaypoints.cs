@@ -8,7 +8,7 @@ namespace Harry
     public class MoveWaypoints : MonoBehaviour
     {
     
-        public GameObject waypoints;
+
 
         public GameObject hive;
 
@@ -28,8 +28,7 @@ namespace Harry
         private void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<PlayerBeeController>())
-            {
-                waypoints.transform.position = new Vector3(waypoints.transform.position.x, waypoints.transform.position.y, 4.2f);
+            {               
                 hive.tag = null;
                 hive2.tag = "Hive";
             }
