@@ -34,6 +34,7 @@ namespace Harry
                 if (other.GetComponent<AIBeeController>() && floInt.active && other.GetComponent<AIBeeController>().visitedAFlower == false && !floInt.visited)
                 {
                     thisFlowersBee = other.gameObject;
+                    floInt.myBeeController = thisFlowersBee.GetComponent<AIBeeController>();
                     AIBeeController beeState = thisFlowersBee.GetComponent<AIBeeController>();
                     beeState.ChangeState(beeState.gettingPollen);
                     beeState.target = floInt.aiPickupPoint;

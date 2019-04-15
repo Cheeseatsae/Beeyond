@@ -10,6 +10,7 @@ namespace Harry
         public AIStateBase currentState;
         public AIStateBase gettingPollen;
         public AIStateBase returnToHive;
+        public AIStateBase enterHive;
         public bool visitedAFlower = false;
 
         public void ChangeState(AIStateBase newState)

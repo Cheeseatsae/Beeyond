@@ -251,6 +251,8 @@ MonoBehaviour:
   rotateSpeed: 4
   maxSpeed: 4
   windYAxisDivider: 0.01
+  yAxisMinWindEffect: 0
+  yAxisWindCutOff: 0
   finalWindSpeed: {fileID: 0}
   playerState: {fileID: 0}
   myState: 0
@@ -260,6 +262,7 @@ MonoBehaviour:
   currentState: {fileID: 8537320667400951128}
   gettingPollen: {fileID: 1827453127879259919}
   returnToHive: {fileID: 8411735084584391154}
+  enterHive: {fileID: 2933449715725599906}
   visitedAFlower: 0
 --- !u!135 &1543035680
 SphereCollider:
@@ -346,6 +349,7 @@ GameObject:
   - component: {fileID: 6460018786008430737}
   - component: {fileID: 1827453127879259919}
   - component: {fileID: 8411735084584391154}
+  - component: {fileID: 2933449715725599906}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -437,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 2449698643631514231}
+  myFlower: {fileID: 0}
 --- !u!114 &8411735084584391154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +455,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bee: {fileID: 2449698643631514231}
+  ftp: {fileID: 0}
+  distance: 0
   hive: {fileID: 0}
+  returnPoint: {fileID: 0}
+--- !u!114 &2933449715725599906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166514364945360684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e478cb1c8bfef4f8cd457342db6521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bee: {fileID: 2449698643631514231}
+  waypoints: {fileID: 0}
 --- !u!1 &4180643545233259037
 GameObject:
   m_ObjectHideFlags: 0
