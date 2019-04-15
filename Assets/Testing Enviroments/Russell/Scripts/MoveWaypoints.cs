@@ -29,7 +29,7 @@ namespace Harry
         {
             if (other.GetComponent<PlayerBeeController>())
             {               
-                hive.tag = null;
+                hive.tag = "Untagged";
                 hive2.tag = "Hive";
             }
         }
