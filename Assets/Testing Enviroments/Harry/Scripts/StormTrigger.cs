@@ -47,6 +47,7 @@ public class StormTrigger : MonoBehaviour
         {
             p.Play();
         }
+        Debug.Log(particles.Count);
     }
     
     public void StopParticles()

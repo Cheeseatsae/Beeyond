@@ -15,14 +15,17 @@ namespace Roo
 
         private Light _lightning;
 
+        [Range(0.01f, 0.5f)] public float minLightningFlux;
+        [Range(0.01f, 0.5f)] public float maxLightningFlux;
+
         [Range(1f, 30f)] public float minPauseTime;
         [Range(5f, 60f)] public float maxPauseTime;
 
         [Range(10, 50)] public int minDuration;
         [Range(20, 500)] public int maxDuration;
 
-        [Range(1f, 7f)] public float minBrightness;
-        [Range(7f, 15f)] public float maxBrightness;
+        [Range(1f, 15f)] public float minBrightness;
+        [Range(1f, 15f)] public float maxBrightness;
 
         [Range(-30f, 15f)] public float minVariation;
         [Range(0f, 150f)] public float maxVariation;
@@ -54,7 +57,7 @@ namespace Roo
 
             for (int i = 0; i < _lightningDuration; i++)
             {
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(Random.Range(minLightningFlux,maxLightningFlux));
 
                 float v = Random.Range(_flashIntensity + _intensityRange.x, _flashIntensity + _intensityRange.y);
 
