@@ -30,7 +30,6 @@ namespace Harry
             // on collision with a bee occupy the flower if we aren't already occupied
             if (other.gameObject.GetComponent<BeeController>() != null && state == State.Unoccupied)
             {
-                Debug.Log("theres a bee on me");
                 // setup
                 state = State.Occupied;
                 myBee = other.gameObject;
@@ -48,9 +47,13 @@ namespace Harry
             }
         }
 
-        public virtual void OnTriggerStay(Collider other)
+        public virtual void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<BeeController>() != null) withinTrigger = true;
+            if (other.GetComponent<BeeController>() != null)
+            {
+                withinTrigger = true;
+                Debug.Log("Bee in trigger");
+            }
             else withinTrigger = false;
         }
 

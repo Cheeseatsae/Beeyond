@@ -318,7 +318,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 17
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -339,7 +339,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.19999999
+    previousCalculatedGlobalScale: 0.14
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
