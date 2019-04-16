@@ -18,11 +18,14 @@ namespace Roo
         [Range(1f, 30f)] public float minPauseTime;
         [Range(5f, 60f)] public float maxPauseTime;
 
-        [Range(.2f, 1f)] public float minDuration;
-        [Range(1f, 2f)] public float maxDuration;
+        [Range(10, 50)] public int minDuration;
+        [Range(20, 500)] public int maxDuration;
 
         [Range(1f, 7f)] public float minBrightness;
         [Range(7f, 15f)] public float maxBrightness;
+
+        [Range(-30f, 15f)] public float minVariation;
+        [Range(0f, 150f)] public float maxVariation;
 
         [Range(1f, 3f)] public float minPauseForThunder;
         [Range(3f, 10f)] public float maxPauseForThunder;
@@ -39,16 +42,26 @@ namespace Roo
             if (lightningActive && !_lightningInProgress)
             {
                 _lightningInProgress = true;
-                StartCoroutine(LightningTime(Random.Range(minPauseTime, maxPauseTime), Random.Range(minDuration, maxDuration), Random.Range(minBrightness, maxBrightness), Random.Range(minPauseForThunder, maxPauseForThunder)));
+                StartCoroutine(LightningTime(Random.Range(minPauseTime, maxPauseTime), Random.Range(minDuration, maxDuration), Random.Range(minBrightness, maxBrightness), new Vector2(minVariation, maxVariation), Random.Range(minPauseForThunder, maxPauseForThunder)));
             }
         }
 
-        IEnumerator LightningTime(float _lightningPause, float _lightningDuration, float _flashIntensity, float _pauseForThunder)
+        IEnumerator LightningTime(float _lightningPause, int _lightningDuration, float _flashIntensity, Vector2 _intensityRange, float _pauseForThunder)
         {
             yield return new WaitForSeconds(_lightningPause);
 
             _lightning.intensity = _flashIntensity;
-            yield return new WaitForSeconds(_lightningDuration);
+
+            for (int i = 0; i < _lightningDuration; i++)
+            {
+                yield return new WaitForSeconds(0.01f);
+
+                float v = Random.Range(_flashIntensity + _intensityRange.x, _flashIntensity + _intensityRange.y);
+
+                _lightning.intensity = v;
+
+            }
+
 
             _lightning.intensity = 0;
 

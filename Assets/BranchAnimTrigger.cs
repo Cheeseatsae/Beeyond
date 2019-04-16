@@ -15,6 +15,7 @@ public class BranchAnimTrigger : MonoBehaviour
 
         if (hasPlayed) return;
         hasPlayed = true;
+        branch.SetActive(true);
         branch.GetComponent<Animator>().SetTrigger("Trigger");
 
     }
