@@ -17,14 +17,15 @@ namespace Harry
                 if (myState == BeeState.Stopped && !interacting)
                 {
                     currentInteractable.OnInteract();
-                PlayAnimation();
+                if (currentInteractable.GetComponent<FlowerInteraction>() != null) PlayAnimation("Standing");
+                if (currentInteractable.GetComponent<HiveInteractable>() != null) PlayAnimation("ButtDance");
                 }
             
         }
 
-        public void PlayAnimation()
+        public void PlayAnimation(string s)
         {
-            GetComponentInChildren<Animator>().SetTrigger("Standing");
+            GetComponentInChildren<Animator>().SetTrigger(s);
         }
 
         // Update is called once per frame
