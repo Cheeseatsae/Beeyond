@@ -20315,6 +20315,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e6a7182978924fb38083a5d915a3f, type: 3}
+--- !u!1 &958297927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8243973400971133346, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
+    type: 3}
+  m_PrefabInstance: {fileID: 5797930270056880701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &958297930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958297927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fbb951a86b3994ebfaf548bba78d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  InputY: 0
 --- !u!1 &975196262
 GameObject:
   m_ObjectHideFlags: 0
@@ -24807,6 +24827,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rain
       objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: -14.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2408891783555781710, guid: c7e1fefe9effe0f45959a6dbe1d54392,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24872,46 +24962,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.64
       objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: prewarm
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: VelocityModule.x.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783555781697, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: VelocityModule.y.scalar
-      value: -25
-      objectReference: {fileID: 0}
     - target: {fileID: 2408891783038955879, guid: c7e1fefe9effe0f45959a6dbe1d54392,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -24953,36 +25003,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2408891782896705408, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: prewarm
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-        type: 3}
-      propertyPath: VelocityModule.x.scalar
-      value: -14.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
         type: 3}
       propertyPath: prewarm
       value: 1
@@ -29792,7 +29812,7 @@ PrefabInstance:
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 200.7
+      value: 20.87
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
@@ -29854,6 +29874,11 @@ PrefabInstance:
       propertyPath: playerState
       value: 
       objectReference: {fileID: 5627209651211961636}
+    - target: {fileID: 8243973400963723878, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 471a4c40fa8d5c348a60da94a917d26c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642, type: 3}
 --- !u!4 &6312606593906309903 stripped
