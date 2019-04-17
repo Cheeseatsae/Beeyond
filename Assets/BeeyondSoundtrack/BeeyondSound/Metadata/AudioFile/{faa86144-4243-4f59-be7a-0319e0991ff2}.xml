@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{faa86144-4243-4f59-be7a-0319e0991ff2}">
         <property name="assetPath">
-            <value>Kite Flapping.wav</value>
+            <value>SFX/Kite Flapping.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

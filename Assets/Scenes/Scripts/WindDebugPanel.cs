@@ -18,6 +18,7 @@ public class WindDebugPanel : MonoBehaviour
     private float _startTime;
 
     public Text windSpeedText;
+    public Text gameProgress;
     
     
     // Start is called before the first frame update
@@ -54,6 +55,7 @@ public class WindDebugPanel : MonoBehaviour
         fill.color = Color.Lerp(Color.green, Color.red, Roo.WindScript.windSpeed / 10f); // slider chnges colour depending on value
         windSpeedText.text = System.Math.Round(Roo.WindScript.windSpeed,2).ToString(); // output windspeed
         timerText.text = minutes + ":" + seconds; // output time as string
+        gameProgress.text = AudioManagerScript.gameProgression.ToString();
 
         //pingpongRangeText.text = System.Math.Round(Roo.WindScript.pingpongRange,2).ToString();
         //pingpongSpeedText.text = System.Math.Round(Roo.WindScript.pingpongSpeed,2).ToString();

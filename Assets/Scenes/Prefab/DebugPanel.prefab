@@ -828,6 +828,7 @@ MonoBehaviour:
   fill: {fileID: 6073247700020083782}
   timerText: {fileID: 0}
   windSpeedText: {fileID: 6073247699745895191}
+  gameProgress: {fileID: 6073247699850217997}
 --- !u!1 &6073247700216112840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Game Level
 --- !u!1 &6073247701464749831
 GameObject:
   m_ObjectHideFlags: 0
