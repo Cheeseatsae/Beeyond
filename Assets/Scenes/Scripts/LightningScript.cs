@@ -30,8 +30,8 @@ namespace Roo
         [Range(-30f, 15f)] public float minVariation;
         [Range(0f, 150f)] public float maxVariation;
 
-        [Range(1f, 3f)] public float minPauseForThunder;
-        [Range(3f, 10f)] public float maxPauseForThunder;
+        [Range(.1f, 3f)] public float minPauseForThunder;
+        [Range(.5f, 10f)] public float maxPauseForThunder;
         // Start is called before the first frame update
         void Start()
         {
@@ -69,6 +69,7 @@ namespace Roo
             _lightning.intensity = 0;
 
             yield return new WaitForSeconds(_pauseForThunder);
+            AudioManagerScript.Playsound("thunder01");
             // thunder1.start() // play thunder sounds based on light intensity
             _lightningInProgress = false;
         }

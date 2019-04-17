@@ -6,7 +6,10 @@ public class AudioManagerScript : MonoBehaviour
 {
     // List all possible game sounds
     public static FMOD.Studio.EventInstance wind; // Game sounds from SFX bank
-    public static FMOD.Studio.EventInstance music; // game music
+    public static FMOD.Studio.EventInstance music;// game music
+    public static FMOD.Studio.EventInstance atmosExploring;
+
+    public static FMOD.Studio.EventInstance thunder01;
 
     public static float gameProgression = 0f;
 
@@ -52,7 +55,13 @@ public class AudioManagerScript : MonoBehaviour
 
         // sfx bank
         wind = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Wind");
+        thunder01 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thunder01");
+
+        // music
         music = FMODUnity.RuntimeManager.CreateInstance("event:/Score/Music");
+
+        // atmos
+        atmosExploring = FMODUnity.RuntimeManager.CreateInstance("event:/Atmos/Exploring");
 
         /*
          *      BELOW IS AN EXAMPLE.. REPLACE WITH CORRECT SOUND LINKS
@@ -72,8 +81,9 @@ public class AudioManagerScript : MonoBehaviour
         wind.getParameter("Strength", out WindVol); // connect to Strength Parameter in Wind Sound and output WindVol
         music.getParameter("GameLevel", out gameLevel);
 
-        wind.start(); // start the wind
-        music.start(); // start music
+       wind.start(); // start the wind
+      // music.start(); // start music
+       atmosExploring.start(); // start exploring atmos
         // WindVol.setValue(1); // set volume to max - no longer required. volume is automated
     }
 
@@ -84,19 +94,15 @@ public class AudioManagerScript : MonoBehaviour
         gameLevel.setValue(gameProgression);
     }
 
-    /*
-     *below is an example, please change correctly
-     * 
-     * 
     // Below is the switch statement for all the possible sounds used in the game
     public static void Playsound(string clip)
     {
-        switch (clip) { case ("score1"): score1.start(); break; }
+        switch (clip) { case ("thunder01"): thunder01.start(); break; }
 
-        switch (clip) { case ("atmos2Start"): atmos2.start(); break; }
-        switch (clip) { case ("atmos2Stop"): atmos.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
+        //switch (clip) { case ("atmos2Start"): atmos2.start(); break; }
+        //switch (clip) { case ("atmos2Stop"): atmos.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 
-        switch (clip) { case ("noWind"): WindIntensity.setValue(0); break; }
+        //switch (clip) { case ("noWind"): WindIntensity.setValue(0); break; }
     }
-    */
+
 }
