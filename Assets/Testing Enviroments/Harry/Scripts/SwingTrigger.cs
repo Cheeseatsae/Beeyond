@@ -22,6 +22,7 @@ public class SwingTrigger : MonoBehaviour
     {
         Destroy(hingeToBreak); // destroy the joint of that object
         Destroy(wallToDestroy);
+        AudioManagerScript.gameProgression += 1;
         cam.IncreaseClamp(0);
     }
 
