@@ -34,7 +34,8 @@ public class StormTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerBeeController>() == null) return;
-        AudioManagerScript.gameProgression = 50f;
+        AudioManagerScript.gameProgression = 6f;
+        AudioManagerScript.Playsound("atmosExploringStop");
 
         StartCoroutine(TheStormApproaches());
 

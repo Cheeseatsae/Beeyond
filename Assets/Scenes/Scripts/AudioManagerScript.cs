@@ -63,17 +63,6 @@ public class AudioManagerScript : MonoBehaviour
         // atmos
         atmosExploring = FMODUnity.RuntimeManager.CreateInstance("event:/Atmos/Exploring");
 
-        /*
-         *      BELOW IS AN EXAMPLE.. REPLACE WITH CORRECT SOUND LINKS
-         *      
-            // score bank
-            score1 = FMODUnity.RuntimeManager.CreateInstance("event:/Score/score1");
-            score2 = FMODUnity.RuntimeManager.CreateInstance("event:/Score/score2");
-
-            // atmos bank
-            atmos1 = FMODUnity.RuntimeManager.CreateInstance("event:/Atmos/atmos1");
-            atmos2 = FMODUnity.RuntimeManager.CreateInstance("event:/Atmos/atmos2");
-         */
 
         // connect to sound parameters
 
@@ -82,7 +71,7 @@ public class AudioManagerScript : MonoBehaviour
         music.getParameter("GameLevel", out gameLevel);
 
        wind.start(); // start the wind
-      // music.start(); // start music
+       music.start(); // start music
        atmosExploring.start(); // start exploring atmos
         // WindVol.setValue(1); // set volume to max - no longer required. volume is automated
     }
@@ -99,8 +88,7 @@ public class AudioManagerScript : MonoBehaviour
     {
         switch (clip) { case ("thunder01"): thunder01.start(); break; }
 
-        //switch (clip) { case ("atmos2Start"): atmos2.start(); break; }
-        //switch (clip) { case ("atmos2Stop"): atmos.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
+        switch (clip) { case ("atmosExploringStop"): atmosExploring.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 
         //switch (clip) { case ("noWind"): WindIntensity.setValue(0); break; }
     }
