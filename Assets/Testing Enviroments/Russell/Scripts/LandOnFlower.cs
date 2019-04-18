@@ -51,11 +51,17 @@ namespace Harry
             if (beeController.myState != BeeController.BeeState.Pollenated)
             {
                 myFlower.OnInteract();
+                //PlayAnimation();
             }
             
             yield return  new WaitForSeconds(1);
             beeController.ChangeState(beeController.returnToHive);
             
+        }
+
+        public void PlayAnimation()
+        {
+            //GetComponentInChildren<Animator>().SetTrigger("Landing");
         }
     }
 
