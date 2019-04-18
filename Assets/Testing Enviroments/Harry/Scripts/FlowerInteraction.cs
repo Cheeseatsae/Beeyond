@@ -19,6 +19,8 @@ namespace Harry
         public bool visited = false;
         public bool active;
 
+        public float flowerAnimationDelay = 2f;
+
         public delegate void OnFlowerInteract();
 
         public OnFlowerInteract InteractionEvent;
@@ -74,6 +76,13 @@ namespace Harry
 
         public void PlayAnimation()
         {
+            StartCoroutine(OnPlay());
+        }
+
+        public IEnumerator OnPlay()
+        {
+            yield return new WaitForSeconds(flowerAnimationDelay);
+
             GetComponentInChildren<Animator>().SetTrigger("Play");
         }
 

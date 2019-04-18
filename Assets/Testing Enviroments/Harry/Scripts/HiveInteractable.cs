@@ -13,6 +13,7 @@ namespace Harry
         public int[] amountOfBees;
         public int[] pollenRequirement;
         public GameObject aiBee;
+        public GameObject aiSpawnPoint;
 
         public int pollenCount = 0;
         
@@ -72,7 +73,7 @@ namespace Harry
             
             for (int i = 0; i < amountOfBees[count - 1]; i++)
             {
-                GameObject newBee = Instantiate(aiBee, transform.position + (Vector3.up * 4), Quaternion.Euler(0, 0, 0));
+                GameObject newBee = Instantiate(aiBee, aiSpawnPoint.transform.position, Quaternion.Euler(0, 0, 0));
                 newBee.GetComponent<BeeController>().target = myBee;
             }
         }
