@@ -9,7 +9,7 @@ public class AudioManagerScript : MonoBehaviour
     public static FMOD.Studio.EventInstance music;// game music
     public static FMOD.Studio.EventInstance atmosExploring;
 
-    public static FMOD.Studio.EventInstance thunder01;
+    public static FMOD.Studio.EventInstance thunder01, thunder02, thunder03, thunder04, thunder05;
 
     public static float gameProgression = 0f;
 
@@ -56,6 +56,10 @@ public class AudioManagerScript : MonoBehaviour
         // sfx bank
         wind = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Wind");
         thunder01 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thunder01");
+        thunder02 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thunder02");
+        thunder03 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thunder03");
+        thunder04 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thunder04");
+        thunder05 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thunder05");
 
         // music
         music = FMODUnity.RuntimeManager.CreateInstance("event:/Score/Music");
@@ -87,6 +91,10 @@ public class AudioManagerScript : MonoBehaviour
     public static void Playsound(string clip)
     {
         switch (clip) { case ("thunder01"): thunder01.start(); break; }
+        switch (clip) { case ("thunder02"): thunder02.start(); break; }
+        switch (clip) { case ("thunder03"): thunder03.start(); break; }
+        switch (clip) { case ("thunder04"): thunder04.start(); break; }
+        switch (clip) { case ("thunder05"): thunder05.start(); break; }
 
         switch (clip) { case ("atmosExploringStop"): atmosExploring.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 

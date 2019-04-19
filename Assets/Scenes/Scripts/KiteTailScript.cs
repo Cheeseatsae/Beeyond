@@ -6,7 +6,7 @@ public class KiteTailScript : MonoBehaviour
 {
     private Rigidbody rb;
 
-    [Range(0f,2f)] public float windStrength = 1f;
+    [Range(0f,5f)] public float windStrength = 1f;
     // Start is called before the first frame update
     void Start()
     {

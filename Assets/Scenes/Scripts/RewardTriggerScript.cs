@@ -5,17 +5,38 @@ using Harry;
 
 public class RewardTriggerScript : MonoBehaviour
 {
+    public List<ParticleSystem> particles = new List<ParticleSystem>();
+
+    public GameObject LightningObject;
+    public GameObject RainObject;
+
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerBeeController>() == null) return;
         AudioManagerScript.gameProgression = 20f;
+        Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
+        LightningObject.gameObject.SetActive(false);
+        RainObject.gameObject.SetActive(false);
+
+        StopParticles();
+        
     }
 
-    private void OnDrawGizmos()
+    public void StopParticles()
     {
-        Gizmos.color = Color.cyan;
+        foreach (ParticleSystem p in particles)
+        {
+            p.Stop();
+        }
+    }
+
+        private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, GetComponent<Collider>().bounds.size);
-        Gizmos.color = new Color(0, 1, 1, .3f);
+        Gizmos.color = new Color(1, 1, 0, .3f);
         Gizmos.DrawCube(transform.position, GetComponent<Collider>().bounds.size);
     }
 

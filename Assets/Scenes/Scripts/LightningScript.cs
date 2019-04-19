@@ -69,7 +69,8 @@ namespace Roo
             _lightning.intensity = 0;
 
             yield return new WaitForSeconds(_pauseForThunder);
-            AudioManagerScript.Playsound("thunder01");
+            int t = Random.Range(1, 5);
+            AudioManagerScript.Playsound("thunder0"+t);
             // thunder1.start() // play thunder sounds based on light intensity
             _lightningInProgress = false;
         }

@@ -21,6 +21,7 @@ public class StormTrigger : MonoBehaviour
     // private Vector4Parameter _oldGain;
 
     public GameObject postProcess;
+    public GameObject BlockerToEnable;
     private ColorGrading _colourGrading;
 
     public List<ParticleSystem> particles = new List<ParticleSystem>();
