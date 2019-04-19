@@ -87,7 +87,6 @@ namespace Harry
             }      
             
             target = AddVariance(toMoveTo);
-            Debug.Log("First waypoint = " + target);
         }
         
         private void FindNextWaypoint()

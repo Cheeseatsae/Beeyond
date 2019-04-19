@@ -13,7 +13,7 @@ public class RainEffectScript : MonoBehaviour
     {
         velocity = GetComponent<ParticleSystem>().velocityOverLifetime;
     }
-
+    
     // Update is called once per frame
     void FixedUpdate()
     {
