@@ -92,7 +92,7 @@ namespace Roo
 
 
                 case (Winds.REWARD):
-                    windSpeed = .001f;
+                    windSpeed = .5f;
                     break;
             }
 

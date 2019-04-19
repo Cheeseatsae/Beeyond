@@ -6,6 +6,7 @@ public class ButterflyFlutterScript : MonoBehaviour
 {
     [Range(0.5f, 5f)] public float minAnimationSpeed = 1.75f;
     [Range(0.5f, 5f)] public float maxAnimationSpeed = 2.25f;
+
     // Start is called before the first frame update
     
     void Awake()

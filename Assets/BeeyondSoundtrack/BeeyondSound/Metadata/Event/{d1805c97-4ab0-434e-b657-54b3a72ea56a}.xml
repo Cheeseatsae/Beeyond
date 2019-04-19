@@ -706,7 +706,7 @@
             <value>0</value>
         </property>
         <property name="maximum">
-            <value>5.4000000953674316</value>
+            <value>9.1999998092651367</value>
         </property>
         <relationship name="parameter">
             <destination>{1ddb30bf-a8fc-4440-949e-92aa50850bc7}</destination>
@@ -717,7 +717,7 @@
             <value>0</value>
         </property>
         <property name="maximum">
-            <value>15</value>
+            <value>18.600000381469727</value>
         </property>
         <relationship name="parameter">
             <destination>{1ddb30bf-a8fc-4440-949e-92aa50850bc7}</destination>
