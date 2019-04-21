@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 114843471618234676}
   MasterBankRef: {fileID: 114197683580629038}
   StringsBankRef: {fileID: 114718380245441192}
-  stringsBankWriteTime: 636913025555421477
+  stringsBankWriteTime: 636914674074581765
   cacheVersion: 2
 --- !u!114 &114006983439151258
 MonoBehaviour:
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Unity\Beeyond_Studio2\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master
     Bank.bank
-  lastModified: 636913025555391559
+  lastModified: 636914674074541877
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -881,8 +881,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114472622870209560}
-  - {fileID: 114793890583512820}
+  - {fileID: 114925190216594842}
+  - {fileID: 114950065940200850}
   MinDistance: 0
   MaxDistance: 0
   Length: 405000
@@ -1038,6 +1038,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114302074941011406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114313331706162094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,6 +1306,22 @@ MonoBehaviour:
     Value: 670
   Exists: 1
 --- !u!114 &114392804918078184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
+--- !u!114 &114403680275316934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1733,6 +1765,22 @@ MonoBehaviour:
   Min: 0
   Max: 0
   Default: 0
+--- !u!114 &114521000827442158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114524228612716160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,8 +2041,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114945714048444886}
-  - {fileID: 114027226221206314}
+  - {fileID: 114403680275316934}
+  - {fileID: 114749151222275668}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -2315,7 +2363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636913025555421477
+  lastModified: 636914674074581765
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2353,6 +2401,22 @@ MonoBehaviour:
   Min: 0
   Max: 15
   Default: 0
+--- !u!114 &114745223829411918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
+  Default: 0
 --- !u!114 &114745450849867560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2384,6 +2448,22 @@ MonoBehaviour:
   Name: WindIntensity
   Min: 0
   Max: 15
+  Default: 0
+--- !u!114 &114749151222275668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114753845671382952
 MonoBehaviour:
@@ -2954,6 +3034,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114871287906907830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114873276097014960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,6 +3277,22 @@ MonoBehaviour:
   Min: 0
   Max: 20
   Default: 0
+--- !u!114 &114925190216594842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
+  Default: 0
 --- !u!114 &114933362503591074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3269,6 +3381,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16700
+--- !u!114 &114950065940200850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114953180151538094
 MonoBehaviour:
   m_ObjectHideFlags: 0
