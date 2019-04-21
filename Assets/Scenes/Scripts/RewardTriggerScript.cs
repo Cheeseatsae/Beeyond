@@ -14,19 +14,7 @@ public class RewardTriggerScript : MonoBehaviour
         if (other.GetComponent<PlayerBeeController>() == null) return;
         AudioManagerScript.gameProgression = 20f;
         Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
-    //    LightningObject.gameObject.SetActive(false);
-    //    StopRain();
     }
-/*
-    [ContextMenu("Stop Rain")]
-    public void StopRain()
-    {
-        foreach (ParticleSystem p in rain)
-        {
-            p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        }
-    }
-    */
 
         private void OnDrawGizmos()
     {

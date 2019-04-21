@@ -27,7 +27,11 @@ MonoBehaviour:
   - {fileID: 114843471618234676}
   MasterBankRef: {fileID: 114979761061763172}
   StringsBankRef: {fileID: 114718380245441192}
+<<<<<<< Updated upstream
   stringsBankWriteTime: 636912993319207795
+=======
+  stringsBankWriteTime: 636914682852458503
+>>>>>>> Stashed changes
   cacheVersion: 2
 --- !u!114 &114006983439151258
 MonoBehaviour:
@@ -491,6 +495,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 670
   Exists: 1
+--- !u!114 &114152586050860956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114156096750909834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,12 +663,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Unity\Beeyond_Studio2\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master
     Bank.bank
-  lastModified: 636914674074541877
+  lastModified: 636914682852418611
   LoadResult: 0
   FileSizes:
   - Name: Desktop
+<<<<<<< Updated upstream
     Value: 11140928
   Exists: 0
+=======
+    Value: 11159712
+  Exists: 1
+>>>>>>> Stashed changes
 --- !u!114 &114202234602307754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,8 +922,13 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< Updated upstream
   - {fileID: 114203141947037148}
   - {fileID: 114490924063107794}
+=======
+  - {fileID: 114692661159427712}
+  - {fileID: 114501115196953268}
+>>>>>>> Stashed changes
   MinDistance: 0
   MaxDistance: 0
   Length: 405000
@@ -1154,6 +1184,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114339175642283796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114340126989835428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,6 +1316,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 304928
   Exists: 1
+--- !u!114 &114375790454713724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114384781902278332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,6 +1430,22 @@ MonoBehaviour:
   Name: WindIntensity
   Min: 0
   Max: 15
+  Default: 0
+--- !u!114 &114415347899652140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
   Default: 0
 --- !u!114 &114418773511779402
 MonoBehaviour:
@@ -1749,6 +1827,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 304928
   Exists: 0
+--- !u!114 &114501115196953268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114501253147424022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2089,8 +2183,13 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< Updated upstream
   - {fileID: 114862831449473320}
   - {fileID: 114440731656864194}
+=======
+  - {fileID: 114375790454713724}
+  - {fileID: 114339175642283796}
+>>>>>>> Stashed changes
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -2214,6 +2313,22 @@ MonoBehaviour:
   Name: WindIntensity
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114655640443046002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114657865609898132
 MonoBehaviour:
@@ -2366,6 +2481,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114692661159427712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
+  Default: 0
 --- !u!114 &114701423451187524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,7 +2542,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
+<<<<<<< Updated upstream
   lastModified: 636912993319207795
+=======
+  lastModified: 636914682852458503
+>>>>>>> Stashed changes
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2620,6 +2755,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114773290518418578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114776697382763030
 MonoBehaviour:
   m_ObjectHideFlags: 0
