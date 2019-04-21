@@ -19,7 +19,49 @@ public class BranchAnimTrigger : MonoBehaviour
     [Range(-30f, 15f)] public float minVariation;
     [Range(0f, 150f)] public float maxVariation;
 
-    private void OnTriggerEnter(Collider other)
+    public ParticleSystem embers;
+
+    [Range(0f, 15f)] public float windRequired;
+    [Range(0.1f, 5f)] public float sparkMultiplyer = 1f;
+
+    private bool _isPlaying = false;
+    private bool _isStopped = true;
+    // Start is called before the first frame update
+    void Start()
+    {
+        embers.Play();
+        var _emission = embers.emission;
+        _emission.enabled = false;
+    }
+
+    void FixedUpdate()
+    {
+        var _emission = embers.emission;
+        float ws = Roo.WindScript.windSpeed;
+
+        _emission.rateOverTime = (ws - windRequired) * sparkMultiplyer;
+
+        if (ws > windRequired && hasPlayed)
+        {
+            if (_isPlaying) return;
+
+            _emission.enabled = true;
+            _isPlaying = true;
+            _isStopped = false;
+            Debug.Log("Embers Playing");
+        }
+        else
+        {
+            if (_isStopped) return;
+
+            _emission.enabled = false;
+            _isStopped = true;
+            _isPlaying = false;
+            Debug.Log("Embers Stopped");
+        }
+    }
+
+        private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<BeeController>() == null) return;
 
