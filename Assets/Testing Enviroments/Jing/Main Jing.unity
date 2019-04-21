@@ -5882,30 +5882,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 320042361}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &105128530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2408891783038955878, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-    type: 3}
-  m_PrefabInstance: {fileID: 1502106632}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &105128531 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2408891783038955877, guid: c7e1fefe9effe0f45959a6dbe1d54392,
-    type: 3}
-  m_PrefabInstance: {fileID: 1502106632}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &105128534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105128530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283b97728d2e748478678b67626d6b2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &105445833
 GameObject:
   m_ObjectHideFlags: 0
@@ -13978,6 +13954,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7883445989333435821, guid: 1a43866f14684d44b991f6fc31cff216,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7ac0cf64391fe0948942580584de1e7b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a43866f14684d44b991f6fc31cff216, type: 3}
 --- !u!1001 &627237670
@@ -19655,7 +19636,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particles.Array.data[2]
       value: 
-      objectReference: {fileID: 105128531}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e3d0fed2694f048a5d657be1b51bba, type: 3}
 --- !u!1001 &797842748
@@ -26703,8 +26684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22711c95bdf594fa602986c9165637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightningObject: {fileID: 0}
-  rain: []
 --- !u!1 &1753786419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2226296287636000085, guid: 6b2d06b748cdf2a43bf3b94421eb4fc3,
