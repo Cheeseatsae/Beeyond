@@ -24,12 +24,13 @@ public class BranchAnimTrigger : MonoBehaviour
     [Range(0f, 15f)] public float windRequired;
     [Range(0.1f, 5f)] public float sparkMultiplyer = 1f;
 
+    public ParticleSystem oneoffSparks;
+
     private bool _isPlaying = false;
     private bool _isStopped = true;
     // Start is called before the first frame update
     void Start()
     {
-        embers.Play();
         var _emission = embers.emission;
         _emission.enabled = false;
     }
@@ -68,7 +69,8 @@ public class BranchAnimTrigger : MonoBehaviour
         if (hasPlayed) return;
         hasPlayed = true;
         branch.SetActive(true);
-        branch.GetComponent<Animator>().SetTrigger("Trigger");
+       // branch.GetComponent<Animator>().SetTrigger("Trigger");
+
         StartCoroutine(CloseLightning());
 
     }
@@ -76,8 +78,10 @@ public class BranchAnimTrigger : MonoBehaviour
     IEnumerator CloseLightning()
     {
         AudioManagerScript.Playsound("thunder05");
+        oneoffSparks.Play();
 
-        for (int i = 0; i < 20; i++)
+
+        for (int i = 0; i < 15; i++)
         {
             yield return new WaitForSeconds(Random.Range(minLightningFlux, maxLightningFlux));
 
@@ -86,6 +90,8 @@ public class BranchAnimTrigger : MonoBehaviour
             tempLightning.intensity = v;
 
         }
+
+        branch.GetComponent<Animator>().SetTrigger("Trigger");
 
         tempLightning.intensity = 0f;
     }
