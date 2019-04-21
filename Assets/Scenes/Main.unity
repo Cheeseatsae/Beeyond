@@ -16876,7 +16876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2133fa55a92a7ce4f9d26b7ee15a4ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyWindVariable: 0.0065
+  MyWindVariable: 0.002
   GrassShader: {fileID: 2100000, guid: dc23b46c0890b774bb9bbeb2aa16645d, type: 2}
 --- !u!64 &640401615
 MeshCollider:
@@ -37313,7 +37313,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: cameraClampMaxX.Array.data[0]
-      value: 2000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
@@ -37343,7 +37343,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875878, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 524
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875878, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
@@ -37433,7 +37433,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875875, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: spawnerSize.z
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3427069147554875896, guid: bf12e30c19919c94eb56c8d022cee64c, type: 3}
@@ -37573,7 +37573,7 @@ PrefabInstance:
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 524
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
