@@ -5,8 +5,8 @@ using Harry;
 
 public class RewardTriggerScript : MonoBehaviour
 {
-    public GameObject LightningObject;
-    public List<ParticleSystem> rain = new List<ParticleSystem>();
+   // public GameObject LightningObject;
+   // public List<ParticleSystem> rain = new List<ParticleSystem>();
 
 
     private void OnTriggerEnter(Collider other)
@@ -14,10 +14,10 @@ public class RewardTriggerScript : MonoBehaviour
         if (other.GetComponent<PlayerBeeController>() == null) return;
         AudioManagerScript.gameProgression = 20f;
         Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
-        LightningObject.gameObject.SetActive(false);
-        StopRain();
+    //    LightningObject.gameObject.SetActive(false);
+    //    StopRain();
     }
-
+/*
     [ContextMenu("Stop Rain")]
     public void StopRain()
     {
@@ -26,7 +26,7 @@ public class RewardTriggerScript : MonoBehaviour
             p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         }
     }
-    
+    */
 
         private void OnDrawGizmos()
     {

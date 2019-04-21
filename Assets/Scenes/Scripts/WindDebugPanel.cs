@@ -34,9 +34,9 @@ public class WindDebugPanel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (_debugPanel.activeSelf)
-            {
+            
                 _debugPanel.SetActive(false);
-            }
+            
            else
            {
                _debugPanel.SetActive(true);

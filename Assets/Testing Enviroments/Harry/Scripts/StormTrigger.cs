@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class StormTrigger : MonoBehaviour
 {
+    public GameObject LightningObject;
 
     public float transparency = 0.5f;
 
@@ -22,6 +23,7 @@ public class StormTrigger : MonoBehaviour
 
     public GameObject postProcess;
     public GameObject BlockerToEnable;
+    public GameObject Dust;
     private ColorGrading _colourGrading;
 
     public List<ParticleSystem> particles = new List<ParticleSystem>();
@@ -35,6 +37,7 @@ public class StormTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerBeeController>() == null) return;
+
         AudioManagerScript.gameProgression = 10f;
         AudioManagerScript.Playsound("atmosExploringStop");
 
@@ -43,6 +46,20 @@ public class StormTrigger : MonoBehaviour
         PlayParticles();
         Roo.WindScript.WindStates = Roo.WindScript.Winds.STRUGGLE;
         Roo.LightningScript.lightningActive = true;
+        Dust.SetActive(false);
+        BlockerToEnable.SetActive(true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<PlayerBeeController>() == null) return;
+
+        StartCoroutine(TheStormRecedes());
+
+        StopParticles();
+        Roo.WindScript.WindStates = Roo.WindScript.Winds.EXPLORING;
+        Dust.SetActive(true);
+        LightningObject.SetActive(false);
     }
 
     private void PlayParticles()
@@ -58,7 +75,7 @@ public class StormTrigger : MonoBehaviour
     {
         foreach (ParticleSystem p in particles)
         {
-            p.Stop();
+            p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         }
     }
 
@@ -77,6 +94,26 @@ public class StormTrigger : MonoBehaviour
             {
                 running = false;
                 StopCoroutine(TheStormApproaches());
+            }
+        }
+
+    }
+
+    private IEnumerator TheStormRecedes()
+    {
+        bool running = exposure < oldExposure;
+
+        while (running)
+        {
+            exposure += decreaseRate;
+            RenderSettings.skybox.SetFloat("_Exposure", exposure);
+
+            yield return new WaitForSeconds(delay);
+
+            if (exposure >= oldExposure)
+            {
+                running = false;
+                StopCoroutine(TheStormRecedes());
             }
         }
 
