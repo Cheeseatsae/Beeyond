@@ -10,6 +10,9 @@ public class GameManagerScript : MonoBehaviour
     public GameObject ObjectToDestroy;
     public GameObject GameCam;
 
+    public GameObject GamePanel;
+    public GameObject StartMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class GameManagerScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
+            GamePanel.SetActive(false);
             Roo.CameraMovementScript.cameraClampMinY = 1.5f;
             AudioManagerScript.Playsound("music");
         }
