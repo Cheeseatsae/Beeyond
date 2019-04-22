@@ -4501,7 +4501,7 @@ GameObject:
   - component: {fileID: 281071655}
   m_Layer: 0
   m_Name: AIWaypoint
-  m_TagString: Untagged
+  m_TagString: Hive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27307,8 +27307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3667a0767ab3abf4c9d4aeb2713f1b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hive: {fileID: 1887015439}
-  hive2: {fileID: 1424587566}
+  hive: {fileID: 281071653}
+  hive2: {fileID: 1769625327}
 --- !u!1 &1733559406
 GameObject:
   m_ObjectHideFlags: 0
@@ -28487,7 +28487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0afb1e7bb597a5b448025b99e252af81, type: 3}
       propertyPath: m_TagString
-      value: Hive
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0afb1e7bb597a5b448025b99e252af81, type: 3}
       propertyPath: m_LocalPosition.x
