@@ -75,7 +75,6 @@ public class AudioManagerScript : MonoBehaviour
         music.getParameter("GameLevel", out gameLevel);
 
        wind.start(); // start the wind
-       music.start(); // start music
        atmosExploring.start(); // start exploring atmos
         // WindVol.setValue(1); // set volume to max - no longer required. volume is automated
     }
@@ -95,6 +94,8 @@ public class AudioManagerScript : MonoBehaviour
         switch (clip) { case ("thunder03"): thunder03.start(); break; }
         switch (clip) { case ("thunder04"): thunder04.start(); break; }
         switch (clip) { case ("thunder05"): thunder05.start(); break; }
+
+        switch (clip) { case ("music"): music.start(); break; }
 
         switch (clip) { case ("atmosExploringStop"): atmosExploring.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 

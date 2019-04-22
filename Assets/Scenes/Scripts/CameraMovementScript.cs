@@ -14,8 +14,8 @@ namespace Roo
         private Vector3 TargetPosition;
         public float cameraClampMinX;
         public float[] cameraClampMaxX;
-        public float cameraClampMinY =2f;
-        public float cameraClampMaxY =16f;
+        public static float cameraClampMinY = 22f;
+        public static float cameraClampMaxY = 22f;
         public int openGate = 0;
         public static GameObject liveCamera;
 

@@ -24,6 +24,12 @@ public class GameManagerScript : MonoBehaviour
             Application.Quit();
         }
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Roo.CameraMovementScript.cameraClampMinY = 1.5f;
+            AudioManagerScript.Playsound("music");
+        }
+
     }
 
 }
