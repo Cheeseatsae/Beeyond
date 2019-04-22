@@ -55,6 +55,7 @@ public class GameManagerScript : MonoBehaviour
     public void StartGame()
     {
         GamePanel.SetActive(false);
+        BlackoutPanel.SetActive(false);
         Roo.CameraMovementScript.cameraClampMinY = 1.5f;
         AudioManagerScript.Playsound("music");
     }
