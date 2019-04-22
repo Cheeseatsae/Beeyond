@@ -1,23 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public GameObject ObjectToBreak;// object that will have joint broken
-    [Range(0,1)] public int hingeJointToBreak = 0;
-    
-    private HingeJoint[] _hinges;
-
     public GameObject ObjectToDestroy;
     public GameObject GameCam;
 
     public GameObject GamePanel;
     public GameObject StartMenu;
 
+    public GameObject BlackoutPanel;
+    public float secondsBeforeFadein;
+    public float fadeRate;
+
     // Start is called before the first frame update
     void Start()
     {
-        _hinges = ObjectToBreak.GetComponents<HingeJoint>();
+        StartCoroutine(Fadein(BlackoutPanel));
     }
 
     // Update is called once per frame
@@ -34,6 +35,22 @@ public class GameManagerScript : MonoBehaviour
         }
 
     }
+
+    IEnumerator Fadein(GameObject _panel)
+    {
+        CanvasGroup cg = _panel.GetComponent<CanvasGroup>();
+        yield return new WaitForSeconds(secondsBeforeFadein);
+
+        while (cg.alpha > 0)
+        {
+            cg.alpha -= Time.deltaTime / fadeRate;
+            yield return null;
+        }
+        _panel.SetActive(false);
+
+        yield return null;
+    }
+
 
     public void StartGame()
     {
