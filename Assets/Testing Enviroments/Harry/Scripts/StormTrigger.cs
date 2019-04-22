@@ -27,6 +27,9 @@ public class StormTrigger : MonoBehaviour
     private ColorGrading _colourGrading;
 
     public List<ParticleSystem> particles = new List<ParticleSystem>();
+
+    public float rainIntensity;
+    public float rainTransitionSpeed;
     
     private void Awake()
     {
@@ -66,7 +69,8 @@ public class StormTrigger : MonoBehaviour
     {
         foreach (ParticleSystem p in particles)
         {
-            p.Play();
+            //p.Play();
+            StartCoroutine(StartRain(p));
         }
         Debug.Log(particles.Count);
     }
@@ -75,7 +79,28 @@ public class StormTrigger : MonoBehaviour
     {
         foreach (ParticleSystem p in particles)
         {
-            p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            // p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            StartCoroutine(StopRain(p));
+        }
+    }
+
+    private IEnumerator StartRain(ParticleSystem _particles)
+    {
+        var _emission = _particles.emission;
+        while(_emission.rateOverTime.constant < rainIntensity)
+        {
+            yield return new WaitForSeconds(.05f);
+            _emission.rateOverTime = _emission.rateOverTime.constant + rainTransitionSpeed;
+        }
+    }
+
+    private IEnumerator StopRain(ParticleSystem _particles)
+    {
+        var _emission = _particles.emission;
+        while (_emission.rateOverTime.constant > 0f)
+        {
+            yield return new WaitForSeconds(.05f);
+            _emission.rateOverTime = _emission.rateOverTime.constant - rainTransitionSpeed;
         }
     }
 
