@@ -14,7 +14,7 @@ public class StormTrigger : MonoBehaviour
     public float decreaseRate = 0.02f;
     public float delay = 0.05f;
     private float exposure;
-    private float oldExposure;
+    public static float oldExposure;
 
     // original post processing values
     // private FloatParameter _oldTemperature;
@@ -35,6 +35,11 @@ public class StormTrigger : MonoBehaviour
     {
         oldExposure = RenderSettings.skybox.GetFloat("_Exposure");
         exposure = RenderSettings.skybox.GetFloat("_Exposure");
+    }
+
+    void Start()
+    {
+        StopParticles();
     }
 
     private void OnTriggerEnter(Collider other)

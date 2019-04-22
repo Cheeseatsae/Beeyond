@@ -29,9 +29,6 @@ public class GameManagerScript : MonoBehaviour
         _panels = GamePanel.GetComponentsInChildren<CanvasGroup>(); // get a list of all active panels
         Debug.Log(_panels.Length);
 
-        BlackoutPanel.alpha = 1f; // turn on to keep continuity from unity splash (make sure bg colour matches)
-        StartCoroutine(Deactivate(BlackoutPanel, secondsBeforeFadein, fadeRate)); // fade to game menu
-
         StartCoroutine(StartUp()); // cleans up all active panels and resets to a begining state
     }
 
@@ -57,6 +54,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void RestartGame()
     {
+        RenderSettings.skybox.SetFloat("_Exposure", StormTrigger.oldExposure); // reset game exposure (stops dark game if reset from the struggle)
         AudioManagerScript.Playsound("musicStop");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -81,8 +79,13 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator StartUp()
     {
+        AudioManagerScript.gameProgression = 0f; // resets music back to start
+
+        BlackoutPanel.alpha = 1f; // turn on to keep continuity from unity splash (make sure bg colour matches)
+        StartCoroutine(Deactivate(BlackoutPanel, secondsBeforeFadein, fadeRate)); // fade to game menu
+
         CloseAllPanels(0f, 0f);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(secondsBeforeFadein/2f);
 
         Roo.CameraMovementScript.cameraClampMinY = 22f; // set camera clamp just in case
         //turn all relevant panels on at start of game
