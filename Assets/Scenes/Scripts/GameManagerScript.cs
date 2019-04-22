@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -29,11 +30,15 @@ public class GameManagerScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            GamePanel.SetActive(false);
-            Roo.CameraMovementScript.cameraClampMinY = 1.5f;
-            AudioManagerScript.Playsound("music");
+            StartGame();
         }
 
     }
 
+    public void StartGame()
+    {
+        GamePanel.SetActive(false);
+        Roo.CameraMovementScript.cameraClampMinY = 1.5f;
+        AudioManagerScript.Playsound("music");
+    }
 }
