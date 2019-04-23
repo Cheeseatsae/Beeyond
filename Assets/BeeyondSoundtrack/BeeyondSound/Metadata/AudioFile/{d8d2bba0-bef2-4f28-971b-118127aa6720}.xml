@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{d8d2bba0-bef2-4f28-971b-118127aa6720}">
+        <property name="assetPath">
+            <value>SFX/KiteTailCollision.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.5083333333333333</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f937b26b-ca68-49d4-b6ae-493f98f8411e}</destination>
+        </relationship>
+    </object>
+</objects>

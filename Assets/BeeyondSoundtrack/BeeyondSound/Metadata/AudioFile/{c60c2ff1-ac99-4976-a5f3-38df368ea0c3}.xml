@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{c60c2ff1-ac99-4976-a5f3-38df368ea0c3}">
+        <property name="assetPath">
+            <value>SFX/WindStrongMediumConstant.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>8.2666666666666675</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f937b26b-ca68-49d4-b6ae-493f98f8411e}</destination>
+        </relationship>
+    </object>
+</objects>

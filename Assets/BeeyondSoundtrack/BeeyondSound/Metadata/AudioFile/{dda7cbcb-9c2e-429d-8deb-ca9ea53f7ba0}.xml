@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{dda7cbcb-9c2e-429d-8deb-ca9ea53f7ba0}">
+        <property name="assetPath">
+            <value>SFX/InsectCallsCrickets.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>10.3445</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f937b26b-ca68-49d4-b6ae-493f98f8411e}</destination>
+        </relationship>
+    </object>
+</objects>

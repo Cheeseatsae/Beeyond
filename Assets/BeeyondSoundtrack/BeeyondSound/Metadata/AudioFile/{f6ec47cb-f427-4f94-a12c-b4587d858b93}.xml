@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f6ec47cb-f427-4f94-a12c-b4587d858b93}">
+        <property name="assetPath">
+            <value>SFX/MetalChainThin.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>18.550000000000001</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f937b26b-ca68-49d4-b6ae-493f98f8411e}</destination>
+        </relationship>
+    </object>
+</objects>
