@@ -25,6 +25,11 @@ namespace Harry
             Gizmos.color = new Color(1,0.92f,0.016f, transparency);
             Gizmos.DrawSphere(transform.position, radius);
         }
+
+        private void OnDestroy()
+        {
+            waypoints.Clear();
+        }
     }
     
 }
