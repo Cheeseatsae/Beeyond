@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33824503, g: 0.32285687, b: 0.31186092, a: 1}
+  m_IndirectSpecularColor: {r: 0.36755326, g: 0.35089102, b: 0.33918682, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8835,6 +8835,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 476654099}
     m_Modifications:
+    - target: {fileID: 100000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
+      propertyPath: m_Name
+      value: Apple tree Flower 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.87
@@ -8890,10 +8894,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5087533
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
-      propertyPath: m_Name
-      value: Apple tree Flower 2
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
       propertyPath: m_Controller
@@ -15710,6 +15710,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 707188533184157748, guid: 44e3d0fed2694f048a5d657be1b51bba,
         type: 3}
+      propertyPath: CloudSpawners.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 707188533184157748, guid: 44e3d0fed2694f048a5d657be1b51bba,
+        type: 3}
       propertyPath: postProcess
       value: 
       objectReference: {fileID: 91959441}
@@ -15763,6 +15768,16 @@ PrefabInstance:
       propertyPath: CloudSpawner
       value: 
       objectReference: {fileID: 2119826982}
+    - target: {fileID: 707188533184157748, guid: 44e3d0fed2694f048a5d657be1b51bba,
+        type: 3}
+      propertyPath: CloudSpawners.Array.data[0]
+      value: 
+      objectReference: {fileID: 2119826982}
+    - target: {fileID: 707188533184157748, guid: 44e3d0fed2694f048a5d657be1b51bba,
+        type: 3}
+      propertyPath: CloudSpawners.Array.data[1]
+      value: 
+      objectReference: {fileID: 1376954968}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e3d0fed2694f048a5d657be1b51bba, type: 3}
 --- !u!4 &788662653 stripped
@@ -17795,6 +17810,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3427069147264836535}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &980680022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980680021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b1a2120fc88a746bdaf7a6cfa89c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &980680023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
@@ -22743,6 +22770,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 281071654}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376954968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376954970}
+  - component: {fileID: 1376954969}
+  m_Layer: 0
+  m_Name: CloudSpawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1376954969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376954968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e23a8478b9e9c04395f3e8117f34270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 5654760927113433687, guid: a0041b2c7dd701640a1bbf37a35d192c,
+    type: 3}
+  spawnInterval: 20
+--- !u!4 &1376954970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376954968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2718, y: 353, z: 2566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1381850112
 PrefabInstance:
@@ -38027,7 +38100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 192225442, guid: 297122f61d27be94587b836139dcced4, type: 3}
-  spawnInterval: 20
+  spawnInterval: 25
 --- !u!1 &2123467272
 GameObject:
   m_ObjectHideFlags: 0
@@ -39800,7 +39873,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: cameraClampMaxX.Array.data[0]
-      value: 20
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
@@ -40198,12 +40271,12 @@ PrefabInstance:
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.5
+      value: 238.4
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.17
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
@@ -42114,6 +42187,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 14360191}
     m_Modifications:
+    - target: {fileID: 100000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
+      propertyPath: m_Name
+      value: Apple tree Flower 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.21
@@ -42169,10 +42246,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.0825176
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
-      propertyPath: m_Name
-      value: Apple tree Flower 2
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: ca9fe46d97bd54e448aea1441cb25933, type: 3}
       propertyPath: m_Controller
