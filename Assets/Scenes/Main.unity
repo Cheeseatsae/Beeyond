@@ -22802,7 +22802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 5654760927113433687, guid: a0041b2c7dd701640a1bbf37a35d192c,
     type: 3}
-  spawnInterval: 20
+  spawnInterval: 29
 --- !u!4 &1376954970
 Transform:
   m_ObjectHideFlags: 0
@@ -22811,7 +22811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376954968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2718, y: 353, z: 2566}
+  m_LocalPosition: {x: 2464, y: 353, z: 2566}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38081,7 +38081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119826982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2520, y: 404, z: 1906}
+  m_LocalPosition: {x: 2226, y: 404, z: 1906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38100,7 +38100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 192225442, guid: 297122f61d27be94587b836139dcced4, type: 3}
-  spawnInterval: 25
+  spawnInterval: 23
 --- !u!1 &2123467272
 GameObject:
   m_ObjectHideFlags: 0

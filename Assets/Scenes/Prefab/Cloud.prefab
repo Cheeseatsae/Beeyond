@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce687940a62effd4190ff5c524e0bd99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilDeath: 60
+  timeUntilDeath: 240
   cloudSpeed: 100
