@@ -30,6 +30,8 @@ public class StormTrigger : MonoBehaviour
 
     public float rainIntensity;
     public float rainTransitionSpeed;
+
+    public GameObject CloudSpawner;
     
     private void Awake()
     {
@@ -56,6 +58,7 @@ public class StormTrigger : MonoBehaviour
         Roo.LightningScript.lightningActive = true;
         Dust.SetActive(false);
         BlockerToEnable.SetActive(true);
+        CloudSpawner.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
@@ -68,6 +71,7 @@ public class StormTrigger : MonoBehaviour
         Roo.WindScript.WindStates = Roo.WindScript.Winds.EXPLORING;
         Dust.SetActive(true);
         LightningObject.SetActive(false);
+        CloudSpawner.SetActive(false);
     }
 
     private void PlayParticles()
