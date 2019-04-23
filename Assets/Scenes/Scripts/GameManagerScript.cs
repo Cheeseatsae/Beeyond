@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public static string previousPanel;
+    private CanvasGroup _previousPanel;
 
     public GameObject GameCam;
 
@@ -26,6 +26,7 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _previousPanel = StartPanel;
         _panels = GamePanel.GetComponentsInChildren<CanvasGroup>(); // get a list of all active panels
         Debug.Log(_panels.Length);
 
@@ -54,7 +55,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void RestartGame()
     {
-        RenderSettings.skybox.SetFloat("_Exposure", StormTrigger.oldExposure); // reset game exposure (stops dark game if reset from the struggle)
+        RenderSettings.skybox.SetFloat("_Exposure", 0.47f); // reset game exposure (stops dark game if reset from the struggle)
         AudioManagerScript.Playsound("musicStop");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -72,6 +73,26 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
+    public void ToSettingsFromPause()
+    {
+        _previousPanel = PausePanel;
+        StartCoroutine(Activate(SettingsPanel, menuTransitionSpeed, menuTransitionSpeed));
+        StartCoroutine(Deactivate(PausePanel, 0f, menuTransitionSpeed));
+    }
+
+    public void ToSettingsFromStart()
+    {
+        _previousPanel = StartPanel;
+        StartCoroutine(Activate(SettingsPanel, menuTransitionSpeed, menuTransitionSpeed));
+        StartCoroutine(Deactivate(StartPanel, 0f, menuTransitionSpeed));
+    }
+
+    public void Back()
+    {
+        StartCoroutine(Activate(_previousPanel, menuTransitionSpeed, menuTransitionSpeed));
+        StartCoroutine(Deactivate(SettingsPanel, 0f, menuTransitionSpeed));
+    }
+
     public void StartGame()
     {
         _isGameRunning = true;
@@ -80,7 +101,7 @@ public class GameManagerScript : MonoBehaviour
         AudioManagerScript.Playsound("music");
     }
 
-    IEnumerator StartUp()
+    IEnumerator  StartUp()
     {
         AudioManagerScript.gameProgression = 0f; // resets music back to start
 
