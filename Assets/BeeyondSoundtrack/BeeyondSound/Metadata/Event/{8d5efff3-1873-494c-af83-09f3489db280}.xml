@@ -97,6 +97,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{a36a2b69-e5b9-4946-847a-4b8f98b4b0b8}">
+        <property name="volume">
+            <value>10</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -120,9 +123,21 @@
     <object class="MixerBusEffectChain" id="{8d9f926f-1d9c-4dcf-baa4-70bc6d649812}">
         <relationship name="effects">
             <destination>{428ca20a-594c-4340-a891-025ec871804a}</destination>
+            <destination>{3f3dd355-f67b-4219-9182-69e56968eeaa}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{bee62f44-47f2-458a-96e7-33108211b313}"/>
     <object class="MixerBusFader" id="{401a395e-680d-4886-96ce-9d6835df6dc9}"/>
     <object class="MixerBusFader" id="{428ca20a-594c-4340-a891-025ec871804a}"/>
+    <object class="PitchShifterEffect" id="{3f3dd355-f67b-4219-9182-69e56968eeaa}">
+        <property name="pitch">
+            <value>2</value>
+        </property>
+        <property name="fftSize">
+            <value>1020</value>
+        </property>
+        <property name="overlap">
+            <value>16.2000008</value>
+        </property>
+    </object>
 </objects>
