@@ -37,14 +37,14 @@ public class GameManagerScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape) && _isGameRunning)
         {
-            StartCoroutine(Activate(GamePanel, 0f, menuTransitionSpeed));
-            StartCoroutine(Activate(PausePanel, 0f, menuTransitionSpeed));
+            PauseGame();
         }
+    }
 
-        if (Input.GetKey(KeyCode.Space) && !_isGameRunning)
-        {
-            StartGame();
-        }
+    public void PauseGame()
+    {
+        StartCoroutine(Activate(GamePanel, 0f, menuTransitionSpeed));
+        StartCoroutine(Activate(PausePanel, 0f, menuTransitionSpeed));
     }
 
     public void QuitGame()
@@ -59,6 +59,11 @@ public class GameManagerScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void ResumeGame()
+    {
+        CloseAllPanels(0, menuTransitionSpeed);
+    }
+
     public void CloseAllPanels(float _pTime, float _transTime)
     {
         foreach (CanvasGroup _p in _panels)
@@ -70,9 +75,7 @@ public class GameManagerScript : MonoBehaviour
     public void StartGame()
     {
         _isGameRunning = true;
-        StartCoroutine(Deactivate(GamePanel, 0f, menuTransitionSpeed));
-        StartCoroutine(Deactivate(StartPanel, 0f, menuTransitionSpeed));
-        StartCoroutine(Deactivate(BlackoutPanel, 0f, menuTransitionSpeed));
+        CloseAllPanels(0f, menuTransitionSpeed);
         Roo.CameraMovementScript.cameraClampMinY = 1.5f;
         AudioManagerScript.Playsound("music");
     }
