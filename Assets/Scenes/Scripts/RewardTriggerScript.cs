@@ -13,6 +13,7 @@ public class RewardTriggerScript : MonoBehaviour
         if (other.GetComponent<PlayerBeeController>() == null) return;
         AudioManagerScript.gameProgression = 20f;
         Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
+        AnimationBee_FlyidleToFlying.disableBeeAnimator = true;
         ObjectToTeleport.GetComponent<PlayerBeeController>().maxSpeed = newBeeSpeed;
         ObjectToTeleport.GetComponent<PlayerBeeController>().target = FinalWayPoint;
     }

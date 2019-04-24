@@ -56,7 +56,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void RestartGame()
     {
-        RenderSettings.skybox.SetFloat("_Exposure", 0.47f); // reset game exposure (stops dark game if reset from the struggle)
+        RenderSettings.skybox.SetFloat("_Exposure", 0.33f);
         AudioManagerScript.Playsound("musicStop");
         ButterflyWaypoint.waypoints.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -106,6 +106,7 @@ public class GameManagerScript : MonoBehaviour
     IEnumerator  StartUp()
     {
         AudioManagerScript.gameProgression = 0f; // resets music back to start
+        AnimationBee_FlyidleToFlying.disableBeeAnimator = false; // make sure bee animations are running.
 
         BlackoutPanel.alpha = 1f; // turn on to keep continuity from unity splash (make sure bg colour matches)
         StartCoroutine(Deactivate(BlackoutPanel, secondsBeforeFadein, fadeRate)); // fade to game menu

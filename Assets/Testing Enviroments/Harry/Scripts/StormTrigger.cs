@@ -16,15 +16,10 @@ public class StormTrigger : MonoBehaviour
     private float exposure;
     public static float oldExposure;
 
-    // original post processing values
-    // private FloatParameter _oldTemperature;
-    // private FloatParameter _oldContrast;
-    // private Vector4Parameter _oldGain;
 
     public GameObject postProcess;
     public GameObject BlockerToEnable;
     public GameObject Dust;
-    private ColorGrading _colourGrading;
 
     public List<ParticleSystem> particles = new List<ParticleSystem>();
 
@@ -79,7 +74,7 @@ public class StormTrigger : MonoBehaviour
         Roo.WindScript.WindStates = Roo.WindScript.Winds.EXPLORING;
         Dust.SetActive(true);
         LightningObject.SetActive(false);
-        foreach (GameObject _cloud in CloudSpawners)
+       foreach (GameObject _cloud in CloudSpawners)
         {
             _cloud.SetActive(false);
         }
