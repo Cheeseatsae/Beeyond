@@ -8,6 +8,7 @@ public class ShowGizmos : MonoBehaviour
     [Range(0, 1)] public float greenChannel;
     [Range(0, 1)] public float blueChannel;
     [Range(0, 1)] public float transparency;
+
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(redChannel,greenChannel,blueChannel,1);

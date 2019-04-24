@@ -5,15 +5,16 @@ using Harry;
 
 public class RewardTriggerScript : MonoBehaviour
 {
-   // public GameObject LightningObject;
-   // public List<ParticleSystem> rain = new List<ParticleSystem>();
-
-
+    public GameObject FinalWayPoint;
+    public GameObject ObjectToTeleport;
+    public float newBeeSpeed;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerBeeController>() == null) return;
         AudioManagerScript.gameProgression = 20f;
         Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
+        ObjectToTeleport.GetComponent<PlayerBeeController>().maxSpeed = newBeeSpeed;
+        ObjectToTeleport.GetComponent<PlayerBeeController>().target = FinalWayPoint;
     }
 
         private void OnDrawGizmos()
