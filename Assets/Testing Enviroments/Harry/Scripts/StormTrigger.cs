@@ -17,7 +17,7 @@ public class StormTrigger : MonoBehaviour
     public static float oldExposure;
 
 
-    public GameObject postProcess;
+   // public GameObject postProcess;
     public GameObject BlockerToEnable;
     public GameObject Dust;
 

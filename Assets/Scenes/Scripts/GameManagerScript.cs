@@ -37,7 +37,7 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape) && _isGameRunning)
+        if ((Input.GetKey(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.JoystickButton7)) && _isGameRunning)
         {
             PauseGame();
         }
@@ -45,6 +45,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void PauseGame()
     {
+        _isGameRunning=false;
         StartCoroutine(Activate(GamePanel, 0f, menuTransitionSpeed));
         StartCoroutine(Activate(PausePanel, 0f, menuTransitionSpeed));
     }
@@ -56,6 +57,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void RestartGame()
     {
+        _isGameRunning=true;
         RenderSettings.skybox.SetFloat("_Exposure", 0.33f);
         AudioManagerScript.Playsound("musicStop");
         ButterflyWaypoint.waypoints.Clear();
