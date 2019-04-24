@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Harry;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -57,6 +58,7 @@ public class GameManagerScript : MonoBehaviour
     {
         RenderSettings.skybox.SetFloat("_Exposure", 0.47f); // reset game exposure (stops dark game if reset from the struggle)
         AudioManagerScript.Playsound("musicStop");
+        ButterflyWaypoint.waypoints.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
