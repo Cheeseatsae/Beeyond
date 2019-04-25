@@ -18,8 +18,12 @@ public class GameManagerScript : MonoBehaviour
     public CanvasGroup PausePanel;
 
     public CanvasGroup BlackoutPanel;
+    public CanvasGroup HiveMindPanel;
+    public CanvasGroup BeeyondPanel;
+
     public float secondsBeforeFadein;
     public float fadeRate;
+    public float secondsToShowLogo;
 
     private CanvasGroup[] _panels; 
     public static bool _isGameRunning = false;
@@ -107,6 +111,8 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator  StartUp()
     {
+        StartCoroutine(Deactivate(BeeyondPanel, 0f, 0f)); // just in case
+        StartCoroutine(Deactivate(HiveMindPanel, 0f, 0f)); // just in case
         Roo.LightningScript.lightningActive = false; //just in case (static variable)
         _isGameRunning = false; //just in case (static variable)
 
@@ -114,9 +120,22 @@ public class GameManagerScript : MonoBehaviour
         AnimationBee_FlyidleToFlying.disableBeeAnimator = false; // make sure bee animations are running.
 
         BlackoutPanel.alpha = 1f; // turn on to keep continuity from unity splash (make sure bg colour matches)
-        StartCoroutine(Deactivate(BlackoutPanel, secondsBeforeFadein, fadeRate)); // fade to game menu
 
-        CloseAllPanels(0f, 0f);
+        yield return new WaitForSeconds(fadeRate);
+
+        //flash studio logo for x seconds
+        StartCoroutine(Activate(HiveMindPanel, 0f, fadeRate));
+        yield return new WaitForSeconds(secondsToShowLogo);
+        StartCoroutine(Deactivate(HiveMindPanel, 0f, fadeRate));
+        yield return new WaitForSeconds(fadeRate*1.1f);
+        //flash game logo for x seconds
+        StartCoroutine(Activate(BeeyondPanel, 0f, fadeRate));
+        yield return new WaitForSeconds(secondsToShowLogo);
+        StartCoroutine(Deactivate(BeeyondPanel, 0f, fadeRate));
+        yield return new WaitForSeconds(fadeRate*1.1f);
+        StartCoroutine(Deactivate(BlackoutPanel, secondsBeforeFadein/2, fadeRate)); // fade to game menu
+
+        CloseAllPanels(0f, 0f); 
         yield return new WaitForSeconds(secondsBeforeFadein/2f);
 
         Roo.CameraMovementScript.cameraClampMinY = 22f; // set camera clamp just in case

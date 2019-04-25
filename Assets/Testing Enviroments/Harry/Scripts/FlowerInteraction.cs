@@ -39,16 +39,14 @@ namespace Harry
                 aiPickupPoint.SetActive(false);
             }
 
-            var _emission = fireflies.emission;
-            _emission.rateOverTime = numberOfFireflies;
+            // fireflies.Play(); not needed, set in particle inspector
         }
 
         void FixedUpdate()
         {
             if (harvested && playerOnly && !hasRemovedFireflies)
             {
-                var _emission = fireflies.emission;
-                _emission.rateOverTime = 0f;
+                fireflies.Stop(true, ParticleSystemStopBehavior.StopEmitting);
                 hasRemovedFireflies = true;
             }
         }
