@@ -98,6 +98,8 @@ public class AudioManagerScript : MonoBehaviour
         switch (clip) { case ("music"): music.start(); break; }
         switch (clip) { case ("musicStop"): music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 
+        switch (clip) { case ("windStop"): wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
+
         switch (clip) { case ("atmosExploring"): atmosExploring.start(); break; }
         switch (clip) { case ("atmosStruggle"): atmosStruggle.start(); break; }
         switch (clip) { case ("atmosExploringStop"): atmosExploring.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }

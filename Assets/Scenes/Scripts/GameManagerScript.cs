@@ -22,7 +22,7 @@ public class GameManagerScript : MonoBehaviour
     public float fadeRate;
 
     private CanvasGroup[] _panels; 
-    private bool _isGameRunning = false;
+    public static bool _isGameRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -107,6 +107,8 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator  StartUp()
     {
+        _isGameRunning = false; //just in case (static variable)
+
         AudioManagerScript.gameProgression = 0f; // resets music back to start
         AnimationBee_FlyidleToFlying.disableBeeAnimator = false; // make sure bee animations are running.
 

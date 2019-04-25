@@ -16,6 +16,7 @@ public class RewardTriggerScript : MonoBehaviour
         AnimationBee_FlyidleToFlying.disableBeeAnimator = true;
         ObjectToTeleport.GetComponent<PlayerBeeController>().maxSpeed = newBeeSpeed;
         ObjectToTeleport.GetComponent<PlayerBeeController>().target = FinalWayPoint;
+        GameManagerScript._isGameRunning = false; // disables pause menu
     }
 
         private void OnDrawGizmos()
