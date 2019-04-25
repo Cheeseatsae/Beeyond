@@ -48,6 +48,8 @@ public class StormTrigger : MonoBehaviour
         if (other.GetComponent<PlayerBeeController>() == null) return;
 
         AudioManagerScript.gameProgression = 10f;
+
+        AudioManagerScript.Playsound("atmosStruggle");
         AudioManagerScript.Playsound("atmosExploringStop");
 
         StartCoroutine(TheStormApproaches());
@@ -67,6 +69,9 @@ public class StormTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<PlayerBeeController>() == null) return;
+
+        AudioManagerScript.Playsound("atmosExploring");
+        AudioManagerScript.Playsound("atmosStruggleStop");
 
         StartCoroutine(TheStormRecedes());
 
