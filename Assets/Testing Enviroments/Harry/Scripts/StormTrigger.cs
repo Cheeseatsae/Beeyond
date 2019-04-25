@@ -56,7 +56,6 @@ public class StormTrigger : MonoBehaviour
 
         PlayParticles();
         Roo.WindScript.WindStates = Roo.WindScript.Winds.STRUGGLE;
-        Roo.LightningScript.lightningActive = true;
         Dust.SetActive(false);
         BlockerToEnable.SetActive(true);
         foreach(GameObject _cloud in CloudSpawners)
@@ -70,6 +69,9 @@ public class StormTrigger : MonoBehaviour
     {
         if (other.GetComponent<PlayerBeeController>() == null) return;
 
+        Dust.SetActive(true);
+        //LightningObject.SetActive(false);
+        Roo.LightningScript.lightningActive = false;
         AudioManagerScript.Playsound("atmosExploring");
         AudioManagerScript.Playsound("atmosStruggleStop");
 
@@ -77,8 +79,7 @@ public class StormTrigger : MonoBehaviour
 
         StopParticles();
         Roo.WindScript.WindStates = Roo.WindScript.Winds.EXPLORING;
-        Dust.SetActive(true);
-        LightningObject.SetActive(false);
+
        foreach (GameObject _cloud in CloudSpawners)
         {
             _cloud.SetActive(false);
@@ -138,9 +139,14 @@ public class StormTrigger : MonoBehaviour
             if (exposure <= desiredExposure)
             {
                 running = false;
-                StopCoroutine(TheStormApproaches());
+                //StopCoroutine(TheStormApproaches());
             }
+
         }
+
+        yield return new WaitForSeconds(Random.Range(15f, 40f));
+        Roo.LightningScript.lightningActive = true;
+        StopCoroutine(TheStormApproaches());
 
     }
 

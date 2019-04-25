@@ -20000,7 +20000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4651674741147504, guid: 26eeb26851aabba4c8d21abf00511f64, type: 3}
       propertyPath: m_LocalScale.x
-      value: 267.74194
+      value: 305.76642
       objectReference: {fileID: 0}
     - target: {fileID: 4651674741147504, guid: 26eeb26851aabba4c8d21abf00511f64, type: 3}
       propertyPath: m_LocalScale.y
@@ -20023,7 +20023,7 @@ PrefabInstance:
     - target: {fileID: 114653042758243998, guid: 26eeb26851aabba4c8d21abf00511f64,
         type: 3}
       propertyPath: _settings._saturation
-      value: 0.97
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 114653042758243998, guid: 26eeb26851aabba4c8d21abf00511f64,
         type: 3}
@@ -20054,7 +20054,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _settings._yLayer._layerMask
       value: 
-      objectReference: {fileID: 2800000, guid: 099f525143bf5034c843836ef9414213, type: 3}
+      objectReference: {fileID: 2800000, guid: 6613e05393f69be4981fcf536f1d97d0, type: 3}
     - target: {fileID: 114653042758243998, guid: 26eeb26851aabba4c8d21abf00511f64,
         type: 3}
       propertyPath: _settings._yLayer._channel1._inputRangeThreshold
@@ -48277,7 +48277,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: cameraClampMaxX.Array.data[0]
-      value: 20
+      value: 524
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
@@ -48749,7 +48749,7 @@ PrefabInstance:
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.93
+      value: 200.1
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}

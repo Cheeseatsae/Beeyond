@@ -51,7 +51,6 @@ namespace Roo
 
         IEnumerator LightningTime(float _lightningPause, int _lightningDuration, float _flashIntensity, Vector2 _intensityRange, float _pauseForThunder)
         {
-            yield return new WaitForSeconds(_lightningPause);
 
             _lightning.intensity = _flashIntensity;
 
@@ -72,6 +71,7 @@ namespace Roo
             int t = Random.Range(1, 4);
             AudioManagerScript.Playsound("thunder0"+t);
             // thunder1.start() // play thunder sounds based on light intensity
+            yield return new WaitForSeconds(_lightningPause);
             _lightningInProgress = false;
         }
 

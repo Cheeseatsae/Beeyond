@@ -75,8 +75,8 @@ namespace Harry
             }
 
             yield return new WaitForSeconds(pauseBetweenPanels);
-            AudioManagerScript.Playsound("windStop");
-            AudioManagerScript.Playsound("atmosExploringStop");
+            // AudioManagerScript.Playsound("windStop");
+            // AudioManagerScript.Playsound("atmosExploringStop");
 
             while (brownOutPanel.alpha < 1)
             {

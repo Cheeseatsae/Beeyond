@@ -107,6 +107,7 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator  StartUp()
     {
+        Roo.LightningScript.lightningActive = false; //just in case (static variable)
         _isGameRunning = false; //just in case (static variable)
 
         AudioManagerScript.gameProgression = 0f; // resets music back to start
