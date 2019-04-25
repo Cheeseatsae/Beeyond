@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027216}
   - component: {fileID: 4027217}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Leg_b_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14540291}
   - component: {fileID: 14540292}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Antenna_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37455615}
   - component: {fileID: 37455616}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Wing_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 117841750}
   - component: {fileID: 117841751}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Leg_f_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153996107}
   - component: {fileID: 153996108}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Leg_m_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 184620823}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Rig_butterfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240203598}
   - component: {fileID: 240203599}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310725854}
   - component: {fileID: 310725855}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Butterfly v3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452425901}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Head_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 533970599}
   - component: {fileID: 533970601}
   - component: {fileID: 533970600}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 650604674}
   - component: {fileID: 650604675}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Wing_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677817471}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711841785}
   - component: {fileID: 711841786}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Leg_b_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 763888117}
   - component: {fileID: 763888119}
   - component: {fileID: 763888118}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Butterfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909420476}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Butt_main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,7 +991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1156809095}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193494794}
   - component: {fileID: 1193494795}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Antenna_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230580410}
   - component: {fileID: 1230580411}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1185,7 +1185,7 @@ GameObject:
   - component: {fileID: 1308202050}
   - component: {fileID: 1308202052}
   - component: {fileID: 1308202051}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,7 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418742562}
   - component: {fileID: 1418742563}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Leg_m_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1344,7 +1344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615562516}
   - component: {fileID: 1615562517}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Leg_f_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1709797748}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Head_main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1455,7 +1455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767594657}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2080645467}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Butt_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,7 +1518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086548560}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Mesh_butterfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
