@@ -7,9 +7,9 @@ public class AudioManagerScript : MonoBehaviour
     // List all possible game sounds
     public static FMOD.Studio.EventInstance wind; // Game sounds from SFX bank
     public static FMOD.Studio.EventInstance music;// game music
-    public static FMOD.Studio.EventInstance atmosExploring;
+    public static FMOD.Studio.EventInstance atmosExploring, atmosStruggle; //atmos sounds
 
-    public static FMOD.Studio.EventInstance thunder01, thunder02, thunder03, thunder04, thunder05;
+    public static FMOD.Studio.EventInstance thunder01, thunder02, thunder03, thunder04, thunder05; // all thundersounds
 
     public static float gameProgression = 0f;
 
@@ -66,6 +66,7 @@ public class AudioManagerScript : MonoBehaviour
 
         // atmos
         atmosExploring = FMODUnity.RuntimeManager.CreateInstance("event:/Atmos/Exploring");
+        atmosStruggle = FMODUnity.RuntimeManager.CreateInstance("event:/Atmos/Struggle");
 
 
         // connect to sound parameters
@@ -76,7 +77,6 @@ public class AudioManagerScript : MonoBehaviour
 
        wind.start(); // start the wind
        atmosExploring.start(); // start exploring atmos
-        // WindVol.setValue(1); // set volume to max - no longer required. volume is automated
     }
 
     // Update is called once per frame
@@ -98,7 +98,10 @@ public class AudioManagerScript : MonoBehaviour
         switch (clip) { case ("music"): music.start(); break; }
         switch (clip) { case ("musicStop"): music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 
+        switch (clip) { case ("atmosExploring"): atmosExploring.start(); break; }
+        switch (clip) { case ("atmosStruggle"): atmosStruggle.start(); break; }
         switch (clip) { case ("atmosExploringStop"): atmosExploring.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
+        switch (clip) { case ("atmosStruggleStop"): atmosStruggle.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); break; }
 
         //switch (clip) { case ("noWind"): WindIntensity.setValue(0); break; }
     }
