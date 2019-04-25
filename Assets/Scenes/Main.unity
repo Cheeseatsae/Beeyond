@@ -4707,11 +4707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 763888117, guid: c87b1769748a930408df53419f1ca5f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.63
+      value: 178.7
       objectReference: {fileID: 0}
     - target: {fileID: 763888117, guid: c87b1769748a930408df53419f1ca5f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.18
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 763888117, guid: c87b1769748a930408df53419f1ca5f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13201,7 +13201,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717604889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.11}
+  m_LocalPosition: {x: 0, y: 0, z: -1.07}
   m_LocalScale: {x: 0.0045499997, y: 0.00451, z: 0.71634996}
   m_Children:
   - {fileID: 1278764996}
@@ -31662,7 +31662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 24.11, y: 21.65}
+  m_AnchoredPosition: {x: 25.91, y: 19.69}
   m_SizeDelta: {x: 1082, y: 586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516917979
@@ -32081,6 +32081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.size3D
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232744378605228950, guid: 7c4f8226c427a0c49b800346e3010797,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8232744378605228948, guid: 7c4f8226c427a0c49b800346e3010797,
         type: 3}
@@ -48272,7 +48277,7 @@ PrefabInstance:
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
       propertyPath: cameraClampMaxX.Array.data[0]
-      value: 524
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3427069147554875876, guid: bf12e30c19919c94eb56c8d022cee64c,
         type: 3}
@@ -48744,12 +48749,12 @@ PrefabInstance:
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 434.1
+      value: 14.93
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 5797930269731544435, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}

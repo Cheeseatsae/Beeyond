@@ -99,7 +99,7 @@ namespace Harry
          
         private void PlayerCheck()
         {
-            if (Vector3.Distance(player.transform.position, transform.position) < fleeDistance && atTarget)
+            if (Mathf.Abs(transform.position.x - player.transform.position.x) < fleeDistance && atTarget)
                 GetNewTarget();
         }
         
