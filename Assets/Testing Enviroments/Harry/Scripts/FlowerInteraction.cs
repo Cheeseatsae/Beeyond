@@ -9,6 +9,9 @@ namespace Harry
     
     public class FlowerInteraction : Interactable
     {
+        public ParticleSystem fireflies;
+        public float numberOfFireflies = 5f;
+        private bool hasRemovedFireflies = false;
         
         public bool harvested;
         [Range(0, 5)]
@@ -35,7 +38,21 @@ namespace Harry
             {
                 aiPickupPoint.SetActive(false);
             }
+
+            var _emission = fireflies.emission;
+            _emission.rateOverTime = numberOfFireflies;
         }
+
+        void FixedUpdate()
+        {
+            if (harvested && playerOnly && !hasRemovedFireflies)
+            {
+                var _emission = fireflies.emission;
+                _emission.rateOverTime = 0f;
+                hasRemovedFireflies = true;
+            }
+        }
+    
 
         public override void OnCollisionEnter(Collision other)
         {
