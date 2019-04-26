@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Harry
 {
-    public class InspectorWindow_AIStateControll : EditorWindow
+ /*   public class InspectorWindow_AIStateControll : EditorWindow
     {
         public delegate void ChangeToFindFlowerState();
 
@@ -42,6 +42,6 @@ namespace Harry
             
         }
     }
-
+    */
 
 }
