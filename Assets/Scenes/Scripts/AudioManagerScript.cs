@@ -3,7 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManagerScript : MonoBehaviour
-{
+{    /***************************************************************************************************
+     *                          -= !!! ATTENTION CODERS OF BEEYOND !!!=-                                *     
+     *                                                                                                  *
+     *       with this script loaded, all you need to do to play a sound is to use the code below...    *
+     *   you can call this from any script on any object without requiring to reference anything else   *
+     *                                                                                                  *
+     *                      AudioMasterScript.Playsound("NAME OF SOUND HERE");                          *
+     *                                                                                                  *
+     *                      just follow the code below to add the sounds from hte bank                  *
+     *                      first list the sounds,                                                      *
+     *                      then connect to the sounds in the bank                                      *
+     *                      then add to the PlaySound() function                                        *
+     *                                                                                                  *
+     *                                                                                                  *
+     *                                                                                                  *
+     *                                       Enjoy, Roo :)                                              *
+     *                                                                                                  *
+     ***************************************************************************************************/
+
+
     // List all possible game sounds
     public static FMOD.Studio.EventInstance wind; // Game sounds from SFX bank
     public static FMOD.Studio.EventInstance music;// game music
