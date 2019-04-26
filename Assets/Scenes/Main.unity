@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.681
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1918276, g: 0.1828256, b: 0.17577729, a: 0.681}
+  m_IndirectSpecularColor: {r: 0.19182587, g: 0.182823, b: 0.17577875, a: 0.681}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8327,7 +8327,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 8.042031e-10, y: 0.00029999207, z: 0.00000039140136}
+  m_ConnectedAnchor: {x: -0.0000000013630923, y: 0.0002999923, z: 0.0000003913203}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -13662,6 +13662,29 @@ CapsuleCollider:
     type: 3}
   m_PrefabInstance: {fileID: 5797930270056880701}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &753715018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753715011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/BeeBuzzIdleMedium
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &757623907
 GameObject:
   m_ObjectHideFlags: 0
@@ -19938,6 +19961,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847301858}
   m_CullTransparentMesh: 0
+--- !u!1 &857655455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4574976207711027769, guid: e807adee0e0dc5c4a9cb8a7d5eeb5929,
+    type: 3}
+  m_PrefabInstance: {fileID: 1735313517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &857655456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857655455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/KiteFlap02
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 15
 --- !u!4 &863694935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8857086738406001816, guid: a7c340a54ce2430459a14055bd1d1a23,
@@ -22247,6 +22299,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987552679}
   m_CullTransparentMesh: 0
+--- !u!1 &999299285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1322632135, guid: 3fde35225ba6d984b9c0a42e571a1435,
+    type: 3}
+  m_PrefabInstance: {fileID: 1432189971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &999299291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999299285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &1007646754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7996547350269013561, guid: af4a7dd845aac9041a35d66b68c8a4d3,
@@ -28891,7 +28972,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000006989954, y: -0.00000023841858, z: 0.00000022280466}
+  m_ConnectedAnchor: {x: -0.00000007863699, y: -0.00000023841858, z: 0.00000022280466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -35471,7 +35552,7 @@ PrefabInstance:
     - target: {fileID: 4574976209017671979, guid: e807adee0e0dc5c4a9cb8a7d5eeb5929,
         type: 3}
       propertyPath: m_AABB.m_Center.z
-      value: 0
+      value: 0.000000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 4574976209017671979, guid: e807adee0e0dc5c4a9cb8a7d5eeb5929,
         type: 3}
@@ -35496,7 +35577,7 @@ PrefabInstance:
     - target: {fileID: 4574976209017671979, guid: e807adee0e0dc5c4a9cb8a7d5eeb5929,
         type: 3}
       propertyPath: m_AABB.m_Extent.z
-      value: 0.12490816
+      value: 0.124908134
       objectReference: {fileID: 0}
     - target: {fileID: 4574976209017671976, guid: e807adee0e0dc5c4a9cb8a7d5eeb5929,
         type: 3}
@@ -35824,7 +35905,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000011358676, y: 0.0008997917, z: 0.00000033202264}
+  m_ConnectedAnchor: {x: -0.0000001223242, y: 0.0008997917, z: 0.00000034076007}
   m_UseSpring: 0
   m_Spring:
     spring: 0

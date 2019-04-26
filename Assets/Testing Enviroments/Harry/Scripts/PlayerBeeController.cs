@@ -34,6 +34,7 @@ namespace Harry
                     _animationRunning = false;
 
                     PlayAnimation("ButtDance");
+                    AudioManagerScript.Playsound("BeeButtDance03");
                 }
                 }
             if(myState == BeeState.Pollenated && !_animationRunning)
@@ -57,6 +58,10 @@ namespace Harry
         
             base.FixedUpdate();
         
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            AudioManagerScript.Playsound("BeePlasticCollision");
         }
     }
     

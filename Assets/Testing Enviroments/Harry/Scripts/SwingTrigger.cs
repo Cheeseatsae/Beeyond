@@ -24,6 +24,7 @@ public class SwingTrigger : MonoBehaviour
         Destroy(wallToDestroy);
         // AudioManagerScript.gameProgression += 1; // progress the score of the game
         cam.IncreaseClamp(0);
+        AudioManagerScript.Playsound("MetalChainSnapping01");
     }
 
     private void OnDestroy()

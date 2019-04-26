@@ -32,7 +32,11 @@ namespace Harry
         {
             HiveInteractable.ActivateNextFlowers += ActivateFlower;
 
+            
+
             InteractionEvent += PlayAnimation;
+
+            
 
             if (playerOnly)
             {
@@ -46,6 +50,7 @@ namespace Harry
         {
             if (harvested && playerOnly && !hasRemovedFireflies)
             {
+                
                 fireflies.Stop(true, ParticleSystemStopBehavior.StopEmitting);
                 hasRemovedFireflies = true;
             }
@@ -59,6 +64,7 @@ namespace Harry
             if (other.gameObject.GetComponent<BeeController>().myState == BeeController.BeeState.Pollenated) return;
 
             base.OnCollisionEnter(other);
+
         }
 
         public void ActivateFlower(int count)
@@ -73,6 +79,7 @@ namespace Harry
         {
             if (myBeeController.myState == BeeController.BeeState.Pollenated) return;
             base.OnInteract();
+            AudioManagerScript.Playsound("BeeDigQuickShort02");
         }
 
         public override IEnumerator Interaction()
