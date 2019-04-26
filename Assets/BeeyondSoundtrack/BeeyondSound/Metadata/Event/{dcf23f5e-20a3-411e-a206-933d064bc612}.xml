@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{dcf23f5e-20a3-411e-a206-933d064bc612}">
         <property name="name">
-            <value>WindMediumMedium&amp;Constant01</value>
+            <value>WindMediumMediumConstant01</value>
         </property>
         <property name="outputFormat">
             <value>0</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{171bd698-39bf-483c-ba3a-b3946a3c9444}">
         <property name="assetPath">
-            <value>SFX/WindMediumMediumConstant.wav</value>
+            <value>SFX/WindMediumMediumConstant02.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

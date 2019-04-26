@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{37d3e429-86d0-417d-b0f9-0029e7991d48}">
         <property name="name">
-            <value>WindMediumMediumConstant</value>
+            <value>WindMediumMediumConstant02</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
@@ -95,6 +95,7 @@
         <property name="length">
             <value>4.3733333333333331</value>
         </property>
+        <property name="name"/>
         <relationship name="audioFile">
             <destination>{171bd698-39bf-483c-ba3a-b3946a3c9444}</destination>
         </relationship>

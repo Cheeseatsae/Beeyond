@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114741351806919814}
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   EditorEvents:
   - {fileID: 114392900600083182}
   - {fileID: 114048795796304034}
@@ -38,7 +38,6 @@ MonoBehaviour:
   - {fileID: 114650594830253344}
   - {fileID: 114682737691248136}
   - {fileID: 114317235648190536}
-  - {fileID: 114405184475047346}
   - {fileID: 114521863681280026}
   - {fileID: 114122668539185242}
   - {fileID: 114670650909757270}
@@ -56,7 +55,6 @@ MonoBehaviour:
   - {fileID: 114862170949903882}
   - {fileID: 114328513240900564}
   - {fileID: 114148731166869570}
-  - {fileID: 114582248945848150}
   - {fileID: 114145305174103356}
   - {fileID: 114590933711749950}
   - {fileID: 114867208082012300}
@@ -112,9 +110,11 @@ MonoBehaviour:
   - {fileID: 114030786883720952}
   - {fileID: 114921331032544082}
   - {fileID: 114574937146064006}
-  MasterBankRef: {fileID: 114814673283421820}
+  - {fileID: 114438040669555040}
+  - {fileID: 114788312300335666}
+  MasterBankRef: {fileID: 114269632250691246}
   StringsBankRef: {fileID: 114741351806919814}
-  stringsBankWriteTime: 636916343575374534
+  stringsBankWriteTime: 636919008526320889
   cacheVersion: 2
 --- !u!114 &114004258025133618
 MonoBehaviour:
@@ -131,7 +131,7 @@ MonoBehaviour:
   Path: event:/SFX/Thunder04
   guid: bc540d8cbad0754ca9d70e0c3ed276bc
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -170,7 +170,7 @@ MonoBehaviour:
   Path: event:/SFX/GateLatchOpening03
   guid: 3c2d45abb8b26f479da71c812614b549
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
   Path: event:/SFX/GateSlam02
   guid: feb1e8534d60eb428d2ecec69b17703f
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -216,7 +216,7 @@ MonoBehaviour:
   Path: event:/SFX/FlowerToneMid01
   guid: ed9a9149027d94478810c646adacc452
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -225,6 +225,22 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 3200
 --- !u!114 &114039770299124880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114041713129529390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +271,7 @@ MonoBehaviour:
   Path: event:/Atmos/Exploring
   guid: 62c33fd31558614c8d63561ee8fff7a2
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -279,6 +295,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114063519998620010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114076395975112822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +326,7 @@ MonoBehaviour:
   Path: event:/SFX/FarmAnimalsChickens01
   guid: faf48745d9d6fc4e8ab88bce2dd424d5
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -349,7 +381,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeDigQuickShort01
   guid: 38aa99fc9b29014d80c605d8afe76706
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -372,7 +404,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeCollisionMetal03
   guid: fb2c7f9efc01a84bb334ac8b5baab0e5
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -395,7 +427,7 @@ MonoBehaviour:
   Path: event:/SFX/LongGrassRustle
   guid: 84b2439f0360e54da776489ed293e667
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -418,7 +450,7 @@ MonoBehaviour:
   Path: event:/SFX/GateLatchOpening02
   guid: c2a4c026c45dab4991e78f5c569d456e
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -457,7 +489,7 @@ MonoBehaviour:
   Path: event:/SFX/FlowerToneHigh02
   guid: 32c4c89bd4279f48bac593407505bf9f
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -496,7 +528,7 @@ MonoBehaviour:
   Path: event:/SFX/FlowerToneHigh01
   guid: 62009dabe2bfd84e89d6408343aeb463
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -519,7 +551,7 @@ MonoBehaviour:
   Path: event:/SFX/MetalChainThin
   guid: 5b6a3bab221c44489a386d7da6e20702
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -558,7 +590,7 @@ MonoBehaviour:
   Path: event:/SFX/GateLatchOpening01
   guid: 8b8ddb060ee4fe4cbef2c92a028d5337
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -581,7 +613,7 @@ MonoBehaviour:
   Path: event:/SFX/WindSoftShortBurst
   guid: 3682ecd6b268b44e87ece3814f5c77a4
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -604,7 +636,7 @@ MonoBehaviour:
   Path: event:/SFX/MetalChainSnapping01
   guid: ba92207a69cf6649ab2f082bdbc52606
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -612,6 +644,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5856
+--- !u!114 &114221298134582338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114223162761080856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +675,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumMedium
   guid: f99b3a3486186143b372ab967eec9c55
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -650,7 +698,7 @@ MonoBehaviour:
   Path: event:/SFX/WindSoftMediumConstant02
   guid: b736f909c56aff41919b00bb8a6f1bb6
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -673,7 +721,7 @@ MonoBehaviour:
   Path: event:/SFX/MetalChainMediumThickness02
   guid: c59c87d56fc20d4e92f8f6d203eb8fb8
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -696,13 +744,13 @@ MonoBehaviour:
   Path: event:/SFX/Wind
   guid: a1c3668e9a003c45aa7399be37e22992
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114925717609368390}
-  - {fileID: 114320907703599566}
+  - {fileID: 114761051516923052}
+  - {fileID: 114672725134089002}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -721,7 +769,7 @@ MonoBehaviour:
   Path: event:/SFX/FlowerToneLow02
   guid: 7b33e27318d4984fbe48307a0fd85ba9
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -729,6 +777,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3200
+--- !u!114 &114246312659372968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114258800603439982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,7 +808,7 @@ MonoBehaviour:
   Path: event:/SFX/FarmAnimalsSheep02
   guid: a261499d535eca4fb37de0f47dd33585
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -767,7 +831,7 @@ MonoBehaviour:
   Path: event:/SFX/FlowerToneMid02
   guid: bf4dae3cee261b47b9c60a1b2c74084b
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -790,7 +854,7 @@ MonoBehaviour:
   Path: event:/SFX/InsectCallsCrickets
   guid: 43452a491d1b174f860f0db362f8c2a3
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -813,7 +877,7 @@ MonoBehaviour:
   Path: event:/SFX/MetalChainSnapping02
   guid: c94101d1e564e24e98c707cc36c8da26
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -821,6 +885,42 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5150
+--- !u!114 &114269632250691246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\user\Documents\Beeyond\Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636919008526171072
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 18091648
+  Exists: 1
+--- !u!114 &114275158693361870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
+  Default: 0
 --- !u!114 &114283620254969838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,7 +936,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumShortBurst
   guid: 06ad6595f1ff254c8b6ceebf2e82a451
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -844,6 +944,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1802
+--- !u!114 &114297108347745642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
+  Default: 0
 --- !u!114 &114299231315545880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,7 +991,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeDigQuickLong
   guid: 294588ba7335574d8599f048e47fb381
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -898,7 +1014,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeWoodCollision02
   guid: 438e035ba5d6a44da563f26d0fde40a4
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -921,7 +1037,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongMediumPulsing01
   guid: c94dfdd56336804ab83d24271262ff9a
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -960,7 +1076,7 @@ MonoBehaviour:
   Path: event:/SFX/HeavyObjectFallingGrass01
   guid: 56c5f32b9c256d41a470969431d5dee7
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -983,7 +1099,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongShortBurst01
   guid: 1261c7236eabb04ba3f1a3f89a199c0f
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1006,7 +1122,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeButtDance01
   guid: a3169825d348494c9a82ec3dcc917ac3
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1029,7 +1145,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeCollisionMetal02
   guid: d3afd0a639809d4c94929eaf853fcc72
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1052,7 +1168,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongShortConstant02
   guid: 9544c570c1a3b442b5af99c359d73c14
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1075,7 +1191,7 @@ MonoBehaviour:
   Path: event:/SFX/GateLatchHigh
   guid: a5671e784e377841a75f9d8df015b11c
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1098,7 +1214,7 @@ MonoBehaviour:
   Path: event:/SFX/Thunder02
   guid: fbdcd40ef4909249ad47bc438b114439
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1121,7 +1237,7 @@ MonoBehaviour:
   Path: event:/SFX/WindSoftMediumConstant01
   guid: d98e58a0aa86e549810dc375a7bec482
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1144,7 +1260,7 @@ MonoBehaviour:
   Path: event:/SFX/Thunder01
   guid: 62528f3231ef2a4493de756a82d1d948
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1167,7 +1283,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongLongConstant01
   guid: de3bafe0e803a44f92d2ea29dc1aab74
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1175,6 +1291,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4847
+--- !u!114 &114399531711310090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114403601858471132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,7 +1322,7 @@ MonoBehaviour:
   Path: event:/SFX/TwigsSnapping
   guid: 023e352888bc514b83ba3ce5f4ebb84b
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1236,7 +1368,7 @@ MonoBehaviour:
   Path: event:/SFX/GateCreak03
   guid: 0be4bf1df5023f4cab0cf5f0648be4d4
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1259,7 +1391,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongMediumConstant
   guid: 77a93353b392954cba55ee9e1d961545
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1282,7 +1414,7 @@ MonoBehaviour:
   Path: event:/SFX/HeavyObjectFallingGrass02
   guid: c336937a56a1084da49ecbc3069b66bc
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1290,6 +1422,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3633
+--- !u!114 &114438040669555040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/WindMediumMediumConstant02
+  guid: 29e4d337d0867d41b0f90029e7991d48
+  Banks:
+  - {fileID: 114269632250691246}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4373
 --- !u!114 &114441513778983024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,7 +1460,7 @@ MonoBehaviour:
   Path: event:/SFX/GateCreak01
   guid: 406b5748f8372f49a3a6618fc0acf8cb
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1328,7 +1483,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumShort
   guid: 0f01ff5432a9024d8bccb270d59de797
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1351,7 +1506,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeWoodCollision01
   guid: 7996994d14119945b591d34c5689a912
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1374,7 +1529,7 @@ MonoBehaviour:
   Path: event:/SFX/WindSoftLongPulsing
   guid: 41de392409b1cf4fb952c80d8d0bee67
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1397,7 +1552,7 @@ MonoBehaviour:
   Path: event:/SFX/KiteFlap01
   guid: 30cdd97b6a8c374aab9eaf525560fe25
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -1420,7 +1575,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongShortBurst02
   guid: 8cb4d8f8222fb540ad454b4c8cb48315
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1443,7 +1598,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeDigQuickShort02
   guid: 6be2e2c84e9dd64ba450d8b9e37f8710
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1466,7 +1621,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongShortPulsing
   guid: e4a1911397b76548bebdeab22652edc6
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1489,7 +1644,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongLongConstant04
   guid: 82ca3f668ce56348b14c00eb7789f16c
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1512,7 +1667,7 @@ MonoBehaviour:
   Path: event:/SFX/GateCreak04
   guid: 1b073089049010469faf5a5457dfccb4
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1535,7 +1690,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeLanding01
   guid: c9a34bb766bb4c489737cb8b3856b82b
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1574,7 +1729,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumLongConstant
   guid: 8c36f52a7a96244daba8282363fddd3e
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1597,7 +1752,7 @@ MonoBehaviour:
   Path: event:/Atmos/Struggle
   guid: 8861b21fd057e84d987b6cc7f93bdb4b
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1620,7 +1775,7 @@ MonoBehaviour:
   Path: event:/SFX/GateLatchOpening04
   guid: 16e458556e30f94b9fbb562a99e5a40c
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1667,6 +1822,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5440
+--- !u!114 &114590127797680000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameLevel
+  Min: 0
+  Max: 20
+  Default: 0
 --- !u!114 &114590933711749950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,7 +1853,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongMediumPulsing02
   guid: 658ce28e33bd8f45ad3176b10a1c1326
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1705,7 +1876,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeDigSlowLong
   guid: 1042566b33370b4c84df4426ab1bb92f
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1728,7 +1899,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongShort
   guid: 76b35c7a57fea043b861106e095330cb
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1736,6 +1907,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1560
+--- !u!114 &114639216038432126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114650594830253344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,7 +1938,7 @@ MonoBehaviour:
   Path: event:/SFX/LightWindLoopFinal
   guid: 1de0dd8ad53b914f8fe20f6932461429
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1790,7 +1977,7 @@ MonoBehaviour:
   Path: event:/SFX/WindSoftMediumPulsing
   guid: 3652b9704497fc4d93ca7a583e899129
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1798,6 +1985,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6912
+--- !u!114 &114672725134089002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Strength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114672866169524650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,7 +2016,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongLongConstant02
   guid: 96ef4143f4f892439a526592b8b508ff
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1868,7 +2071,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongLongConstant03
   guid: 25b7bd4c459f134584a193e15b321ebc
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1907,7 +2110,7 @@ MonoBehaviour:
   Path: event:/SFX/HeavyObjectFallingGrass03
   guid: 3e5b3e3ac7fa384f8ddc808c2f2bde4b
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1930,7 +2133,7 @@ MonoBehaviour:
   Path: event:/SFX/KiteFlap02
   guid: 89245c243bbc5e4586aa7fce1d9e5931
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -1969,7 +2172,7 @@ MonoBehaviour:
   Path: event:/SFX/Thunder03
   guid: fcdf61e9aec9874db7501b08bd895c55
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1992,7 +2195,7 @@ MonoBehaviour:
   Path: event:/SFX/FarmAnimalsCow01
   guid: 37baa2a5ffe3f349b9f4afce0d7a8404
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2015,7 +2218,7 @@ MonoBehaviour:
   Path: event:/SFX/Thunder05
   guid: 904bd3ccab4ce244943ac5f79ac72bb4
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2038,7 +2241,7 @@ MonoBehaviour:
   Path: event:/SFX/MetalChainMediumThickness
   guid: fdf66617e589ad459f59daea176b100a
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2059,11 +2262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\BeeyondSoundtrack\BeeyondSound\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636916343575374534
+  lastModified: 636919008526320889
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 4946
+    Value: 4950
   Exists: 1
 --- !u!114 &114743473507931948
 MonoBehaviour:
@@ -2080,7 +2283,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumShortConstant
   guid: c298de7eaaf4854195610a43b9209240
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2104,6 +2307,22 @@ MonoBehaviour:
   Min: 0
   Max: 20
   Default: 0
+--- !u!114 &114761051516923052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WindIntensity
+  Min: 0
+  Max: 15
+  Default: 0
 --- !u!114 &114767928702022458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,7 +2338,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongLoop2
   guid: 908c7f9897aef34e839ca8a9a2f04620
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2142,7 +2361,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeBuzzIntense
   guid: 1c1e95acccf9d74dba39b0242b56afc6
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2165,7 +2384,7 @@ MonoBehaviour:
   Path: event:/SFX/FarmAnimalsSheep01
   guid: 0cc4dc821c2b0c48aea032ced2067b43
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2173,6 +2392,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1396
+--- !u!114 &114788312300335666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/WindMediumMediumConstant01
+  guid: 5e3ff2dca3201e41a206933d064bc612
+  Banks:
+  - {fileID: 114269632250691246}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5440
 --- !u!114 &114793991515125056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,7 +2446,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumLongPulsing
   guid: a151dec9703333458b1aaa87c12ae86e
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2227,13 +2469,13 @@ MonoBehaviour:
   Path: event:/Score/Music
   guid: 975c80d1b04a4e43b65754b3a72ea56a
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114022914551048234}
-  - {fileID: 114954094769375698}
+  - {fileID: 114590127797680000}
+  - {fileID: 114041713129529390}
   MinDistance: 0
   MaxDistance: 0
   Length: 405000
@@ -2288,7 +2530,7 @@ MonoBehaviour:
   Path: event:/SFX/GateCreak02
   guid: c71533cc1df9e746a05a22ccf355b0eb
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2327,7 +2569,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeCollisionAmended
   guid: f3ff5e8d73184c49af8309f3489db280
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2350,7 +2592,7 @@ MonoBehaviour:
   Path: event:/SFX/GateSlam01
   guid: 9656adbc75e2ef4fb4155bcf1b28efe3
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2373,7 +2615,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeDigSlowShort
   guid: 4dadfed2cbe0ff4b9ea829d38326abb9
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2396,7 +2638,7 @@ MonoBehaviour:
   Path: event:/SFX/WindStrongShortConstant01
   guid: 6599c3e72ac8534895bd2c86b7ebab27
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2419,7 +2661,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumMediumPulsing
   guid: c0c8b5d8c03ff54ab425f261e07f21d9
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2442,7 +2684,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeBuzzIdleMedium
   guid: db10fc1fb65a78438cc2ef3ff63e6d1e
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2465,7 +2707,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeBuzzIdleSoft
   guid: 9a866ef0097e8c40a76fb3b4868d1989
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2473,6 +2715,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3124
+--- !u!114 &114886491274127656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameMusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114890282921203766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2504,7 +2762,7 @@ MonoBehaviour:
   Path: event:/SFX/WindMediumShortPulsing
   guid: e1e3293d33043d49af8218167a42da84
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2527,7 +2785,7 @@ MonoBehaviour:
   Path: event:/SFX/InsectCallsCicadas
   guid: f24750939de22441a1172474529897fe
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2550,7 +2808,7 @@ MonoBehaviour:
   Path: event:/SFX/KiteTailCollision
   guid: 3c977f352c2b81448a96fde8384717f3
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2573,7 +2831,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeButtDance02
   guid: feed2830a3e2e040974d074e1511a8cf
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2596,7 +2854,7 @@ MonoBehaviour:
   Path: event:/SFX/MetalChainClunky
   guid: dbd13bef2eb3044bb398c2e06298510c
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2635,7 +2893,7 @@ MonoBehaviour:
   Path: event:/SFX/BeePlasticCollision
   guid: c57070c0fa4a5c42bb7a539581c9046c
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2658,7 +2916,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeButtDance03
   guid: 3dd27eb4e9de754c9dc7fab499c0c5bb
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2681,7 +2939,7 @@ MonoBehaviour:
   Path: event:/SFX/BeeCollisionMetal01
   guid: 997ef03782b09c4597ce24b47c6add92
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2720,7 +2978,7 @@ MonoBehaviour:
   Path: event:/SFX/FlowerToneLow01
   guid: d32a3a5917927f47b1a227f2e0aefbea
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2743,7 +3001,7 @@ MonoBehaviour:
   Path: event:/SFX/Kite
   guid: dfeb8d21a5a23f4b9e9f6be200d26eb1
   Banks:
-  - {fileID: 114814673283421820}
+  - {fileID: 114269632250691246}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
