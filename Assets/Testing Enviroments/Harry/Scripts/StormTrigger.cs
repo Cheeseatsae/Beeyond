@@ -90,8 +90,8 @@ public class StormTrigger : MonoBehaviour
     {
         foreach (ParticleSystem p in particles)
         {
-            //p.Play();
-            StartCoroutine(StartRain(p));
+            p.Play();
+            //StartCoroutine(StartRain(p));
         }
         Debug.Log(particles.Count);
     }
@@ -100,8 +100,8 @@ public class StormTrigger : MonoBehaviour
     {
         foreach (ParticleSystem p in particles)
         {
-            // p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-            StartCoroutine(StopRain(p));
+            p.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            //StartCoroutine(StopRain(p));
         }
     }
 

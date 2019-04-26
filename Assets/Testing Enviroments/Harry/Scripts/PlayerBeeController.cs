@@ -11,6 +11,7 @@ namespace Harry
         private bool _animationRunning = false;
         public ParticleSystem fireflies;
         public float numberOfFireflies;
+        private bool _canPlaySound = true;
 
         void Start()
         {
@@ -61,7 +62,19 @@ namespace Harry
         }
         private void OnCollisionEnter(Collision collision)
         {
-            AudioManagerScript.Playsound("BeePlasticCollision");
+            if (_canPlaySound)
+            {
+                _canPlaySound = false;
+                AudioManagerScript.Playsound("BeePlasticCollision");
+                StartCoroutine(RegulateCollisionSounds());
+            }
+            
+        }
+
+        IEnumerator RegulateCollisionSounds()
+        {
+            yield return new WaitForSeconds(0.5f);
+            _canPlaySound = true;
         }
     }
     

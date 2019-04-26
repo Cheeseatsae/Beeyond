@@ -28,11 +28,15 @@ public class GameManagerScript : MonoBehaviour
     private CanvasGroup[] _panels; 
     public static bool _isGameRunning = false;
 
+    public GameObject tutorialPanelsHolder;
+    private CanvasGroup[] tutorialPanels;
+    private bool _tutorialSwitch = false;
     // Start is called before the first frame update
     void Start()
     {
         _previousPanel = StartPanel;
         _panels = GamePanel.GetComponentsInChildren<CanvasGroup>(); // get a list of all active panels
+        tutorialPanels = tutorialPanelsHolder.GetComponentsInChildren<CanvasGroup>();
         Debug.Log(_panels.Length);
 
         StartCoroutine(StartUp()); // cleans up all active panels and resets to a begining state
@@ -44,6 +48,11 @@ public class GameManagerScript : MonoBehaviour
         if ((Input.GetKey(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.JoystickButton7)) && _isGameRunning)
         {
             PauseGame();
+        }
+
+        if ((Input.GetKey(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton3)) && _isGameRunning)
+        {
+            ToggleTutorials(0f, 0.2f);
         }
     }
 
@@ -71,6 +80,14 @@ public class GameManagerScript : MonoBehaviour
     public void ResumeGame()
     {
         CloseAllPanels(0, menuTransitionSpeed);
+    }
+
+    public void ToggleTutorials(float _pTime, float _transTime)
+    {
+        foreach (CanvasGroup _p in tutorialPanels)
+        {
+            StartCoroutine(Deactivate(_p, _pTime, _transTime));
+        }
     }
 
     public void CloseAllPanels(float _pTime, float _transTime)
@@ -111,6 +128,7 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator  StartUp()
     {
+        Roo.CameraMovementScript.cameraClampMinY = 22f; // set camera clamp just in case
         StartCoroutine(Deactivate(BeeyondPanel, 0f, 0f)); // just in case
         StartCoroutine(Deactivate(HiveMindPanel, 0f, 0f)); // just in case
         Roo.LightningScript.lightningActive = false; //just in case (static variable)
@@ -138,7 +156,6 @@ public class GameManagerScript : MonoBehaviour
         CloseAllPanels(0f, 0f); 
         yield return new WaitForSeconds(secondsBeforeFadein/2f);
 
-        Roo.CameraMovementScript.cameraClampMinY = 22f; // set camera clamp just in case
         //turn all relevant panels on at start of game
         StartCoroutine(Activate(GamePanel, 0, 0));
         StartCoroutine(Activate(StartPanel, 0, 0));

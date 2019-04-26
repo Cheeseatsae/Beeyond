@@ -62,7 +62,7 @@ namespace Harry
             if (harvested) return;
             if (other.gameObject.GetComponent<BeeController>() == null) return;
             if (other.gameObject.GetComponent<BeeController>().myState == BeeController.BeeState.Pollenated) return;
-
+            if (other.gameObject.GetComponent<PlayerBeeController>() != null) AudioManagerScript.Playsound("BeeDigQuickShort02");
             base.OnCollisionEnter(other);
 
         }
@@ -79,7 +79,6 @@ namespace Harry
         {
             if (myBeeController.myState == BeeController.BeeState.Pollenated) return;
             base.OnInteract();
-            AudioManagerScript.Playsound("BeeDigQuickShort02");
         }
 
         public override IEnumerator Interaction()
