@@ -79,6 +79,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void ResumeGame()
     {
+		_isGameRunning = true;
         CloseAllPanels(0, menuTransitionSpeed);
     }
 
