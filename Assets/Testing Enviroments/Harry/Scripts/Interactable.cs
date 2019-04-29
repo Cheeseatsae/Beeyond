@@ -49,7 +49,7 @@ namespace Harry
 
         public virtual void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<BeeController>() != null)
+            if (other.GetComponent<BeeController>() != null || other.gameObject.layer == 15)
             {
                 withinTrigger = true;
                 Debug.Log("Bee in trigger");
