@@ -53,7 +53,7 @@ public class AudioManagerScript : MonoBehaviour
     public static FMOD.Studio.EventInstance atmos1, atmos2, atmos3; // Game sounds from Atmos bank
     */
 
-    public static FMOD.Studio.EventInstance Exploring, Struggle; // Game sounds from atmos bank
+    public FMOD.Studio.EventInstance Exploring, Struggle; // Game sounds from atmos bank
 
 
     // name the parameters for wind variables
@@ -63,6 +63,9 @@ public class AudioManagerScript : MonoBehaviour
     // name the parameters for music variables
     public static FMOD.Studio.ParameterInstance gameLevel;
     public static FMOD.Studio.ParameterInstance musicVol;
+
+    // name the parameters for bee movement variables
+    public static FMOD.Studio.ParameterInstance BeeMovement; // name the parameter for bee movement
 
 
 
@@ -195,6 +198,7 @@ public class AudioManagerScript : MonoBehaviour
         wind.getParameter("WindIntensity", out WindIntensity); // connect to WindIntensity Parameter in Wind Sound
         wind.getParameter("Strength", out WindVol); // connect to Strength Parameter in Wind Sound and output WindVol
         music.getParameter("GameLevel", out gameLevel);
+        BeeBuzzIdleMedium.getParameter("BeeMovement", out BeeMovement);
 
        wind.start(); // start the wind
        atmosExploring.start(); // start exploring atmos
@@ -205,6 +209,7 @@ public class AudioManagerScript : MonoBehaviour
     {
         WindIntensity.setValue(Roo.WindScript.windSpeed);
         gameLevel.setValue(gameProgression);
+        BeeMovement.setValue(Harry.BeeTargetController.BuzzingVolume);
     }
 
     // Below is the switch statement for all the possible sounds used in the game
