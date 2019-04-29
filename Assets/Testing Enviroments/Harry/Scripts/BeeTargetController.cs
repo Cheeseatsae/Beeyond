@@ -14,6 +14,8 @@ namespace Harry
 
         public Transform parent;
 
+        public static float BuzzingVolume;
+
         // horizontal input property
         private float InputHorizontalValue 
         { 
@@ -38,6 +40,7 @@ namespace Harry
             // sets position locally for bee to chase
             transform.position = new Vector3(InputHorizontalValue * inputMult, InputVerticalValue * inputMult, 0) + parent.position;
             parent.position = new Vector3(parent.position.x, parent.position.y,  Mathf.Lerp(parent.position.z, 0, 0.05f));
+            BuzzingVolume = InputHorizontalValue;
         }
         
     }
