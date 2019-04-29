@@ -45,24 +45,24 @@ public class StormTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerBeeController>() == null) return;
+        if (other.GetComponent<PlayerBeeController>() != null || other.gameObject.layer == 15) 
+		{
+			AudioManagerScript.gameProgression = 10f;	
 
-        AudioManagerScript.gameProgression = 10f;
+			AudioManagerScript.Playsound("atmosStruggle");
+			AudioManagerScript.Playsound("atmosExploringStop");	
 
-        AudioManagerScript.Playsound("atmosStruggle");
-        AudioManagerScript.Playsound("atmosExploringStop");
-
-        StartCoroutine(TheStormApproaches());
-
-        PlayParticles();
-        Roo.WindScript.WindStates = Roo.WindScript.Winds.STRUGGLE;
-        Dust.SetActive(false);
-        BlockerToEnable.SetActive(true);
-        foreach(GameObject _cloud in CloudSpawners)
-        {
-            _cloud.SetActive(true);
+			StartCoroutine(TheStormApproaches());
+	
+			PlayParticles();
+			Roo.WindScript.WindStates = Roo.WindScript.Winds.STRUGGLE;
+			Dust.SetActive(false);
+			BlockerToEnable.SetActive(true);
+			foreach(GameObject _cloud in CloudSpawners)
+			{	
+				_cloud.SetActive(true);
+			}
         }
-        
     }
 
     private void OnTriggerExit(Collider other)

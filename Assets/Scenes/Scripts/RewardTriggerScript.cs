@@ -10,13 +10,15 @@ public class RewardTriggerScript : MonoBehaviour
     public float newBeeSpeed;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerBeeController>() == null) return;
-        AudioManagerScript.gameProgression = 20f;
-        Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
-        AnimationBee_FlyidleToFlying.disableBeeAnimator = true;
-        ObjectToTeleport.GetComponent<PlayerBeeController>().maxSpeed = newBeeSpeed;
-        ObjectToTeleport.GetComponent<PlayerBeeController>().target = FinalWayPoint;
-        GameManagerScript._isGameRunning = false; // disables pause menu
+        if (other.GetComponent<PlayerBeeController>() != null || other.gameObject.layer == 15) 
+		{
+			AudioManagerScript.gameProgression = 20f;
+			Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
+			AnimationBee_FlyidleToFlying.disableBeeAnimator = true;
+			ObjectToTeleport.GetComponent<PlayerBeeController>().maxSpeed = newBeeSpeed;
+			ObjectToTeleport.GetComponent<PlayerBeeController>().target = FinalWayPoint;
+			GameManagerScript._isGameRunning = false; // disables pause menu
+		}
     }
 
         private void OnDrawGizmos()

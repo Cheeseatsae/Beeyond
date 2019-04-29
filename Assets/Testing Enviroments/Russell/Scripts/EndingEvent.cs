@@ -33,7 +33,7 @@ namespace Harry
     
         public void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<PlayerBeeController>())
+            if (other.GetComponent<PlayerBeeController>() != null || other.gameObject.layer == 15)
             {
                 SpawnTheBees();
                 StartCoroutine(RollCredits());
