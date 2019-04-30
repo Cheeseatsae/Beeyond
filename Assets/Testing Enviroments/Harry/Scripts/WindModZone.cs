@@ -27,40 +27,42 @@ namespace Harry
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<BeeController>() == null) return;
+            if (other.GetComponent<BeeController>() != null || other.gameObject.layer == 15)
+            {
+                BeeController thisBee = other.GetComponent<BeeController>();
+            
+                beeMod b = new beeMod();
+                b.bee = thisBee.gameObject;
+                b.oldMultX = thisBee.windSpeedMult;
+                b.oldMultY = thisBee.windYAxisDivider;
+                b.windClamp = thisBee.windSpeedClamp;
+            
+                bees.Add(b);
+            
+                thisBee.windSpeedMult = newMultX;
+                thisBee.windYAxisDivider = newMultY;
+                thisBee.windSpeedClamp = newWindClamp;
+            }
 
-            BeeController thisBee = other.GetComponent<BeeController>();
-            
-            beeMod b = new beeMod();
-            b.bee = thisBee.gameObject;
-            b.oldMultX = thisBee.windSpeedMult;
-            b.oldMultY = thisBee.windYAxisDivider;
-            b.windClamp = thisBee.windSpeedClamp;
-            
-            bees.Add(b);
-            
-            thisBee.windSpeedMult = newMultX;
-            thisBee.windYAxisDivider = newMultY;
-            thisBee.windSpeedClamp = newWindClamp;
-            
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.GetComponent<BeeController>() == null) return;
-
-            BeeController thisBee = other.GetComponent<BeeController>();
-            
-            for (int i = 0; i < bees.Count; i ++)
+            if (other.GetComponent<BeeController>() != null || other.gameObject.layer == 15)
             {
-                if (bees[i].bee == thisBee.gameObject)
+                BeeController thisBee = other.GetComponent<BeeController>();
+
+                for (int i = 0; i < bees.Count; i++)
                 {
-                    thisBee.windSpeedMult = bees[i].oldMultX;
-                    thisBee.windYAxisDivider = bees[i].oldMultY;
-                    thisBee.windSpeedClamp = bees[i].windClamp;
+                    if (bees[i].bee == thisBee.gameObject)
+                    {
+                        thisBee.windSpeedMult = bees[i].oldMultX;
+                        thisBee.windYAxisDivider = bees[i].oldMultY;
+                        thisBee.windSpeedClamp = bees[i].windClamp;
 
-                    bees.RemoveAt(i);
+                        bees.RemoveAt(i);
 
+                    }
                 }
             }
 
