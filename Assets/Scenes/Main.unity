@@ -363,8 +363,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When the wind in howling, it will blow you backwards. Hide behind large
-    objects to stay safe.
+  m_Text: Howling winds will blow you backwards. Hide behind large objects to stay
+    safe.
 --- !u!222 &17679498
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7680,7 +7680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Large object will shield you from the wind.
+  m_Text: Large objects will shield you from the wind.
 --- !u!222 &375379935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20354,7 +20354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875320615}
   m_LocalRotation: {x: 0.27663487, y: -0, z: -0, w: 0.96097517}
-  m_LocalPosition: {x: 20, y: -0.065, z: -2.538286}
+  m_LocalPosition: {x: 211.93, y: -0.065, z: -200}
   m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
   m_Children: []
   m_Father: {fileID: 1666080983}
@@ -49576,27 +49576,27 @@ PrefabInstance:
     - target: {fileID: 5995838557053832890, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5995838557053832890, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.13
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 5995838557053832890, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_Radius
-      value: 0.35
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5995838557053832890, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_Height
-      value: 1.84
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5995838557053832890, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.21
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8243973400970714498, guid: f3aeaaa0d75a55f47b0e6c7d42e8a642,
         type: 3}
