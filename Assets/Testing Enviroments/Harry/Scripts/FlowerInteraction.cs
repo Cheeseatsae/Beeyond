@@ -6,7 +6,9 @@ using UnityEngine;
 
 namespace Harry
 {
+
     
+
     public class FlowerInteraction : Interactable
     {
         public ParticleSystem fireflies;
@@ -27,7 +29,9 @@ namespace Harry
         public delegate void OnFlowerInteract();
 
         public OnFlowerInteract InteractionEvent;
-        
+
+        public static FMOD.Studio.EventInstance FlowerToneTrueLoop01, FlowerToneTrueLoop02;
+
         private void Start()
         {
             HiveInteractable.ActivateNextFlowers += ActivateFlower;
@@ -44,7 +48,13 @@ namespace Harry
             }
 
             // fireflies.Play(); not needed, set in particle inspector
+
+            FlowerToneTrueLoop01 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/FlowerToneTrueLoop01");
+            FlowerToneTrueLoop02 = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/FlowerToneTrueLoop02");
+            FlowerToneTrueLoop01.start();
         }
+
+
 
         void FixedUpdate()
         {
@@ -53,6 +63,7 @@ namespace Harry
                 
                 fireflies.Stop(true, ParticleSystemStopBehavior.StopEmitting);
                 hasRemovedFireflies = true;
+                FlowerToneTrueLoop01.start();
             }
         }
     
@@ -62,7 +73,7 @@ namespace Harry
             if (harvested) return;
             if (other.gameObject.GetComponent<BeeController>() == null) return;
             if (other.gameObject.GetComponent<BeeController>().myState == BeeController.BeeState.Pollenated) return;
-            if (other.gameObject.GetComponent<PlayerBeeController>() != null) AudioManagerScript.Playsound("BeeDigQuickShort02");
+            if (other.gameObject.GetComponent<PlayerBeeController>() != null) { AudioManagerScript.Playsound("BeeDigQuickShort02"); FlowerToneTrueLoop01.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); }            
             base.OnCollisionEnter(other);
 
         }

@@ -209,7 +209,7 @@ public class AudioManagerScript : MonoBehaviour
     {
         WindIntensity.setValue(Roo.WindScript.windSpeed);
         gameLevel.setValue(gameProgression);
-        BeeMovement.setValue(Harry.BeeTargetController.BuzzingVolume);
+        
     }
 
     // Below is the switch statement for all the possible sounds used in the game
