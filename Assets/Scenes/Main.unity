@@ -4060,7 +4060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011585294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.776, y: -2.35, z: -0.036054}
+  m_LocalPosition: {x: 26.776, y: -2.317, z: -0.036054}
   m_LocalScale: {x: 0.87, y: 0.87, z: 0.87}
   m_Children:
   - {fileID: 679295098}
@@ -4236,7 +4236,7 @@ CapsuleCollider:
   m_Radius: 0.11
   m_Height: 0.65
   m_Direction: 1
-  m_Center: {x: 0.17481944, y: 0.2, z: -0.36}
+  m_Center: {x: 0.17481944, y: 0.14, z: -0.36}
 --- !u!1 &180638708
 GameObject:
   m_ObjectHideFlags: 0
@@ -12691,7 +12691,7 @@ CapsuleCollider:
   m_Radius: 0.11
   m_Height: 0.58
   m_Direction: 1
-  m_Center: {x: -0.37, y: 0.15, z: 0.27744287}
+  m_Center: {x: -0.37, y: 0.09, z: 0.27744287}
 --- !u!4 &648405798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 987473972, guid: 2b4e6a7182978924fb38083a5d915a3f,
@@ -30949,9 +30949,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.4
-  m_Height: 1.15
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: -0.013512429, y: 0.19, z: 0.64014655}
+  m_Center: {x: 0, y: 0.25, z: 0.7}
 --- !u!1001 &1476768118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36600,7 +36600,7 @@ CapsuleCollider:
   m_Radius: 0.08
   m_Height: 0.69
   m_Direction: 1
-  m_Center: {x: -0.17, y: 0.22, z: -0.36}
+  m_Center: {x: -0.17, y: 0.19, z: -0.36}
 --- !u!1001 &1787710695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43698,7 +43698,7 @@ CapsuleCollider:
   m_Radius: 0.17
   m_Height: 0.71
   m_Direction: 1
-  m_Center: {x: -0.44, y: 0.15, z: 0.069896206}
+  m_Center: {x: -0.44, y: 0.12, z: 0.069896206}
 --- !u!1 &1885431881
 GameObject:
   m_ObjectHideFlags: 0
@@ -44392,7 +44392,7 @@ CapsuleCollider:
   m_Radius: 0.1
   m_Height: 0.62
   m_Direction: 1
-  m_Center: {x: 0.36, y: 0.14, z: 0.32856286}
+  m_Center: {x: 0.36, y: 0.11, z: 0.32856286}
 --- !u!1 &1940454266
 GameObject:
   m_ObjectHideFlags: 0
@@ -44757,7 +44757,7 @@ CapsuleCollider:
   m_Radius: 0.15
   m_Height: 0.72
   m_Direction: 1
-  m_Center: {x: 0.46, y: 0.17448503, z: 0.09691086}
+  m_Center: {x: 0.46, y: 0.11, z: 0.09691086}
 --- !u!1 &1963490956
 GameObject:
   m_ObjectHideFlags: 0
@@ -45914,7 +45914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBee: {fileID: 0}
   myBeeController: {fileID: 0}
-  delay: 2
+  delay: 3
   state: 1
   fireflies: {fileID: 1872261744}
   numberOfFireflies: 5
@@ -51325,7 +51325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8684946853774220795}
   m_LocalRotation: {x: -0.095667034, y: -0.23221366, z: 0.022957258, w: 0.9676764}
-  m_LocalPosition: {x: 1.69, y: 1.6, z: 1.24}
+  m_LocalPosition: {x: 1.69, y: 1.517, z: 1.24}
   m_LocalScale: {x: 2.1014616, y: 2.1014616, z: 2.1014616}
   m_Children:
   - {fileID: 8684946853774246361}

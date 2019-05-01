@@ -37,10 +37,9 @@ namespace Harry
         {
             // if bee isnt pollenated dont let it do anything
             if (other.gameObject.GetComponent<BeeController>().myState != BeeController.BeeState.Pollenated) return;
-            if (other.gameObject.GetComponent<PlayerBeeController>().myState != BeeController.BeeState.Pollenated) return; // ROO ADDED
 
 
-            if (other.gameObject.GetComponent<PlayerBeeController>() != null) AudioManagerScript.gameProgression += 1;
+           // if (other.gameObject.GetComponent<PlayerBeeController>() != null) AudioManagerScript.gameProgression += 1;
                 
             base.OnCollisionEnter(other);
         }
@@ -50,7 +49,9 @@ namespace Harry
             
             myBeeController.interacting = true;                
             yield return new WaitForSeconds(delay);
-            
+
+            AudioManagerScript.gameProgression += 1; // increment the game audio progression
+
             // if interacted increase the pollen count
             pollenCount++;
             // allow bee to move

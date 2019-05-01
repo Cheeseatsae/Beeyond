@@ -30,14 +30,9 @@ namespace Harry
 
         public OnFlowerInteract InteractionEvent;
 
-       // [FMODUnity.EventRef]
-       // public string selectFlowerSound;
-
-       // FMOD.Studio.EventInstance flowerSound;
 
         private void Start()
         {
-            //flowerSound = FMODUnity.RuntimeManager.CreateInstance(selectFlowerSound);
             HiveInteractable.ActivateNextFlowers += ActivateFlower;
 
             InteractionEvent += PlayAnimation;
