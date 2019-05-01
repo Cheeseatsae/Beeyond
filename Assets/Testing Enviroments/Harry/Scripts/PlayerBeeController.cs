@@ -16,10 +16,16 @@ namespace Harry
         FMOD.Studio.EventInstance buzzing;// bee sound
         FMOD.Studio.ParameterInstance BuzzingVol;
 
+        private Rigidbody _playerRigidBody;
+        private Transform _playerTransform;
+
         void Start()
         {
             buzzing = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/BeeBuzzIdleMedium");
             buzzing.getParameter("BuzzVol", out BuzzingVol);
+
+            _playerRigidBody = GetComponent<Rigidbody>();
+            _playerTransform = GetComponent<Transform>();
 
             buzzing.start();
             BuzzingVol.setValue(1f);
@@ -65,7 +71,7 @@ namespace Harry
         public override void FixedUpdate()
         {
             BuzzingVol.setValue(Harry.BeeTargetController.BuzzingVolume);
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(buzzing, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(buzzing, _playerTransform, _playerRigidBody); // 3d location needs to be updated
             // if we're stopped do nothing
             if (myState == BeeState.Stopped) { BuzzingVol.setValue(0f); return; }
         

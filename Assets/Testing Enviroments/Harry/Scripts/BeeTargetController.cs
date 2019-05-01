@@ -40,6 +40,8 @@ namespace Harry
             // sets position locally for bee to chase
             transform.position = new Vector3(InputHorizontalValue * inputMult, InputVerticalValue * inputMult, 0) + parent.position;
             parent.position = new Vector3(parent.position.x, parent.position.y,  Mathf.Lerp(parent.position.z, 0, 0.05f));
+
+            // sets float for buzzing volume of bee
             BuzzingVolume = Mathf.Max(InputHorizontalValue, InputVerticalValue);
             if (BuzzingVolume < 0.1f) BuzzingVolume = 0.1f;
         }
