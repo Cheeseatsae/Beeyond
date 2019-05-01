@@ -37,10 +37,11 @@ namespace Harry
         {
             // if bee isnt pollenated dont let it do anything
             if (other.gameObject.GetComponent<BeeController>().myState != BeeController.BeeState.Pollenated) return;
+            if (other.gameObject.GetComponent<PlayerBeeController>().myState != BeeController.BeeState.Pollenated) return;
 
 
-           // if (other.gameObject.GetComponent<PlayerBeeController>() != null) AudioManagerScript.gameProgression += 1;
-                
+            // if (other.gameObject.GetComponent<PlayerBeeController>() != null) AudioManagerScript.gameProgression += 1;
+
             base.OnCollisionEnter(other);
         }
 
