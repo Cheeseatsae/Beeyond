@@ -13,14 +13,24 @@ namespace Harry
         public float numberOfFireflies;
         private bool _canPlaySound = true;
 
+        FMOD.Studio.EventInstance buzzing;// bee sound
+        FMOD.Studio.ParameterInstance BuzzingVol;
+
         void Start()
         {
+            buzzing = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/BeeBuzzIdleMedium");
+            buzzing.getParameter("BuzzVol", out BuzzingVol);
+
+            buzzing.start();
+            BuzzingVol.setValue(1f);
+
             var _emission = fireflies.emission;
             _emission.rateOverTime = 0f;
         }
         
         private void Update()
         {
+            
             // HACK will need to be redone later 
             playerState.text = myState.ToString();
 
@@ -28,7 +38,7 @@ namespace Harry
                 {
                     currentInteractable.OnInteract();
                 if (currentInteractable.GetComponent<FlowerInteraction>() != null) PlayAnimation("Standing");
-                if (currentInteractable.GetComponent<HiveInteractable>() != null)
+                    if (currentInteractable.GetComponent<HiveInteractable>() != null)
                 {
                     var _emission = fireflies.emission;
                     _emission.rateOverTime = 0f;
@@ -54,8 +64,10 @@ namespace Harry
         // Update is called once per frame
         public override void FixedUpdate()
         {
-        // if we're stopped do nothing
-            if (myState == BeeState.Stopped) return;
+            BuzzingVol.setValue(Harry.BeeTargetController.BuzzingVolume);
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(buzzing, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            // if we're stopped do nothing
+            if (myState == BeeState.Stopped) { BuzzingVol.setValue(0f); return; }
         
             base.FixedUpdate();
         
