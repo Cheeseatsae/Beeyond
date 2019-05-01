@@ -68,15 +68,15 @@ namespace Harry
 
         }
 
-        private void OnDrawGizmos()
+  /*      private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(transform.position, GetComponent<Collider>().bounds.size);
             Gizmos.color = new Color(1, 0, 0, transparency);
             Gizmos.DrawCube(transform.position, GetComponent<Collider>().bounds.size);
             
-        }
-    }
+        } */
+    } 
 
 }
 
