@@ -31,7 +31,7 @@ public class WindDebugPanel : MonoBehaviour
     void Update()
     {
         // used for toggling audio canvas on and off
-        if (Input.GetKeyDown(KeyCode.T))
+       /* if (Input.GetKeyDown(KeyCode.T))
         {
             if (_debugPanel.activeSelf)
             
@@ -41,7 +41,7 @@ public class WindDebugPanel : MonoBehaviour
            {
                _debugPanel.SetActive(true);
            }
-        } 
+        } */
 
         // get time values in mins and sec
         float t = Time.time - _startTime;

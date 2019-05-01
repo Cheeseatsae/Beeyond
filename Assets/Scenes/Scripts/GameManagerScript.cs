@@ -28,15 +28,14 @@ public class GameManagerScript : MonoBehaviour
     private CanvasGroup[] _panels; 
     public static bool _isGameRunning = false;
 
-    public GameObject tutorialPanelsHolder;
-    private CanvasGroup[] tutorialPanels;
-    private bool _tutorialSwitch = false;
+    public CanvasGroup[] tutorialPanels;
+    private bool _tutorialsFaded = false;
+
     // Start is called before the first frame update
     void Start()
     {
         _previousPanel = StartPanel;
         _panels = GamePanel.GetComponentsInChildren<CanvasGroup>(); // get a list of all active panels
-        tutorialPanels = tutorialPanelsHolder.GetComponentsInChildren<CanvasGroup>();
         Debug.Log(_panels.Length);
 
         StartCoroutine(StartUp()); // cleans up all active panels and resets to a begining state
@@ -50,10 +49,7 @@ public class GameManagerScript : MonoBehaviour
             PauseGame();
         }
 
-        if ((Input.GetKey(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton3)) && _isGameRunning)
-        {
-            ToggleTutorials(0f, 0.2f);
-        }
+        if (AudioManagerScript.gameProgression > 0 && !_tutorialsFaded) { _tutorialsFaded = true; CloseTutorials(secondsBeforeFadein, fadeRate); }
     }
 
     public void PauseGame()
@@ -83,7 +79,7 @@ public class GameManagerScript : MonoBehaviour
         CloseAllPanels(0, menuTransitionSpeed);
     }
 
-    public void ToggleTutorials(float _pTime, float _transTime)
+    public void CloseTutorials(float _pTime, float _transTime)
     {
         foreach (CanvasGroup _p in tutorialPanels)
         {

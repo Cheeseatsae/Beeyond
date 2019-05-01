@@ -19,6 +19,9 @@ namespace Roo
         public int openGate = 0;
         public static GameObject liveCamera;
 
+        public GameObject Fence;
+        public GameObject CameraClampDeviation;
+
         void Awake()
         {
             liveCamera = this.gameObject;
@@ -33,6 +36,8 @@ namespace Roo
 
         void FixedUpdate()
         {
+            if (transform.position.x > CameraClampDeviation.transform.position.x) CalculateClamp();
+
             TargetPosition = new Vector3(FollowTarget.transform.position.x, FollowTarget.transform.position.y,
                 transform.position.z);
             transform.position =
@@ -55,6 +60,17 @@ namespace Roo
         private void OnDestroy()
         {
             HiveInteractable.PollenCollected -= IncreaseClamp;
+        }
+
+        private void CalculateClamp()
+        {
+            float totalDistance = Fence.transform.position.x - CameraClampDeviation.transform.position.x;
+            float totalHeight = 22f - 8f;
+            float percentageDistance = (Fence.transform.position.x - transform.position.x) / totalDistance;
+
+            cameraClampMaxY = 8f + (totalHeight * percentageDistance);
+
+            if (transform.position.x > Fence.transform.position.x) cameraClampMaxY = 8f;
         }
     }
 }
