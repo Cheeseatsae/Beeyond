@@ -14,7 +14,7 @@ public class RewardTriggerScript : MonoBehaviour
 		{
 			AudioManagerScript.gameProgression = 20f;
 			Roo.WindScript.WindStates = Roo.WindScript.Winds.REWARD;
-			AnimationBee_FlyidleToFlying.disableBeeAnimator = true;
+			//AnimationBee_FlyidleToFlying.disableBeeAnimator = true;
 			ObjectToTeleport.GetComponent<PlayerBeeController>().maxSpeed = newBeeSpeed;
 			ObjectToTeleport.GetComponent<PlayerBeeController>().target = FinalWayPoint;
 			GameManagerScript._isGameRunning = false; // disables pause menu

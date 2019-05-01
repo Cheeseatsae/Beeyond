@@ -136,7 +136,7 @@ public class GameManagerScript : MonoBehaviour
         _isGameRunning = false; //just in case (static variable)
 
         AudioManagerScript.gameProgression = 0f; // resets music back to start
-        AnimationBee_FlyidleToFlying.disableBeeAnimator = false; // make sure bee animations are running.
+        //AnimationBee_FlyidleToFlying.disableBeeAnimator = false; // make sure bee animations are running.
 
         BlackoutPanel.alpha = 1f; // turn on to keep continuity from unity splash (make sure bg colour matches)
 

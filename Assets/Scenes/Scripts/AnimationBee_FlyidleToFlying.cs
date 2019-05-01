@@ -7,7 +7,7 @@ public class AnimationBee_FlyidleToFlying : MonoBehaviour
     public Animator animator;
     float InputX;
     public float InputY;
-    public static bool disableBeeAnimator = false;
+    // public static bool disableBeeAnimator = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class AnimationBee_FlyidleToFlying : MonoBehaviour
 
     void ProcessAnimations()
     {
-        if (disableBeeAnimator) { animator.SetFloat("InputX", 1f); return; }
+        if (!GameManagerScript._isGameRunning) { animator.SetFloat("InputX", 1f); return; }
         InputY = Input.GetAxis("Vertical");
         InputX = Input.GetAxis("Horizontal");
         animator.SetFloat("InputY", InputY);
