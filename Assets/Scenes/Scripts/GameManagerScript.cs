@@ -49,7 +49,7 @@ public class GameManagerScript : MonoBehaviour
             PauseGame();
         }
 
-        if (AudioManagerScript.gameProgression > 0 && !_tutorialsFaded) { _tutorialsFaded = true; CloseTutorials(secondsBeforeFadein, fadeRate); }
+        if (AudioManagerScript.gameProgression > 0 && !_tutorialsFaded && GameCam.transform.position.y > 10f) { _tutorialsFaded = true; CloseTutorials(0f, 0f); }
     }
 
     public void PauseGame()
