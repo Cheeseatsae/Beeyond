@@ -12,7 +12,7 @@ namespace Harry
         [Range(0,3)]
         public float inputMult = 1;
 
-        public Transform parent;
+        public GameObject parent;
 
         public static float BuzzingVolume;
 
@@ -37,12 +37,18 @@ namespace Harry
         
         void Update() 
         {
+            float _inputHorizontal = InputHorizontalValue;
+            float _inputVertical = InputVerticalValue;
+
+            if (!GameManagerScript._isGameRunning) { _inputHorizontal = 0f; _inputVertical = 0f; }
+
             // sets position locally for bee to chase
-            transform.position = new Vector3(InputHorizontalValue * inputMult, InputVerticalValue * inputMult, 0) + parent.position;
-            parent.position = new Vector3(parent.position.x, parent.position.y,  Mathf.Lerp(parent.position.z, 0, 0.05f));
+                transform.position = new Vector3(_inputHorizontal * inputMult, _inputVertical * inputMult, 0) + parent.transform.position;
+                parent.transform.position = new Vector3(parent.transform.position.x, parent.transform.position.y, Mathf.Lerp(parent.transform.position.z, 0, 0.05f));
+                
 
             // sets float for buzzing volume of bee
-            BuzzingVolume = Mathf.Max(InputHorizontalValue, InputVerticalValue);
+            BuzzingVolume = Mathf.Max(_inputHorizontal, _inputVertical);
             if (BuzzingVolume < 0.1f) BuzzingVolume = 0.1f;
         }
         

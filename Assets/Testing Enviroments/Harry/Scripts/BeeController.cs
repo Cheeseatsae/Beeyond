@@ -61,6 +61,8 @@ namespace Harry
 
         public virtual void FixedUpdate()
         {
+            float _windspeed = Roo.WindScript.windSpeed;
+            if (!GameManagerScript._isGameRunning) _windspeed = 0f;
             RotateTowards(target.transform.position);
             Debug.DrawLine(_myModel.transform.position, _myModel.transform.position + _myModel.transform.forward * 4, Color.cyan);
             
@@ -70,21 +72,21 @@ namespace Harry
             
             // wind based on y axis
             if (_myModel.transform.position.y > yAxisWindCutOff)
-                _yAxisWindMod = Roo.WindScript.windSpeed * (_myModel.transform.position.y * windYAxisDivider);
+                _yAxisWindMod = _windspeed * (_myModel.transform.position.y * windYAxisDivider);
             else
                 _yAxisWindMod = yAxisMinWindEffect * windYAxisDivider;
             
-            _force = new Vector3(_force.x - (Roo.WindScript.windSpeed * windSpeedMult) - _yAxisWindMod, _force.y + _flutter.InputSin(), _force.z);
+            _force = new Vector3(_force.x - (_windspeed * windSpeedMult) - _yAxisWindMod, _force.y + _flutter.InputSin(), _force.z);
             
             // adding the force normalized
             _myBody.AddForce(_force);
 
             // adding drag to slow us and clamping speed
             _myBody.velocity = Vector3.Lerp(_myBody.velocity, Vector3.zero, 0.01f);
-            _myBody.velocity = new Vector3(Mathf.Clamp(_myBody.velocity.x, -maxSpeed - (Roo.WindScript.windSpeed * windSpeedClamp), maxSpeed), Mathf.Clamp(_myBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(_myBody.velocity.z, -maxSpeed, maxSpeed));
+            _myBody.velocity = new Vector3(Mathf.Clamp(_myBody.velocity.x, -maxSpeed - (_windspeed * windSpeedClamp), maxSpeed), Mathf.Clamp(_myBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(_myBody.velocity.z, -maxSpeed, maxSpeed));
  
             if (finalWindSpeed != null)
-                finalWindSpeed.text = System.Math.Round((Roo.WindScript.windSpeed * windSpeedMult) + (Roo.WindScript.windSpeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
+                finalWindSpeed.text = System.Math.Round((_windspeed * windSpeedMult) + (_windspeed * (_myModel.transform.position.y / windYAxisDivider)),2).ToString();
         }
         
         public virtual void RotateTowards(Vector3 t)
