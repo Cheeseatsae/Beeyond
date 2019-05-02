@@ -15,7 +15,8 @@ namespace Roo
         public float cameraClampMinX;
         public float[] cameraClampMaxX;
         public static float cameraClampMinY = 22f;
-        public static float cameraClampMaxY = 22f;
+        public float cameraClampMaxYExploring = 22f;
+        public float cameraClampMaxYStruggle = 8f;
         public int openGate = 0;
         public static GameObject liveCamera;
 
@@ -36,8 +37,6 @@ namespace Roo
 
         void FixedUpdate()
         {
-            if (transform.position.x > CameraClampDeviation.transform.position.x) CalculateClamp();
-
             TargetPosition = new Vector3(FollowTarget.transform.position.x, FollowTarget.transform.position.y,
                 transform.position.z);
             transform.position =
@@ -46,7 +45,7 @@ namespace Roo
 
             transform.position =
                 new Vector3(Mathf.Clamp(transform.position.x, cameraClampMinX, cameraClampMaxX[openGate]),
-                    Mathf.Clamp(transform.position.y, cameraClampMinY, cameraClampMaxY), transform.position.z); // clamp camera boundaries 
+                    Mathf.Clamp(transform.position.y, cameraClampMinY, CalculateClamp()), transform.position.z); // clamp camera boundaries 
         }
 
         public void IncreaseClamp(int count)
@@ -62,15 +61,18 @@ namespace Roo
             HiveInteractable.PollenCollected -= IncreaseClamp;
         }
 
-        private void CalculateClamp()
+        private float CalculateClamp()
         {
+            if (transform.position.x < CameraClampDeviation.transform.position.x) return cameraClampMaxYExploring;
+            if (transform.position.x > Fence.transform.position.x) return cameraClampMaxYStruggle;
+
             float totalDistance = Fence.transform.position.x - CameraClampDeviation.transform.position.x;
-            float totalHeight = 22f - 8f;
+            float totalHeight = cameraClampMaxYExploring - cameraClampMaxYStruggle;
             float percentageDistance = (Fence.transform.position.x - transform.position.x) / totalDistance;
 
-            cameraClampMaxY = 8f + (totalHeight * percentageDistance);
+            float cameraClampMaxY = cameraClampMaxYStruggle + (totalHeight * percentageDistance);
 
-            if (transform.position.x > Fence.transform.position.x) cameraClampMaxY = 8f;
+            return cameraClampMaxY;
         }
     }
 }
